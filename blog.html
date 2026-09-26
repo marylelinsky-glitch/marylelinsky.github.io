@@ -1,111 +1,307 @@
-
-
-
-
-⸻
-
-layout: null
-
 <!DOCTYPE HTML>
 <html>
 <head>
 	<title>Blog | Marylelin Lelinsky</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-<style>
-	body {
-		background: linear-gradient(135deg, #3d2e63 0%, #6b5b95 45%, #9d8fd6 78%, #b7c3ea 100%);
-		color: #fdfbf7;
-	}
-	#wrapper {
-		background: transparent;
-	}
-	h1, h2, h3 {
-		color: #ffffff;
-	}
-	p {
-		color: #f1ecf9;
-	}
-	.button {
-		background-color: #f2a65a !important;
-		color: #3a2415 !important;
-		border: none !important;
-	}
-	.button:hover {
-		background-color: #e08f3e !important;
-	}
-	.posts {
-		max-width: 800px;
-		margin: 0 auto;
-	}
-	.post {
-		margin: 0 auto 4em auto;
-		padding: 2em;
-		background: rgba(255, 255, 255, 0.08);
-		border-radius: 12px;
-		text-align: left;
-	}
-	.post-date {
-		font-size: 0.85em;
-		opacity: 0.8;
-	}
-	.post-image {
-		width: 100%;
-		max-width: 100%;
-		border-radius: 12px;
-		margin: 1em 0;
-	}
-</style>
+
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+	<style>
+		body {
+			background: linear-gradient(135deg, #3d2e63 0%, #6b5b95 45%, #9d8fd6 78%, #b7c3ea 100%);
+			color: #fdfbf7;
+		}
+
+		#wrapper {
+			background: transparent;
+		}
+
+		h1, h2, h3 {
+			color: #ffffff;
+		}
+
+		p {
+			color: #f1ecf9;
+		}
+
+		.button {
+			background-color: #f2a65a !important;
+			color: #3a2415 !important;
+			border: none !important;
+		}
+
+		.button:hover {
+			background-color: #e08f3e !important;
+		}
+
+		.posts {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.post {
+			margin: 0 auto 4em auto;
+			padding: 2em;
+			background: rgba(255, 255, 255, 0.08);
+			border-radius: 12px;
+			text-align: left;
+		}
+
+		.post-date {
+			font-size: 0.85em;
+			opacity: 0.8;
+		}
+
+		.post-image {
+			width: 100%;
+			border-radius: 12px;
+			margin: 1em 0;
+		}
+
+		.post-body {
+			line-height: 1.8;
+			margin-top: 1.5em;
+		}
+
+		.loading {
+			text-align: center;
+			opacity: 0.8;
+		}
+
+		.error {
+			text-align: center;
+			padding: 2em;
+			background: rgba(255, 255, 255, 0.08);
+			border-radius: 12px;
+		}
+	</style>
 </head>
+
 <body class="is-preload">
+
 <div id="wrapper" class="divided">
-<section class="wrapper style1 align-center">
-	<div class="inner">
-		<h1>Do meu caderno</h1>
-		<p class="major">
-			Palavras, imagens e pequenas coisas que ficam pelo caminho.
-		</p>
-		<div class="posts">
-			{% for post in site.posts %}
-			<article class="post">
-				<h2>{{ post.title }}</h2>
-				<p class="post-date">
-					{{ post.date | date: "%d/%m/%Y" }}
+
+	<section class="wrapper style1 align-center">
+
+		<div class="inner">
+
+			<h1>Do meu caderno</h1>
+
+			<p class="major">
+				Palavras, imagens e pequenas coisas que ficam pelo caminho.
+			</p>
+
+			<div id="posts" class="posts">
+
+				<p class="loading">
+					<i class="fa-solid fa-spinner fa-spin"></i>
+					A abrir o caderno...
 				</p>
-				{% if post.image %}
-				<img
-					src="{{ post.image }}"
-					alt="{{ post.title }}"
-					class="post-image"
-				>
-				{% endif %}
-				{% if post.description %}
-				<p>
-					{{ post.description }}
-				</p>
-				{% endif %}
-				<p>
-					<a href="{{ post.url }}" class="button">
-						<i class="fa-solid fa-book-open"></i>
-						Ler artigo
+
+			</div>
+
+			<ul class="actions special">
+				<li>
+					<a href="index.html" class="button">
+						<i class="fa-solid fa-arrow-left"></i>
+						Voltar ao site
 					</a>
-				</p>
-			</article>
-			{% endfor %}
+				</li>
+			</ul>
+
 		</div>
-		<ul class="actions special">
-			<li>
-				<a href="index.html" class="button">
-					<i class="fa-solid fa-arrow-left"></i>
-					Voltar ao site
-				</a>
-			</li>
-		</ul>
-	</div>
-</section>
+
+	</section>
+
 </div>
+
+<script>
+const REPO = "marylelinsky-glitch/marylelinsky.github.io";
+const POSTS_FOLDER = "_posts";
+
+async function carregarPosts() {
+
+	const container = document.getElementById("posts");
+
+	try {
+
+		const resposta = await fetch(
+			`https://api.github.com/repos/${REPO}/contents/${POSTS_FOLDER}`
+		);
+
+		if (!resposta.ok) {
+			throw new Error("Não foi possível carregar os artigos.");
+		}
+
+		const ficheiros = await resposta.json();
+
+		const posts = ficheiros
+			.filter(ficheiro => ficheiro.name.endsWith(".md"))
+			.sort((a, b) => b.name.localeCompare(a.name));
+
+		if (posts.length === 0) {
+			container.innerHTML = `
+				<div class="post">
+					<h2>Ainda não há artigos</h2>
+					<p>O meu caderno está à espera das primeiras palavras.</p>
+				</div>
+			`;
+			return;
+		}
+
+		container.innerHTML = "";
+
+		for (const ficheiro of posts) {
+			await mostrarPost(ficheiro, container);
+		}
+
+	} catch (erro) {
+
+		console.error(erro);
+
+		container.innerHTML = `
+			<div class="error">
+				<h2>O caderno está temporariamente fechado</h2>
+				<p>
+					Não foi possível carregar os artigos neste momento.
+				</p>
+			</div>
+		`;
+	}
+}
+
+
+async function mostrarPost(ficheiro, container) {
+
+	const resposta = await fetch(ficheiro.download_url);
+	const markdown = await resposta.text();
+
+	const dados = interpretarPost(markdown);
+
+	const artigo = document.createElement("article");
+	artigo.className = "post";
+
+	let html = "";
+
+	html += `<h2>${escapar(dados.title)}</h2>`;
+
+	if (dados.date) {
+		const data = new Date(dados.date);
+
+		if (!isNaN(data)) {
+			html += `
+				<p class="post-date">
+					${data.toLocaleDateString("pt-PT")}
+				</p>
+			`;
+		}
+	}
+
+	if (dados.image) {
+		html += `
+			<img
+				src="${escapar(dados.image)}"
+				alt="${escapar(dados.title)}"
+				class="post-image"
+			>
+		`;
+	}
+
+	if (dados.description) {
+		html += `
+			<p>
+				${escapar(dados.description)}
+			</p>
+		`;
+	}
+
+	html += `
+		<div class="post-body">
+			${formatarTexto(dados.body)}
+		</div>
+	`;
+
+	artigo.innerHTML = html;
+
+	container.appendChild(artigo);
+}
+
+
+function interpretarPost(texto) {
+
+	let frontMatter = {};
+	let body = texto;
+
+	if (texto.startsWith("---")) {
+
+		const fim = texto.indexOf("---", 3);
+
+		if (fim !== -1) {
+
+			const cabecalho = texto.substring(3, fim).trim();
+			body = texto.substring(fim + 3).trim();
+
+			cabecalho.split("\n").forEach(linha => {
+
+				const separador = linha.indexOf(":");
+
+				if (separador !== -1) {
+
+					const chave = linha
+						.substring(0, separador)
+						.trim();
+
+					const valor = linha
+						.substring(separador + 1)
+						.trim()
+						.replace(/^["']|["']$/g, "");
+
+					frontMatter[chave] = valor;
+				}
+			});
+		}
+	}
+
+	return {
+		title: frontMatter.title || "Sem título",
+		date: frontMatter.date || "",
+		description: frontMatter.description || "",
+		image: frontMatter.image || "",
+		body: body
+	};
+}
+
+
+function formatarTexto(texto) {
+
+	return texto
+		.split(/\n\s*\n/)
+		.map(paragrafo => {
+
+			paragrafo = paragrafo.trim();
+
+			if (!paragrafo) return "";
+
+			return `<p>${escapar(paragrafo).replace(/\n/g, "<br>")}</p>`;
+		})
+		.join("");
+}
+
+
+function escapar(texto) {
+
+	const div = document.createElement("div");
+	div.textContent = texto;
+
+	return div.innerHTML;
+}
+
+
+carregarPosts();
+</script>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -113,5 +309,6 @@ layout: null
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
