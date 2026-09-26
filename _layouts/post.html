@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{ page.title }} | Marylelin Lelinsky</title>
+
+	<link rel="stylesheet" href="/assets/css/main.css" />
+
+	<style>
+		body {
+			background: linear-gradient(135deg, #3d2e63 0%, #6b5b95 45%, #9d8fd6 78%, #b7c3ea 100%);
+			color: #fdfbf7;
+		}
+
+		.post-page {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 5em 2em;
+		}
+
+		h1, h2 {
+			color: #ffffff;
+		}
+
+		p {
+			color: #f1ecf9;
+		}
+
+		.post-date {
+			opacity: 0.75;
+		}
+	</style>
+</head>
+
+<body>
+
+<main class="post-page">
+
+	<h1>{{ page.title }}</h1>
+
+	<p class="post-date">
+		{{ page.date | date: "%d/%m/%Y" }}
+	</p>
+
+	{% if page.image %}
+		<img src="{{ page.image }}" alt="{{ page.title }}" style="max-width:100%; border-radius:12px;">
+	{% endif %}
+
+	{% if page.description %}
+		<p><strong>{{ page.description }}</strong></p>
+	{% endif %}
+
+	<div>
+		{{ content }}
+	</div>
+
+	<p>
+		<a href="/blog.html" class="button">← Voltar ao caderno</a>
+	</p>
+
+</main>
+
+</body>
+</html>
