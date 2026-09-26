@@ -1,4 +1,10 @@
+---
+layout: null
+---
+
 <!DOCTYPE HTML>
+<html>
+<head>
 <html>
 <head>
 	<title>Blog | Marylelin Lelinsky</title>
@@ -62,30 +68,67 @@
 
 			<p class="major">
 				Palavras, imagens e pequenas coisas que ficam pelo caminho.
-			</p>
+			</p>			<div class="posts">
 
-			<!-- PRIMEIRO ARTIGO -->
-			<div class="post">
+{% for post in site.posts %}
 
-				<h2>Bem-vindos ao meu caderno</h2>
+				<article class="post">
 
-				<p class="post-date">
-					26 de setembro de 2026
-				</p>
+					<h2>{{ post.title }}</h2>
 
-				<p>
-					Este é o meu pequeno espaço para partilhar pensamentos,
-					histórias, bastidores das minhas ilustrações e novidades
-					sobre os meus livros.
-				</p>
+					<p class="post-date">
+						{{ post.date | date: "%d/%m/%Y" }}
+					</p>
 
-				<p>
-					Por aqui, as palavras podem aparecer acompanhadas de
-					imagens, memórias e tudo aquilo que nasce entre uma
-					história e outra.
-				</p>
+					{% if post.image %}
+					<img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; border-radius:12px;">
+					{% endif %}
 
-			</div>
+					{% if post.description %}
+					<p>{{ post.description }}</p>
+					{% endif %}
+
+					<p>
+						<a href="{{ post.url }}" class="button">
+							Ler artigo
+						</a>
+					</p>
+
+				</article>
+
+{% endfor %}
+
+			</div><div class="posts">
+
+{% for post in site.posts %}
+
+<article class="post">
+    <h2>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
+
+    <p class="post-date">
+        {{ post.date | date: "%d/%m/%Y" }}
+    </p>
+
+    {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; border-radius:12px;">
+    {% endif %}
+
+    {% if post.description %}
+        <p>{{ post.description }}</p>
+    {% endif %}
+
+    <p>
+        <a href="{{ post.url }}" class="button">Ler artigo</a>
+    </p>
+</article>
+
+{% endfor %}
+
+</div>
+
+			
 
 			<ul class="actions special">
 				<li>
