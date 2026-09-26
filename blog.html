@@ -1,149 +1,111 @@
----
+
+
+
+
+⸻
+
 layout: null
----
 
 <!DOCTYPE HTML>
-<html>
-<head>
 <html>
 <head>
 	<title>Blog | Marylelin Lelinsky</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-	<style>
-		body {
-			background: linear-gradient(135deg, #3d2e63 0%, #6b5b95 45%, #9d8fd6 78%, #b7c3ea 100%);
-			color: #fdfbf7;
-		}
-
-		#wrapper {
-			background: transparent;
-		}
-
-		h1, h2, h3 {
-			color: #ffffff;
-		}
-
-		p {
-			color: #f1ecf9;
-		}
-
-		.button {
-			background-color: #f2a65a !important;
-			color: #3a2415 !important;
-			border: none !important;
-		}
-
-		.button:hover {
-			background-color: #e08f3e !important;
-		}
-
-		.post {
-			max-width: 800px;
-			margin: 0 auto 4em auto;
-			padding: 2em;
-			background: rgba(255, 255, 255, 0.08);
-			border-radius: 12px;
-		}
-
-		.post-date {
-			font-size: 0.85em;
-			opacity: 0.8;
-		}
-	</style>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+	body {
+		background: linear-gradient(135deg, #3d2e63 0%, #6b5b95 45%, #9d8fd6 78%, #b7c3ea 100%);
+		color: #fdfbf7;
+	}
+	#wrapper {
+		background: transparent;
+	}
+	h1, h2, h3 {
+		color: #ffffff;
+	}
+	p {
+		color: #f1ecf9;
+	}
+	.button {
+		background-color: #f2a65a !important;
+		color: #3a2415 !important;
+		border: none !important;
+	}
+	.button:hover {
+		background-color: #e08f3e !important;
+	}
+	.posts {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	.post {
+		margin: 0 auto 4em auto;
+		padding: 2em;
+		background: rgba(255, 255, 255, 0.08);
+		border-radius: 12px;
+		text-align: left;
+	}
+	.post-date {
+		font-size: 0.85em;
+		opacity: 0.8;
+	}
+	.post-image {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 12px;
+		margin: 1em 0;
+	}
+</style>
 </head>
-
 <body class="is-preload">
-
 <div id="wrapper" class="divided">
-
-	<section class="wrapper style1 align-center">
-		<div class="inner">
-
-			<h1>Do meu caderno</h1>
-
-			<p class="major">
-				Palavras, imagens e pequenas coisas que ficam pelo caminho.
-			</p>			<div class="posts">
-
-{% for post in site.posts %}
-
-				<article class="post">
-
-					<h2>{{ post.title }}</h2>
-
-					<p class="post-date">
-						{{ post.date | date: "%d/%m/%Y" }}
-					</p>
-
-					{% if post.image %}
-					<img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; border-radius:12px;">
-					{% endif %}
-
-					{% if post.description %}
-					<p>{{ post.description }}</p>
-					{% endif %}
-
-					<p>
-						<a href="{{ post.url }}" class="button">
-							Ler artigo
-						</a>
-					</p>
-
-				</article>
-
-{% endfor %}
-
-			</div><div class="posts">
-
-{% for post in site.posts %}
-
-<article class="post">
-    <h2>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-    </h2>
-
-    <p class="post-date">
-        {{ post.date | date: "%d/%m/%Y" }}
-    </p>
-
-    {% if post.image %}
-        <img src="{{ post.image }}" alt="{{ post.title }}" style="max-width:100%; border-radius:12px;">
-    {% endif %}
-
-    {% if post.description %}
-        <p>{{ post.description }}</p>
-    {% endif %}
-
-    <p>
-        <a href="{{ post.url }}" class="button">Ler artigo</a>
-    </p>
-</article>
-
-{% endfor %}
-
-</div>
-
-			
-
-			<ul class="actions special">
-				<li>
-					<a href="index.html" class="button">
-						<i class="fa-solid fa-arrow-left"></i>
-						Voltar ao site
+<section class="wrapper style1 align-center">
+	<div class="inner">
+		<h1>Do meu caderno</h1>
+		<p class="major">
+			Palavras, imagens e pequenas coisas que ficam pelo caminho.
+		</p>
+		<div class="posts">
+			{% for post in site.posts %}
+			<article class="post">
+				<h2>{{ post.title }}</h2>
+				<p class="post-date">
+					{{ post.date | date: "%d/%m/%Y" }}
+				</p>
+				{% if post.image %}
+				<img
+					src="{{ post.image }}"
+					alt="{{ post.title }}"
+					class="post-image"
+				>
+				{% endif %}
+				{% if post.description %}
+				<p>
+					{{ post.description }}
+				</p>
+				{% endif %}
+				<p>
+					<a href="{{ post.url }}" class="button">
+						<i class="fa-solid fa-book-open"></i>
+						Ler artigo
 					</a>
-				</li>
-			</ul>
-
+				</p>
+			</article>
+			{% endfor %}
 		</div>
-	</section>
-
+		<ul class="actions special">
+			<li>
+				<a href="index.html" class="button">
+					<i class="fa-solid fa-arrow-left"></i>
+					Voltar ao site
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>
 </div>
-
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -151,6 +113,5 @@ layout: null
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-
 </body>
 </html>
