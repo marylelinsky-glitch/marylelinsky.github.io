@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: marylelinsky-glitch/marylelinsky.github.io
+  name: turbo-github
+  turbo_site_id: ff7cc77e-c75c-4adc-9603-405fa6050fe9
   branch: main
 
 media_folder: "images/uploads"
