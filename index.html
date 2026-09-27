@@ -17,10 +17,14 @@
   <link rel="alternate" hreflang="pt-PT" href="https://marylelinsky.com/" />
   <link rel="alternate" hreflang="x-default" href="https://marylelinsky.com/" />
 
+  <!-- ============================================= -->
+  <!-- ÍCONES E FAVICON (AQUI ESTÁ A MAGIA PARA O GOOGLE) -->
+  <!-- ============================================= -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <!-- ============================================= -->
 
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/book-palette.css" />
@@ -51,6 +55,9 @@
   <meta name="twitter:site" content="@marylelinsky" />
   <meta name="twitter:creator" content="@marylelinsky" />
 
+  <!-- ============================================= -->
+  <!-- DADOS ESTRUTURADOS (SCHEMA) - LOGO OFICIAL -->
+  <!-- ============================================= -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1244,179 +1251,3 @@
     function () {
 
       gallery.scrollBy({
-
-        left:
-          -getScrollAmount(),
-
-        behavior:
-          "smooth"
-
-      });
-
-    }
-  );
-
-
-  next.addEventListener(
-    "click",
-    function () {
-
-      gallery.scrollBy({
-
-        left:
-          getScrollAmount(),
-
-        behavior:
-          "smooth"
-
-      });
-
-    }
-  );
-
-
-  gallery.addEventListener(
-    "scroll",
-    updateButtons
-  );
-
-
-  window.addEventListener(
-    "resize",
-    updateButtons
-  );
-
-
-  /* =========================
-     ARRASTAR COM RATO / DEDO
-     ========================= */
-
-  var isDragging = false;
-  var startX = 0;
-  var startScroll = 0;
-
-
-  gallery.addEventListener(
-    "pointerdown",
-    function (event) {
-
-      if (
-        event.pointerType === "mouse" &&
-        event.button !== 0
-      ) {
-        return;
-      }
-
-
-      isDragging = true;
-
-      startX =
-        event.clientX;
-
-      startScroll =
-        gallery.scrollLeft;
-
-
-      gallery.classList.add(
-        "dragging"
-      );
-
-
-      gallery.setPointerCapture(
-        event.pointerId
-      );
-
-    }
-  );
-
-
-  gallery.addEventListener(
-    "pointermove",
-    function (event) {
-
-      if (!isDragging) {
-        return;
-      }
-
-
-      var distance =
-        event.clientX -
-        startX;
-
-
-      gallery.scrollLeft =
-        startScroll -
-        distance;
-
-    }
-  );
-
-
-  function stopDragging(event) {
-
-    if (!isDragging) {
-      return;
-    }
-
-
-    isDragging = false;
-
-
-    gallery.classList.remove(
-      "dragging"
-    );
-
-
-    if (
-      event &&
-      gallery.hasPointerCapture &&
-      gallery.hasPointerCapture(
-        event.pointerId
-      )
-    ) {
-
-      gallery.releasePointerCapture(
-        event.pointerId
-      );
-
-    }
-
-  }
-
-
-  gallery.addEventListener(
-    "pointerup",
-    stopDragging
-  );
-
-
-  gallery.addEventListener(
-    "pointercancel",
-    stopDragging
-  );
-
-
-  gallery.addEventListener(
-    "lostpointercapture",
-    function () {
-
-      isDragging = false;
-
-      gallery.classList.remove(
-        "dragging"
-      );
-
-    }
-  );
-
-
-  updateButtons();
-
-
-})();
-
-</script>
-
-
-</body>
-</html>
