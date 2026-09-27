@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-PT"><head>
-  
+   
   <meta http-equiv="Content-Language" content="pt-PT" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Marylelin Lelinsky" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="description" content="Marylelin Lelinsky é autora e ilustradora portuguesa. Descobre livros, poesia, ficção literária, ilustrações e histórias sobre memória, perda, identidade e [...]" />
-  <meta name="keywords" content="Marylelin Lelinsky, autora portuguesa, ilustradora portuguesa, poesia, ficção literária, livros, literatura infantil, ilustração, memória, identidade, histórias[...]" />
+  <meta name="description" content="Marylelin Lelinsky é autora e ilustradora portuguesa. Descobre livros, poesia, ficção literária, ilustrações e histórias sobre memória, perda, identidade, amor e criação." />
+  <meta name="keywords" content="Marylelin Lelinsky, autora portuguesa, ilustradora portuguesa, poesia, ficção literária, livros, literatura infantil, ilustração, memória, identidade, histórias, Portugal" />
   <meta name="theme-color" content="#16232e" />
 
   <title>Marylelin Lelinsky | Autora e Ilustradora Portuguesa</title>
@@ -161,11 +161,11 @@
   </script>
 
   <style>
-    body{background:linear-gradient(135deg,#3d2e63 0%,#6b5b95 45%,#9d8fd6 78%,#b7c3ea 100%);color:#fdfbf7}#wrapper{background:transparent}h1,h2,h3{color:#fff}p,form label{color:#f1ecf9}.button{background-color:#7d6b9d;color:#fdfbf7;border:none;border-radius:5px;padding:10px 20px;cursor:pointer;text-decoration:none;display:inline-block;font-weight:bold;transition:background-color 0.3s}.button:hover{background-color:#9d8fd6}.button.alt{background-color:transparent;border:2px solid #fdfbf7;color:#fdfbf7}.button.alt:hover{background-color:rgba(253,251,247,0.1)}
+    body{background:linear-gradient(135deg,#3d2e63 0%,#6b5b95 45%,#9d8fd6 78%,#b7c3ea 100%);color:#fdfbf7}#wrapper{background:transparent}h1,h2,h3{color:#fff}p,form label{color:#f1ecf9}.button{background:linear-gradient(135deg,#f4d6b7 0%,#d7b29b 100%);color:#1d2330;border:0;border-radius:999px;padding:0.9rem 1.45rem;font-weight:700;box-shadow:0 12px 28px rgba(19,21,35,0.22);transition:transform .2s ease, box-shadow .2s ease}.button:hover{transform:translateY(-1px);box-shadow:0 15px 30px rgba(19,21,35,0.28)}.button.alt{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,.25);color:#fff}.button.small{padding:0.7rem 1.1rem;font-size:.9rem}.button.big{font-size:1.02rem}
 
     .partnership-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       align-items: stretch;
       width: min(1100px, 100%);
@@ -223,12 +223,33 @@
       margin-top: 0.25rem;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+    .gallery-wrapper {
       width: min(1100px, 100%);
       margin: 2rem auto 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.4) rgba(255,255,255,0.06);
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x proximity;
+      padding-bottom: 0.4rem;
+    }
+
+    .gallery-wrapper::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .gallery-wrapper::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.3);
+      border-radius: 999px;
+    }
+
+    .gallery-grid {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      align-items: stretch;
+      padding: 0.25rem 0;
     }
 
     .gallery-grid article {
@@ -239,6 +260,8 @@
       border: 1px solid rgba(255,255,255,0.12);
       box-shadow: 0 8px 18px rgba(0,0,0,0.12);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      flex: 0 0 180px;
+      scroll-snap-align: start;
     }
 
     .gallery-grid article:hover {
@@ -289,8 +312,8 @@
         grid-template-columns: 1fr;
       }
 
-      .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .gallery-grid article {
+        flex-basis: 150px;
       }
     }
   </style>
@@ -395,18 +418,20 @@
         <div class="inner"><img src="" /></div>
       </div>
 
-      <div class="gallery-grid inner">
-        <article><a href="images/gallery/fulls/01.jpg" class="image"><img src="images/gallery/thumbs/01.jpg" alt="Ilustração 1" /></a></article>
-        <article><a href="images/gallery/fulls/02.jpg" class="image"><img src="images/gallery/thumbs/02.jpg" alt="Ilustração 2" /></a></article>
-        <article><a href="images/gallery/fulls/03.jpg" class="image"><img src="images/gallery/thumbs/03.jpg" alt="Ilustração 3" /></a></article>
-        <article><a href="images/gallery/fulls/04.jpg" class="image"><img src="images/gallery/thumbs/04.jpg" alt="Ilustração 4" /></a></article>
-        <article><a href="images/gallery/fulls/05.jpg" class="image"><img src="images/gallery/thumbs/05.jpg" alt="Ilustração 5" /></a></article>
-        <article><a href="images/gallery/fulls/06.jpg" class="image"><img src="images/gallery/thumbs/06.jpg" alt="Ilustração 6" /></a></article>
+      <div class="gallery-wrapper">
+        <div class="gallery-grid inner">
+          <article><a href="images/gallery/fulls/01.jpg" class="image"><img src="images/gallery/thumbs/01.jpg" alt="Ilustração 1" /></a></article>
+          <article><a href="images/gallery/fulls/02.jpg" class="image"><img src="images/gallery/thumbs/02.jpg" alt="Ilustração 2" /></a></article>
+          <article><a href="images/gallery/fulls/03.jpg" class="image"><img src="images/gallery/thumbs/03.jpg" alt="Ilustração 3" /></a></article>
+          <article><a href="images/gallery/fulls/04.jpg" class="image"><img src="images/gallery/thumbs/04.jpg" alt="Ilustração 4" /></a></article>
+          <article><a href="images/gallery/fulls/05.jpg" class="image"><img src="images/gallery/thumbs/05.jpg" alt="Ilustração 5" /></a></article>
+          <article><a href="images/gallery/fulls/06.jpg" class="image"><img src="images/gallery/thumbs/06.jpg" alt="Ilustração 6" /></a></article>
+        </div>
       </div>
 
       <div class="gallery-controls" aria-hidden="false">
-        <button class="gallery-prev" aria-label="Anterior">‹</button>
-        <button class="gallery-next" aria-label="Seguinte">›</button>
+        <button class="gallery-prev" aria-label="Anterior" type="button">‹</button>
+        <button class="gallery-next" aria-label="Seguinte" type="button">›</button>
       </div>
     </div>
   </section>
@@ -490,5 +515,54 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+  (function () {
+    var gallery = document.querySelector('.gallery-wrapper');
+    if (!gallery) return;
+
+    var prev = document.querySelector('.gallery-prev');
+    var next = document.querySelector('.gallery-next');
+
+    if (prev && next) {
+      prev.addEventListener('click', function () {
+        gallery.scrollBy({ left: -220, behavior: 'smooth' });
+      });
+
+      next.addEventListener('click', function () {
+        gallery.scrollBy({ left: 220, behavior: 'smooth' });
+      });
+    }
+
+    var isDown = false;
+    var startX = 0;
+    var scrollLeft = 0;
+
+    gallery.addEventListener('pointerdown', function (event) {
+      isDown = true;
+      startX = event.clientX;
+      scrollLeft = gallery.scrollLeft;
+      gallery.setPointerCapture(event.pointerId);
+    });
+
+    gallery.addEventListener('pointermove', function (event) {
+      if (!isDown) return;
+      var walk = (event.clientX - startX) * 1.2;
+      gallery.scrollLeft = scrollLeft - walk;
+    });
+
+    gallery.addEventListener('pointerup', function () {
+      isDown = false;
+    });
+
+    gallery.addEventListener('pointerleave', function () {
+      isDown = false;
+    });
+
+    gallery.addEventListener('pointercancel', function () {
+      isDown = false;
+    });
+  })();
+</script>
 
 </body></html>
