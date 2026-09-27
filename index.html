@@ -42,30 +42,55 @@
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Organization",
-        "@id":"https://marylelinsky.com/#organization",
-        "name":"Marylelin Lelinsky",
-        "url":"https://marylelinsky.com/",
-        "logo":{
-          "@type":"ImageObject",
-          "url":"https://marylelinsky.com/images/Logo.png",
-          "width":1200,
-          "height":1200
-        },
-        "description":"Autora e ilustradora portuguesa de literatura infantil, poesia e ficção literária",
-        "sameAs":[
-          "https://www.instagram.com/marylelinsky",
-          "https://www.linkedin.com/in/marylelinsky"
-        ]
-      },
-      {"@type":"WebSite","@id":"https://marylelinsky.com/#website","url":"https://marylelinsky.com/","name":"Marylelin Lelinsky","description":"Site oficial de Marylelin Lelinsky, autora e ilustradora portuguesa"},
-      {"@type":"WebPage","@id":"https://marylelinsky.com/#webpage","url":"https://marylelinsky.com/","name":"Marylelin Lelinsky | Autora e Ilustradora Portuguesa","isPartOf":{"@id":"https://marylelinsky.com/#website"}},
-      {"@type":"ImageObject","@id":"https://marylelinsky.com/#logo","url":"https://marylelinsky.com/images/Logo.png","contentUrl":"https://marylelinsky.com/images/Logo.png","caption":"Logo de Marylelin Lelinsky","width":1200,"height":1200},
-      {"@type":"Person","@id":"https://marylelinsky.com/#person","name":"Marylelin Lelinsky","givenName":"Marylelin","familyName":"Lelinsky","jobTitle":"Autora e ilustradora","description":"Autora e ilustradora portuguesa de literatura infantil, poesia e ficção literária"}
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://marylelinsky.com/#person",
+    "name": "Marylelin Lelinsky",
+    "givenName": "Marylelin",
+    "familyName": "Lelinsky",
+    "jobTitle": "Autora e Ilustradora",
+    "url": "https://marylelinsky.com/",
+    "image": "https://marylelinsky.com/images/Logo.png",
+    "description": "Autora e ilustradora portuguesa de literatura infantil, poesia e ficção literária. Histórias sobre memória, perda e os lugares onde o tempo não passa.",
+    "sameAs": [
+      "https://www.instagram.com/marylelinsky",
+      "https://www.linkedin.com/in/marylelinsky"
     ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://marylelinsky.com/#organization",
+    "name": "Marylelin Lelinsky",
+    "url": "https://marylelinsky.com/",
+    "logo": "https://marylelinsky.com/images/Logo.png",
+    "description": "Autora e ilustradora portuguesa de literatura infantil, poesia e ficção literária",
+    "sameAs": [
+      "https://www.instagram.com/marylelinsky",
+      "https://www.linkedin.com/in/marylelinsky"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://marylelinsky.com/#website",
+    "name": "Marylelin Lelinsky",
+    "url": "https://marylelinsky.com/",
+    "description": "Site oficial de Marylelin Lelinsky, autora e ilustradora portuguesa",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://marylelinsky.com/?s={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
