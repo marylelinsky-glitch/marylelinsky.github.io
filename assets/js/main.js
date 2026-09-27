@@ -102,18 +102,18 @@
 	// Wrapper.
 		$wrapper.children()
 			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				initialize:	function() {
+				top: 		'30vh',
+				bottom: 	'30vh',
+				initialize: 	function() {
 					$(this).addClass('is-inactive');
 				},
-				terminate:	function() {
+				terminate: 	function() {
 					$(this).removeClass('is-inactive');
 				},
-				enter:		function() {
+				enter: 		function() {
 					$(this).removeClass('is-inactive');
 				},
-				leave:		function() {
+				leave: 		function() {
 
 					var $this = $(this);
 
@@ -126,19 +126,19 @@
 	// Items.
 		$('.items')
 			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
+				top: 		'30vh',
+				bottom: 	'30vh',
+				delay: 		50,
+				initialize: 	function() {
 					$(this).addClass('is-inactive');
 				},
-				terminate:	function() {
+				terminate: 	function() {
 					$(this).removeClass('is-inactive');
 				},
-				enter:		function() {
+				enter: 		function() {
 					$(this).removeClass('is-inactive');
 				},
-				leave:		function() {
+				leave: 		function() {
 
 					var $this = $(this);
 
@@ -153,21 +153,21 @@
 	// Gallery.
 		$('.gallery')
 			.wrapInner('<div class="inner"></div>')
-			.prepend(browser.mobile ? '' : '<div class="forward"></div><div class="backward"></div>')
+			.prepend(browser.mobile ? '' : '<div class="forward" aria-hidden="true"></div><div class="backward" aria-hidden="true"></div>')
 			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
+				top: 		'30vh',
+				bottom: 	'30vh',
+				delay: 		50,
+				initialize: 	function() {
 					$(this).addClass('is-inactive');
 				},
-				terminate:	function() {
+				terminate: 	function() {
 					$(this).removeClass('is-inactive');
 				},
-				enter:		function() {
+				enter: 		function() {
 					$(this).removeClass('is-inactive');
 				},
-				leave:		function() {
+				leave: 		function() {
 
 					var $this = $(this);
 
@@ -224,118 +224,221 @@
 
 				});
 
-		// Lightbox.
-			$('.gallery.lightbox')
-				.on('click', 'a', function(event) {
+			// Lightbox.
+				$('.gallery.lightbox')
+					.on('click', 'a', function(event) {
 
-					var $a = $(this),
-						$gallery = $a.parents('.gallery'),
-						$modal = $gallery.children('.modal'),
-						$modalImg = $modal.find('img'),
-						href = $a.attr('href');
+						var $a = $(this),
+							$gallery = $a.parents('.gallery'),
+							$modal = $gallery.children('.modal'),
+							$modalImg = $modal.find('img'),
+							href = $a.attr('href');
 
-					// Not an image? Bail.
-						if (!href.match(/\.(jpg|gif|png|mp4)$/))
-							return;
+						// Not an image? Bail.
+							if (!href.match(/\.(jpg|gif|png|mp4)$/))
+								return;
 
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
+						// Prevent default.
+							event.preventDefault();
+							event.stopPropagation();
 
-					// Locked? Bail.
-						if ($modal[0]._locked)
-							return;
+						// Locked? Bail.
+							if ($modal[0]._locked)
+								return;
 
-					// Lock.
-						$modal[0]._locked = true;
+						// Lock.
+							$modal[0]._locked = true;
 
-					// Set src.
-						$modalImg.attr('src', href);
+						// Set src.
+							$modalImg.attr('src', href);
 
-					// Set visible.
-						$modal.addClass('visible');
+						// Set visible.
+							$modal.addClass('visible');
 
-					// Focus.
-						$modal.focus();
+						// Focus.
+							$modal.focus();
 
-					// Delay.
-						setTimeout(function() {
-
-							// Unlock.
-								$modal[0]._locked = false;
-
-						}, 600);
-
-				})
-				.on('click', '.modal', function(event) {
-
-					var $modal = $(this),
-						$modalImg = $modal.find('img');
-
-					// Locked? Bail.
-						if ($modal[0]._locked)
-							return;
-
-					// Already hidden? Bail.
-						if (!$modal.hasClass('visible'))
-							return;
-
-					// Lock.
-						$modal[0]._locked = true;
-
-					// Clear visible, loaded.
-						$modal
-							.removeClass('loaded')
-
-					// Delay.
-						setTimeout(function() {
-
-							$modal
-								.removeClass('visible')
-
+						// Delay.
 							setTimeout(function() {
-
-								// Clear src.
-									$modalImg.attr('src', '');
 
 								// Unlock.
 									$modal[0]._locked = false;
 
-								// Focus.
-									$body.focus();
+							}, 600);
 
-							}, 475);
+					})
+					.on('click', '.modal', function(event) {
+
+						var $modal = $(this),
+							$modalImg = $modal.find('img');
+
+						// Locked? Bail.
+							if ($modal[0]._locked)
+								return;
+
+						// Already hidden? Bail.
+							if (!$modal.hasClass('visible'))
+								return;
+
+						// Lock.
+							$modal[0]._locked = true;
+
+						// Clear visible, loaded.
+							$modal
+								.removeClass('loaded')
+
+						// Delay.
+							setTimeout(function() {
+
+								$modal
+									.removeClass('visible')
+
+								setTimeout(function() {
+
+									// Clear src.
+										$modalImg.attr('src', '');
+
+									// Unlock.
+										$modal[0]._locked = false;
+
+									// Focus.
+										$body.focus();
+
+								}, 475);
 
 						}, 125);
 
-				})
-				.on('keypress', '.modal', function(event) {
+					})
+					.on('keypress', '.modal', function(event) {
 
-					var $modal = $(this);
+						var $modal = $(this);
 
-					// Escape? Hide modal.
-						if (event.keyCode == 27)
-							$modal.trigger('click');
+						// Escape? Hide modal.
+							if (event.keyCode == 27)
+								$modal.trigger('click');
 
-				})
-				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
-					.find('img')
-						.on('load', function(event) {
+					})
+					.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
+						.find('img')
+							.on('load', function(event) {
 
-							var $modalImg = $(this),
-								$modal = $modalImg.parents('.modal');
+								var $modalImg = $(this),
+									$modal = $modalImg.parents('.modal');
 
-							setTimeout(function() {
+								setTimeout(function() {
 
-								// No longer visible? Bail.
-									if (!$modal.hasClass('visible'))
-										return;
+									// No longer visible? Bail.
+										if (!$modal.hasClass('visible'))
+											return;
 
-								// Set loaded.
-									$modal.addClass('loaded');
+									// Set loaded.
+										$modal.addClass('loaded');
 
-							}, 275);
+								}, 275);
 
-						});
+							});
+
+	// --- ADD AUTOPLAY, VISIBLE CONTROLS AND SWIPE SUPPORT ---
+
+		$('.gallery').each(function() {
+			var $gallery = $(this),
+				$inner = $gallery.find('.inner'),
+				$items = $inner.children(),
+				itemWidth = $items.first().outerWidth(true) || 240,
+				isMobile = browser.mobile,
+				userInteracted = false,
+				autoplayDelay = 4000,
+				autoplayTimer = null,
+				autoplayPaused = false,
+				resumeTimeoutId = null;
+
+			// Create visible controls for non-mobile (and for accessibility)
+			if (!$gallery.find('.gallery-controls').length) {
+				var $controls = $('<div class="gallery-controls" aria-hidden="false">\n  <button class="gallery-prev" aria-label="Anterior">‹</button>\n  <button class="gallery-next" aria-label="Seguinte">›</button>\n</div>');
+				$gallery.append($controls);
+
+				// Click handlers
+				$controls.on('click', '.gallery-prev', function(e){
+					e.preventDefault();
+					scrollBy($inner, -itemWidth, true);
+					pauseAutoplay();
+				});
+
+				$controls.on('click', '.gallery-next', function(e){
+					e.preventDefault();
+					scrollBy($inner, itemWidth, true);
+					pauseAutoplay();
+				});
+			}
+
+			// Utility: animated scrollBy
+			function scrollBy($el, delta, animate) {
+				var target = $el.scrollLeft() + delta;
+				if (animate) $el.stop().animate({scrollLeft: target}, 500);
+				else $el.scrollLeft(target);
+			}
+
+			// Autoplay
+			function startAutoplay() {
+				if (autoplayTimer || autoplayPaused) return;
+				autoplayTimer = setInterval(function(){
+					// scroll by one item width
+					scrollBy($inner, itemWidth, true);
+				}, autoplayDelay);
+			}
+
+			function stopAutoplay() {
+				clearInterval(autoplayTimer); autoplayTimer = null;
+			}
+
+			function pauseAutoplay() {
+				userInteracted = true; stopAutoplay();
+				clearTimeout(resumeTimeoutId);
+				resumeTimeoutId = setTimeout(function(){ userInteracted = false; startAutoplay(); }, 8000);
+			}
+
+			// Start autoplay for non-mobile galleries
+			if (!isMobile) startAutoplay();
+
+			// Pause on hover / focus
+			$gallery.on('mouseenter focusin', function(){ autoplayPaused = true; stopAutoplay(); });
+			$gallery.on('mouseleave focusout', function(){ autoplayPaused = false; if(!userInteracted) startAutoplay(); });
+
+			// Support swipe on touch devices (and pointer dragging on desktop)
+			var startX = null, startScroll = null, isDragging = false;
+
+			$inner.on('touchstart pointerdown', function(e){
+				if (e.type === 'pointerdown' && e.pointerType !== 'touch') return; // only handle touch here for pointerdown
+				startX = (e.originalEvent.touches ? e.originalEvent.touches[0].clientX : e.originalEvent.clientX);
+				startScroll = $inner.scrollLeft();
+				isDragging = true;
+				stopAutoplay();
+			});
+
+			$inner.on('touchmove pointermove', function(e){
+				if (!isDragging) return;
+				e.preventDefault();
+				var x = (e.originalEvent.touches ? e.originalEvent.touches[0].clientX : e.originalEvent.clientX);
+				var delta = startX - x;
+				$inner.scrollLeft(startScroll + delta);
+			});
+
+			$inner.on('touchend touchcancel pointerup pointercancel', function(e){
+				if (!isDragging) return;
+				isDragging = false;
+				// snap to nearest item
+				var current = $inner.scrollLeft();
+				var index = Math.round(current / itemWidth);
+				var target = index * itemWidth;
+				$inner.stop().animate({scrollLeft: target}, 300);
+				pauseAutoplay();
+			});
+
+			// Make sure itemWidth updates on resize
+			$window.on('resize', function(){
+				itemWidth = $items.first().outerWidth(true) || 240;
+			});
+
+		});
 
 })(jQuery);
