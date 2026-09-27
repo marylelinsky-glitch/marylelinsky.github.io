@@ -12,7 +12,41 @@
 	<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
 	<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
-	<meta name="theme-color" content="#16232e" />
+	<meta name="theme-color" content="#16232e" />  1. "meta description" — o texto que aparece por baixo do título quando
+     alguém te encontra no Google. Agora está mais completo, mencionando
+     todos os teus livros.
+  2. "Open Graph" — o que aparece quando o teu site é partilhado no
+     Facebook, Instagram ou WhatsApp (imagem, título, descrição).
+  3. O bloco JSON-LD (dentro de <script type="application/ld+json">) —
+     não aparece na página, é só para o Google. Diz-lhe: "esta pessoa é
+     uma autora, chama-se Marylelin Lelinsky, tem estes livros, estes
+     estão à venda nestes sítios". Isto é o que ajuda o Google a mostrar
+     fichas mais ricas (com capa, autora, etc.) quando alguém pesquisar
+     o teu nome ou o dos teus livros — incluindo pesquisas em inglês
+     sobre "O que Faz uma Bota no Céu das Melancias", já que esse livro
+     está à venda também na Portobello Bookshop e na iMusic.
+
+  NÃO PRECISAS DE SUBSTITUIR NADA — já usei os teus links reais
+  (Amazon, redes sociais, livraria de Edimburgo, iMusic).
+-->
+
+<meta name="description" content="Marylelin Lelinsky — autora e ilustradora portuguesa. Livros de literatura infantil, poesia e ficção literária: Saudade é Nome de Flor, O Sonho dos Mortos, Alma na Neblina, e O que Faz uma Bota no Céu das Melancias — também publicado internacionalmente como 'What does a Boot do in the watermelon heaven?'.">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Marylelin Lelinsky | Autora & Ilustradora">
+<meta property="og:description" content="Autora e ilustradora portuguesa. Histórias sobre memória, perda e os lugares onde o tempo não passa.">
+<meta property="og:image" content="images/banner.jpeg">
+<meta property="og:url" content="https://marylelinsky.com">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marylelinsky.com/#autora",
+      "name": "Marylelin Lelinsky",
+      "jobTitle": "Author and Illustrator",
 
 	<style>
 		/* FUNDO — céu de conto de fadas, inspirado na capa "Saudade é Nome de Flor" */
@@ -323,7 +357,8 @@
 </div>
 
 <!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
 <script>
 	// Substitui ESTES 3 valores pelos teus (ver instrucoes)
 	emailjs.init({ publicKey: "GeR7AOatMxYc05NM7" });
