@@ -1,0 +1,65 @@
+/* Paleta delicada inspirada em "Saudade é Nome de Flor" */
+:root {
+  --book-lilac: #d8b4f8;
+  --book-lilac-light: #eddcff;
+  --book-purple: #9271d4;
+  --book-purple-dark: #7657b4;
+  --book-green: #a8cf82;
+  --book-pink: #e9a7bd;
+  --book-cream: #fffaf1;
+  --book-ink: #59476f;
+}
+
+body {
+  background: linear-gradient(135deg, #f7eaff 0%, #e9d8fb 38%, #d9e9c5 72%, #fff0d2 100%) !important;
+  color: var(--book-ink) !important;
+}
+
+#wrapper {
+  background: transparent !important;
+}
+
+h1, h2, h3 {
+  color: var(--book-ink) !important;
+}
+
+p, form label {
+  color: #705b80 !important;
+}
+
+.button,
+input[type="submit"].button {
+  background: var(--book-purple) !important;
+  color: #fff !important;
+  border: 1px solid rgba(118, 87, 180, .25) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 6px 16px rgba(118, 87, 180, .2) !important;
+  transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease !important;
+}
+
+.button:hover,
+input[type="submit"].button:hover {
+  background: var(--book-purple-dark) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(118, 87, 180, .28) !important;
+}
+
+.button.alt {
+  background: var(--book-cream) !important;
+  color: var(--book-purple-dark) !important;
+  border-color: var(--book-lilac) !important;
+}
+
+.button.alt:hover {
+  background: var(--book-lilac-light) !important;
+  color: var(--book-purple-dark) !important;
+}
+
+.icons a {
+  color: var(--book-purple) !important;
+}
+
+.icons a:hover {
+  color: var(--book-pink) !important;
+}
