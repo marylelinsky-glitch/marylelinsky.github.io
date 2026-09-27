@@ -1,233 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <!--
   ===========================================================================
-  PÁGINA EM INGLÊS PARA O LIVRO "What does a Boot do in the watermelon heaven?"
+  COMO USAR ESTE FICHEIRO
   ===========================================================================
-
-  COMO USAR ESTE FICHEIRO:
-  1. Guarda este ficheiro no teu repositório do GitHub, por exemplo com o
-     nome "watermelon-heaven-en.html" (ou o nome que preferires).
-  2. Se o teu site já tem um ficheiro CSS próprio (com as tuas cores:
-     lilás, terracota, verde-sálvia, creme), diz-me o nome desse ficheiro
-     e eu ligo esta página a ele. Por agora, esta página já vem com o
-     estilo embutido (na tag <style> lá em baixo), para funcionar sozinha.
-  3. Substitui os textos marcados com [SUBSTITUIR: ...] pelos teus dados
-     reais (por exemplo, o link direto para o teu site principal).
-  4. Faz "commit" e "push" no GitHub como fazes com as outras páginas.
-
-  PORQUE É QUE ISTO AJUDA NAS PESQUISAS INTERNACIONAIS:
-  - O Google lê o conteúdo em inglês e associa esta página a pesquisas
-    em inglês (ex: "Marylelin Lelinsky watermelon heaven").
-  - O bloco "JSON-LD" (mais abaixo, dentro de <script type="application/ld+json">)
-    é um "cartão de identidade" do livro que o Google entende diretamente:
-    diz-lhe quem é a autora, o título, o ISBN, a editora, etc. É isto que
-    faz aparecer aquelas fichas bonitas nos resultados de pesquisa, com
-    capa e informação organizada.
-  - As "meta tags" (as linhas dentro de <head>) controlam o que aparece
-    como título e descrição quando alguém encontra esta página no Google
-    ou a partilha nas redes sociais.
+  1. Guarda-o no MESMO sítio do teu index.html, com o nome, por exemplo,
+     "watermelon-heaven.html" — assim os caminhos para "assets/..." e
+     "images/..." continuam a funcionar sem precisares de mudar nada,
+     porque usam exatamente as mesmas pastas do teu site.
+  2. Já usa a tua imagem real (images/Spotligth04.jpeg) e o teu link real
+     da Amazon para esse livro.
+  3. Acrescentei também os links da livraria de Edimburgo (Portobello
+     Bookshop) e da iMusic, para mostrar a disponibilidade internacional.
+  4. No topo do teu index.html, no bloco do livro das melancias, podes
+     acrescentar um pequeno link "Read in English" a apontar para este
+     ficheiro — deixo esse bocadinho de código comentado, mais abaixo,
+     pronto a colar lá.
 -->
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What does a Boot do in the watermelon heaven? | Marylelin Lelinsky</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- ======================================================
-       BLOCO 1: TÍTULO E DESCRIÇÃO QUE APARECEM NO GOOGLE
-       ====================================================== -->
-  <title>What Does a Boot Do in the Watermelon Heaven? | Marylelin Lelinsky</title>
-  <meta name="description" content="A tender picture book by Portuguese author-illustrator Marylelin Lelinsky. Two little boots share quiet days beneath a washing tank — until one follows a mysterious seed to the magical Watermelon Heaven. A story about love, identity, and letting go.">
-
-  <!-- Diz aos motores de busca que esta página está em inglês,
-       e aponta para a versão portuguesa do site, se existir.
-       [SUBSTITUIR: coloca aqui o link real da página em português,
-       se a tiveres, por exemplo do teu site marylelinsky.com] -->
-  <link rel="alternate" hreflang="en" href="[SUBSTITUIR: link desta própria página em inglês]">
-  <link rel="alternate" hreflang="pt" href="[SUBSTITUIR: link da página equivalente em português no teu site]">
-
-  <!-- ======================================================
-       BLOCO 2: O QUE APARECE QUANDO A PÁGINA É PARTILHADA
-       (Facebook, Instagram, WhatsApp, etc.) — Open Graph
-       ====================================================== -->
-  <meta property="og:type" content="book">
-  <meta property="og:title" content="What Does a Boot Do in the Watermelon Heaven?">
-  <meta property="og:description" content="A tender picture book by Marylelin Lelinsky about love, identity, and the difficult beauty of letting go.">
-  <meta property="og:image" content="[SUBSTITUIR: link para uma imagem da capa do livro, alojada no teu site]">
-  <meta property="og:url" content="[SUBSTITUIR: link desta própria página]">
-  <meta property="book:author" content="Marylelin Lelinsky">
-  <meta property="book:isbn" content="9789403928814">
-
-  <!-- ======================================================
-       BLOCO 3: DADOS ESTRUTURADOS PARA O GOOGLE (JSON-LD)
-       Este bloco não aparece visualmente na página — é só para
-       os motores de busca lerem. Não precisas de mexer aqui
-       a não ser para atualizar links ou preço.
-       ====================================================== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "What does a Boot do in the watermelon heaven?",
-    "author": {
-      "@type": "Person",
-      "name": "Marylelin Lelinsky",
-      "nationality": "Portuguese",
-      "jobTitle": "Author and Illustrator"
-    },
-    "isbn": "9789403928814",
-    "numberOfPages": "48",
-    "datePublished": "2026-08-11",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Mijnbestseller B.V."
-    },
-    "bookFormat": "https://schema.org/Paperback",
-    "inLanguage": "en",
-    "description": "Two little boots live together beneath a washing tank, sharing quiet days, little discoveries, and a deep bond with each other. But when one of them follows a mysterious seed to the magical Watermelon Heaven, everything changes. Left behind, her sister faces loneliness, longing, and the fear of being forgotten. A tender and imaginative story about love, identity, courage, and the difficult beauty of letting go.",
-    "offers": [
-      {
-        "@type": "Offer",
-        "url": "https://www.theportobellobookshop.com/9789403928814",
-        "priceCurrency": "GBP",
-        "price": "10.45",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "The Portobello Bookshop"
-        }
-      },
-      {
-        "@type": "Offer",
-        "url": "https://imusic.nl/books/9789403928814/marylelin-lelinsky-2026-what-does-a-boot-do-in-the-watermelon-heaven-paperback-book",
-        "priceCurrency": "EUR",
-        "price": "14.99",
-        "seller": {
-          "@type": "Organization",
-          "name": "iMusic"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- ======================================================
-       BLOCO 4: ESTILO VISUAL DA PÁGINA
-       (usa a tua paleta: lilás, terracota, verde-sálvia, creme)
-       ====================================================== -->
-  <style>
-    :root {
-      --creme: #F5EFE6;
-      --lilas: #B9A6C9;
-      --terracota: #C97B5A;
-      --verde-salvia: #8A9A7E;
-      --texto: #3A342E;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--creme);
-      color: var(--texto);
-      font-family: Georgia, 'Times New Roman', serif;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 56px 24px 80px;
-    }
-    .kicker {
-      color: var(--verde-salvia);
-      font-family: Georgia, serif;
-      font-style: italic;
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-    h1 {
-      font-size: 34px;
-      line-height: 1.25;
-      margin: 0 0 24px;
-      color: var(--texto);
-    }
-    .cover-placeholder {
-      width: 180px;
-      aspect-ratio: 3 / 4;
-      background: var(--lilas);
-      border-radius: 4px;
-      margin-bottom: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 13px;
-      text-align: center;
-      padding: 12px;
-    }
-    p { font-size: 18px; max-width: 62ch; }
-    .meta {
-      margin-top: 40px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(58,52,46,0.15);
-      font-size: 15px;
-      color: rgba(58,52,46,0.75);
-    }
-    .buy-links {
-      margin-top: 32px;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .buy-links a {
-      display: inline-block;
-      padding: 12px 22px;
-      background: var(--terracota);
-      color: white;
-      text-decoration: none;
-      border-radius: 3px;
-      font-size: 15px;
-    }
-    .buy-links a:hover { opacity: 0.9; }
-  </style>
-</head>
-<body>
-  <div class="container">
-
-    <!-- Substitui esta imagem pela capa real do teu livro quando a tiveres alojada -->
-    <div class="cover-placeholder">
-      [SUBSTITUIR pela<br>imagem da capa]
-    </div>
-
-    <p class="kicker">A picture book by Marylelin Lelinsky</p>
-    <h1>What does a Boot do in the watermelon heaven?</h1>
-
-    <p>
-      Two little boots live together beneath a washing tank, sharing quiet
-      days, little discoveries, and a deep bond with each other. But when
-      one of them follows a mysterious seed to the magical Watermelon
-      Heaven, everything changes.
-    </p>
-    <p>
-      Left behind, her sister faces loneliness, longing, and the fear of
-      being forgotten. As she imagines the strange world her sister has
-      discovered, she begins to understand that freedom is not always
-      about going somewhere new. Sometimes, it is about discovering who
-      you are, learning to say no, and knowing where your heart belongs.
-    </p>
-    <p>
-      A tender and imaginative story about love, identity, courage, and
-      the difficult beauty of letting go.
-    </p>
-
-    <div class="buy-links">
-      <a href="https://www.theportobellobookshop.com/9789403928814">Buy in the UK</a>
-      <a href="https://imusic.nl/books/9789403928814/marylelin-lelinsky-2026-what-does-a-boot-do-in-the-watermelon-heaven-paperback-book">Buy in Europe</a>
-    </div>
-
-    <div class="meta">
-      Paperback · 48 pages · ISBN 9789403928814 · Published August 2026<br>
-      Written and illustrated by Marylelin Lelinsky, a Portuguese author
-      and illustrator based in Porto.
-    </div>
-
-  </div>
-</body>
-</html>
+	<!-- Favicon (iguais às do teu index.html) -->
+	<link rel="icon" href="favicon.ico" sizes="any" />
+	<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png" />
+	<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<meta name="theme-color" content="#16232e" />
