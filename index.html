@@ -12,7 +12,7 @@
   <meta name="description" content="Autora e ilustradora portuguesa. Poesia, ficção literária e livros para crianças, entre a cor e a filosofia. Imagens que sentem antes de contar." />
 
   <meta name="keywords" content="Marylelin Lelinsky, autora portuguesa, ilustradora portuguesa, poesia, ficção literária, livros, literatura infantil, ilustração, pastel, aguarela, memória, identidade" />
-  <meta name="theme-color" content="#B8A5D0" />
+  <meta name="theme-color" content="#D8B9C3" />
 
   <title>Marylelin Lelinsky | Autora e Ilustradora</title>
 
@@ -40,7 +40,7 @@
   <meta property="og:site_name" content="Marylelin Lelinsky" />
   <meta property="og:image" content="https://marylelinsky.com/images/Logo.png" />
 
-  <!-- DADOS ESTRUTURADOS (ajuda os motores de busca a reconhecerem a autora) -->
+  <!-- DADOS ESTRUTURADOS -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,33 +59,33 @@
 
   <style>
     :root {
-      /* Paleta — Identidade Visual Marylelin Lelinsky */
-      --bg: #F6EEDF;            /* Creme — o papel onde tudo assenta */
-      --paper: #FDFAF3;         /* Creme claro, sem branco puro */
-      --ink: #2E2238;           /* Ameixa-noite — texto */
-      --muted: #5B4C66;         /* Ameixa suavizada para texto secundário (contraste 6:1) */
+      /* Paleta Royalcore — Pérola, Rosa Velho, Ouro Envelhecido e Borgonha Suave */
+      --bg: #FCF9F5;            /* Marfim / Pérola — fundo principal */
+      --paper: #FFFDF9;         /* Branco pérola puro para cartões */
+      --ink: #382830;           /* Borgonha noturno / Vinho escuro (texto principal rico) */
+      --muted: #6E5A63;         /* Vinho rosado suavizado para texto secundário */
 
-      --lilas: #B8A5D0;         /* Lilás — cor-assinatura */
-      --lilas-soft: #EFE9F4;
-      --lilas-text: #6B5A85;
+      --lilas: #D8B9C3;         /* Rosa Velho (substitui o lilás original mantendo a suavidade) */
+      --lilas-soft: #F4EAEF;    /* Rosa pó claro */
+      --lilas-text: #8C5B6B;    /* Rosa velho escuro para títulos/detalhes */
 
-      --terracota: #C4694A;     /* Terracota — acento quente (decoração) */
-      --terracota-text: #A5502F;/* Terracota escura — texto e botões */
-      --terracota-deep: #8A3F22;
-      --terracota-soft: #F4E3DA;
+      --terracota: #C2847A;     /* Rosa-terracota antigo / Acento quente real */
+      --terracota-text: #A35C52;/* Tom vinho-queimado para botões e destaques */
+      --terracota-deep: #7A3D35;
+      --terracota-soft: #F7EBE8;
 
-      --salvia: #9DAE96;        /* Verde-sálvia — apoio */
-      --salvia-text: #4E6049;
-      --salvia-soft: #E4EADF;
+      --salvia: #A8B5AB;        /* Verde-sálvia aristocrático / Apoio botânico */
+      --salvia-text: #56665C;
+      --salvia-soft: #EBEFED;
 
-      --noite: #2E2238;         /* Modo Sombra */
-      --noite-2: #3A2D47;
-      --noite-text: #DDD0E8;
+      --noite: #2A1F26;         /* Modo Sombra Royal (Borgonha escuro aveludado) */
+      --noite-2: #382B33;
+      --noite-text: #E6D8DF;
 
-      --line: #E4D8C3;          /* linha a lápis, nunca preto */
-      --radius: 22px;
-      --shadow: 0 10px 26px rgba(46, 34, 56, .08);
-      --shadow-lg: 0 18px 44px rgba(46, 34, 56, .12);
+      --line: #E8DCD5;          /* Linha efeito pergaminho/marfim */
+      --radius: 20px;
+      --shadow: 0 10px 30px rgba(56, 40, 48, .07);
+      --shadow-lg: 0 20px 48px rgba(56, 40, 48, .12);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -101,20 +101,20 @@
       overflow-x: hidden;
     }
 
-    /* manchas de aguarela no papel */
+    /* Manchas em tons pérola, rosa velho e dourado suave no fundo */
     body::before {
       content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
       background:
-        radial-gradient(760px 420px at 88% -4%, rgba(184, 165, 208, .22), transparent 65%),
-        radial-gradient(680px 420px at -8% 28%, rgba(157, 174, 150, .20), transparent 65%),
-        radial-gradient(620px 420px at 104% 72%, rgba(196, 105, 74, .12), transparent 65%);
+        radial-gradient(760px 420px at 88% -4%, rgba(216, 185, 195, .28), transparent 65%),
+        radial-gradient(680px 420px at -8% 28%, rgba(168, 181, 171, .20), transparent 65%),
+        radial-gradient(620px 420px at 104% 72%, rgba(194, 132, 122, .14), transparent 65%);
     }
 
-    /* grão de papel / pastel por cima de tudo, por baixo do texto */
+    /* Grão de papel fino */
     body::after {
       content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
-      opacity: .32; mix-blend-mode: multiply;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .18  0 0 0 0 .13  0 0 0 0 .22  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+      opacity: .28; mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .22  0 0 0 0 .16  0 0 0 0 .19  0 0 0 .4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
     }
 
     img { max-width: 100%; display: block; }
@@ -133,7 +133,6 @@
 
     section { padding: 5.5rem 0; position: relative; }
 
-    /* ---------- libélula: um só motivo, usado com intenção ---------- */
     @keyframes floaty {
       0%, 100% { transform: translateY(0) rotate(-5deg); }
       50%      { transform: translateY(-14px) rotate(6deg); }
@@ -142,7 +141,7 @@
     /* ---------- header ---------- */
     .site-header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(246, 238, 223, .9);
+      background: rgba(252, 249, 245, .88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
@@ -172,14 +171,15 @@
       font-weight: 500; font-size: 1.02rem; text-decoration: none; cursor: pointer;
       border: 1.5px solid transparent;
       transition: transform .2s, background .2s, border-color .2s, color .2s;
+      box-shadow: 0 4px 14px rgba(56, 40, 48, .06);
     }
     .btn svg { width: 18px; height: 18px; flex: none; }
-    .btn-primary { background: var(--lilas-text); color: #FBF6EC; }
+    .btn-primary { background: var(--lilas-text); color: #FFFDF9; }
     .btn-primary:hover { transform: translateY(-2px); background: var(--noite); }
     .btn-ghost { background: transparent; border-color: var(--ink); color: var(--ink); }
     .btn-ghost:hover { transform: translateY(-2px); border-color: var(--lilas-text); color: var(--lilas-text); }
     .btn-lilas { background: var(--lilas); color: var(--ink); }
-    .btn-lilas:hover { transform: translateY(-2px); background: #CDBFE0; }
+    .btn-lilas:hover { transform: translateY(-2px); background: #E2CCC8; }
     .btn-small { padding: .5rem 1.15rem; font-size: .95rem; }
     .btn-block { width: 100%; justify-content: center; }
     button.btn { font-size: 1.02rem; }
@@ -190,7 +190,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: .5rem;
       background: var(--lilas-soft); color: var(--lilas-text);
-      border: 1px solid rgba(184, 165, 208, .55);
+      border: 1px solid rgba(216, 185, 195, .6);
       padding: .35rem 1rem; border-radius: 999px;
       font-weight: 500; font-size: .92rem; font-style: italic;
       margin-bottom: 1.3rem;
@@ -214,16 +214,15 @@
     .hero-actions { display: flex; gap: .9rem; flex-wrap: wrap; }
 
     .hero-art { position: relative; isolation: isolate; }
-    /* mancha de aguarela com borda irregular, atrás do retrato */
     .hero-art::before {
       content: ""; position: absolute; z-index: -1; inset: -5% -7% -7% 6%;
-      background: var(--lilas); opacity: .5;
+      background: var(--lilas); opacity: .55;
       border-radius: 48% 52% 46% 54% / 50% 44% 56% 50%;
       filter: url(#rough);
     }
     .hero-art::after {
       content: ""; position: absolute; z-index: -1; inset: 10% 8% -10% -8%;
-      background: var(--salvia); opacity: .35;
+      background: var(--salvia); opacity: .38;
       border-radius: 54% 46% 50% 50% / 46% 54% 46% 54%;
       filter: url(#rough);
     }
@@ -246,7 +245,7 @@
     .about-text { display: flex; flex-direction: column; gap: 1.1rem; color: var(--muted); font-size: 1.1rem; }
     .about-text .kicker { color: var(--terracota-text); }
 
-    /* ---------- ondas (limite entre claro e escuro) ---------- */
+    /* ---------- ondas ---------- */
     .wave { display: block; width: 100%; height: 44px; position: relative; z-index: 1; margin-bottom: -1px; }
     .wave.flip { transform: scaleY(-1); margin-bottom: 0; margin-top: -1px; }
 
@@ -309,13 +308,13 @@
     .band-luz .book-info p { color: var(--muted); }
     .band-luz .subtitle { color: var(--lilas-text); }
 
-    /* Modo Sombra */
+    /* Modo Sombra (Royal Borgonha Velvet) */
     .band-sombra { background: var(--noite); color: var(--bg); }
     .band-sombra .kicker { color: var(--lilas); }
     .band-sombra .section-head p,
     .band-sombra .book-info p { color: var(--noite-text); }
-    .band-sombra .book-media { background: var(--noite-2); box-shadow: 0 18px 44px rgba(0, 0, 0, .35); outline: 1px solid rgba(184, 165, 208, .3); outline-offset: -1px; }
-    .band-sombra .tag { background: rgba(184, 165, 208, .18); color: var(--lilas); }
+    .band-sombra .book-media { background: var(--noite-2); box-shadow: 0 18px 44px rgba(0, 0, 0, .4); outline: 1px solid rgba(216, 185, 195, .3); outline-offset: -1px; }
+    .band-sombra .tag { background: rgba(216, 185, 195, .18); color: var(--lilas); }
     .band-sombra .group-head span { color: var(--lilas); }
     .band-sombra .subtitle { color: var(--lilas); }
     .band-sombra a:not(.btn) { color: var(--lilas); }
@@ -350,11 +349,11 @@
     /* lightbox */
     .lightbox {
       position: fixed; inset: 0; z-index: 100; display: none;
-      background: rgba(46, 34, 56, .92); backdrop-filter: blur(6px);
+      background: rgba(42, 31, 38, .93); backdrop-filter: blur(6px);
       align-items: center; justify-content: center; padding: 2rem; cursor: zoom-out;
     }
     .lightbox.open { display: flex; }
-    .lightbox img { max-width: min(92vw, 1000px); max-height: 88vh; border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.4); }
+    .lightbox img { max-width: min(92vw, 1000px); max-height: 88vh; border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
     .lightbox-close {
       position: absolute; top: 1rem; right: 1rem; width: 46px; height: 46px; border-radius: 50%;
       border: 0; background: var(--paper); color: var(--ink); font-size: 1.6rem; line-height: 1; cursor: pointer;
@@ -388,7 +387,7 @@
     label svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: .3rem; color: var(--terracota-text); }
     input, textarea {
       width: 100%; padding: .85rem 1rem; border-radius: 14px;
-      border: 1.5px solid #CDBFA6; background: var(--bg);
+      border: 1.5px solid #D6C2BC; background: var(--bg);
       font-family: "Newsreader", Georgia, serif; font-size: 1rem;
       color: var(--ink); transition: border-color .2s, background .2s;
     }
@@ -444,7 +443,7 @@
 <body>
 <a class="skip" href="#sobre">Saltar para o conteúdo</a>
 
-<!-- SÍMBOLOS SVG: Libélula Aguarelada do Livro + Ícones + filtro de aguarela -->
+<!-- SÍMBOLOS SVG -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
     <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="7" result="n"/>
@@ -452,16 +451,16 @@
   </filter>
 
   <symbol id="libelula" viewBox="0 0 120 120">
-    <g fill="none" stroke="#6b4d57" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M55 45 C35 25 15 25 10 38 C8 43 20 48 53 49 Z" fill="#e8c2a0" fill-opacity="0.5"/>
+    <g fill="none" stroke="#7A4D5C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M55 45 C35 25 15 25 10 38 C8 43 20 48 53 49 Z" fill="#F0D5D8" fill-opacity="0.6"/>
       <path d="M22 32 C35 38 48 44 53 49"/>
-      <path d="M65 45 C85 25 105 25 110 38 C112 43 100 48 67 49 Z" fill="#e8c2a0" fill-opacity="0.5"/>
+      <path d="M65 45 C85 25 105 25 110 38 C112 43 100 48 67 49 Z" fill="#F0D5D8" fill-opacity="0.6"/>
       <path d="M98 32 C85 38 72 44 67 49"/>
-      <path d="M56 52 C38 42 22 46 20 54 C19 59 30 60 55 55 Z" fill="#a4cbbe" fill-opacity="0.6"/>
-      <path d="M64 52 C82 42 98 46 100 54 C101 59 90 60 65 55 Z" fill="#a4cbbe" fill-opacity="0.6"/>
-      <path d="M58 35 C58 32 62 32 62 35 C62 48 60 85 59.5 95 C59 85 58 48 58 35 Z" fill="#6b4d57"/>
+      <path d="M56 52 C38 42 22 46 20 54 C19 59 30 60 55 55 Z" fill="#A8B5AB" fill-opacity="0.6"/>
+      <path d="M64 52 C82 42 98 46 100 54 C101 59 90 60 65 55 Z" fill="#A8B5AB" fill-opacity="0.6"/>
+      <path d="M58 35 C58 32 62 32 62 35 C62 48 60 85 59.5 95 C59 85 58 48 58 35 Z" fill="#7A4D5C"/>
     </g>
-    <circle cx="60" cy="33" r="3" fill="#b8525c"/>
+    <circle cx="60" cy="33" r="3" fill="#C2847A"/>
   </symbol>
 
   <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></symbol>
@@ -511,7 +510,6 @@
         </div>
       </div>
       <div class="hero-art reveal">
-        <!-- Sugestão: trocar este retrato por uma ilustração tua (ou usá-la ao lado do retrato) para a mão se ver logo à entrada -->
         <img src="images/banner.jpeg" alt="Retrato de Marylelin Lelinsky com uma margarida" />
         <svg class="hero-fly" aria-hidden="true"><use href="#libelula"/></svg>
       </div>
@@ -532,9 +530,9 @@
   </section>
 
   <!-- onda: claro → escuro -->
-  <svg class="wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 C120 6 230 40 380 24 C540 6 650 38 810 22 C960 8 1090 40 1240 24 C1330 15 1400 22 1440 28 L1440 44 L0 44 Z" fill="#2E2238"/></svg>
+  <svg class="wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 C120 6 230 40 380 24 C540 6 650 38 810 22 C960 8 1090 40 1240 24 C1330 15 1400 22 1440 28 L1440 44 L0 44 Z" fill="#2A1F26"/></svg>
 
-  <!-- ============ LIVROS — MODO SOMBRA (poesia e prosa) ============ -->
+  <!-- ============ LIVROS — MODO SOMBRA ============ -->
   <section id="livros" class="band-sombra">
     <div class="wrap">
       <div class="section-head reveal">
@@ -578,34 +576,13 @@
           </div>
         </div>
       </article>
-
-      <!--
-        ============ AS LUZES DA CHUVA (lançado em março de 2026) ============
-        Falta-me a capa, a sinopse e a ligação de compra, por isso fica comentado.
-        Para publicar: preenche os campos [ ], tira os marcadores de comentário e
-        decide se fica aqui (Modo Sombra) ou na secção dos livros para crianças.
-
-        <article class="book-row reveal">
-          <div class="book-media">
-            <img src="images/[CAPA-AS-LUZES-DA-CHUVA].jpg" alt="Capa de As Luzes da Chuva" loading="lazy" />
-          </div>
-          <div class="book-info">
-            <span class="tag">[GÉNERO]</span>
-            <h3>As Luzes da Chuva</h3>
-            <p>[SINOPSE CURTA, 1 a 2 frases]</p>
-            <div class="book-actions">
-              <a href="[LIGAÇÃO DE COMPRA]" class="btn btn-lilas"><svg aria-hidden="true"><use href="#i-cart"/></svg> Comprar livro</a>
-            </div>
-          </div>
-        </article>
-      -->
     </div>
   </section>
 
   <!-- onda: escuro → claro -->
-  <svg class="wave flip" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 C120 6 230 40 380 24 C540 6 650 38 810 22 C960 8 1090 40 1240 24 C1330 15 1400 22 1440 28 L1440 44 L0 44 Z" fill="#2E2238"/></svg>
+  <svg class="wave flip" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 C120 6 230 40 380 24 C540 6 650 38 810 22 C960 8 1090 40 1240 24 C1330 15 1400 22 1440 28 L1440 44 L0 44 Z" fill="#2A1F26"/></svg>
 
-  <!-- ============ LIVROS — MODO LUZ (para crianças) ============ -->
+  <!-- ============ LIVROS — MODO LUZ ============ -->
   <section id="livros-infantis" class="band-luz" style="padding-top:3.5rem">
     <div class="wrap">
       <div class="group-head reveal">
@@ -686,7 +663,6 @@
         <p>Clica em qualquer ilustração para a ver em tamanho maior.</p>
       </div>
 
-      <!-- Sugestão: trocar "Ilustração N" por uma descrição curta de cada imagem (ajuda quem usa leitores de ecrã e o Google) -->
       <div class="gallery-grid reveal">
         <a href="images/gallery/fulls/01.jpg" class="lightbox-link"><img src="images/gallery/thumbs/01.jpg" alt="Ilustração 1" loading="lazy" /></a>
         <a href="images/gallery/fulls/02.jpg" class="lightbox-link"><img src="images/gallery/thumbs/02.jpg" alt="Ilustração 2" loading="lazy" /></a>
@@ -698,7 +674,7 @@
     </div>
   </section>
 
-  <!-- lightbox (sem src vazio, para não falhar nem pedir a página a si própria) -->
+  <!-- lightbox -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Ilustração ampliada">
     <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Fechar">&times;</button>
     <img alt="Ilustração ampliada" id="lightbox-img" />
@@ -790,13 +766,13 @@
       });
 
       if (response.ok) {
-        statusDiv.innerHTML = '<p style="color:#A5502F;">Mensagem enviada. Obrigada pelo contacto.</p>';
+        statusDiv.innerHTML = '<p style="color:#A35C52;">Mensagem enviada. Obrigada pelo contacto.</p>';
         this.reset();
       } else {
-        statusDiv.innerHTML = '<p style="color:#A5502F;">Não foi possível enviar. Tenta novamente ou escreve para marylelinsky@gmail.com.</p>';
+        statusDiv.innerHTML = '<p style="color:#A35C52;">Não foi possível enviar. Tenta novamente ou escreve para marylelinsky@gmail.com.</p>';
       }
     } catch (error) {
-      statusDiv.innerHTML = '<p style="color:#A5502F;">Erro de ligação. Tenta novamente.</p>';
+      statusDiv.innerHTML = '<p style="color:#A35C52;">Erro de ligação. Tenta novamente.</p>';
     } finally {
       botao.textContent = 'Enviar';
       botao.disabled = false;
