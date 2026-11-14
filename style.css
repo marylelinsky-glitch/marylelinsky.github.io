@@ -1,7 +1,15 @@
+/* ---------------- RESET ---------------- */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
 }
 
 body{
@@ -9,165 +17,327 @@ body{
     overflow:hidden;
 }
 
-/* FUNDO */
+/* ---------------- FUNDO ---------------- */
 
 .landing{
-    position:relative;
-
     width:100vw;
     height:100vh;
 
-    background:url("images/hero.png");
+    background-image:url("images/hero.png");
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
+
+    position:relative;
 }
 
-/* TOPO */
+/* ---------------- TOPO ---------------- */
 
 header{
+
     position:absolute;
 
-    top:4%;
-    left:0;
-
-    width:100%;
+    top:40px;
+    left:60px;
+    right:60px;
 
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:flex-start;
-
-    gap:120px;
 }
 
-/* LOGO */
+/* ---------------- LOGO ---------------- */
 
-.logo{
-    text-align:center;
+.branding{
+
+    max-width:420px;
 }
 
-.logo h1{
-    font-size:5rem;
-    line-height:.9;
+.branding h1{
+
+    font-size:6rem;
+
+    line-height:.85;
+
     font-weight:400;
 
-    color:#4e3035;
+    color:#4b2f39;
 }
 
-.logo p{
-    margin-top:10px;
+.branding p{
 
-    letter-spacing:4px;
-
-    color:#5f4045;
-}
-
-/* MENU */
-
-nav{
-    display:flex;
-    gap:35px;
-
-    margin-top:60px;
-}
-
-nav a{
-    text-decoration:none;
-
-    color:#5b403f;
+    margin-top:15px;
 
     font-size:1rem;
 
-    letter-spacing:2px;
+    letter-spacing:6px;
+
+    color:#6b4e58;
 }
 
-/* FRASE */
+/* ---------------- MENU ---------------- */
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-top:40px;
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#5f4549;
+
+    letter-spacing:2px;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    opacity:.6;
+}
+
+/* ---------------- FRASE ---------------- */
 
 .frase{
+
     position:absolute;
 
-    top:38%;
-    right:20%;
+    top:32%;
+
+    right:14%;
 
     text-align:center;
 }
 
 .frase h2{
-    font-size:3.8rem;
+
+    font-size:4.2rem;
 
     font-style:italic;
+
     font-weight:300;
 
-    line-height:1.4;
+    line-height:1.35;
 
-    color:#7c5461;
+    color:#875c72;
 }
 
-/* BOTÃO */
+/* ---------------- BOTÃO ---------------- */
 
 .explorar{
+
     display:inline-block;
 
-    margin-top:30px;
-
-    padding:18px 50px;
-
-    border:1px solid #a2866c;
-
-    border-radius:50px;
+    margin-top:35px;
 
     text-decoration:none;
 
-    color:#5b403f;
+    color:#6a524a;
 
-    background:rgba(255,255,255,.15);
+    font-size:1.2rem;
+
+    letter-spacing:2px;
+
+    padding:18px 55px;
+
+    border:1px solid #9b8068;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    transition:.3s;
 }
 
-/* LIVROS */
+.explorar:hover{
+
+    background:
+    rgba(255,255,255,.25);
+}
+
+/* ---------------- ZONA INFERIOR ---------------- */
 
 .livros{
+
     position:absolute;
 
-    left:8%;
-    bottom:5%;
+    left:80px;
+    bottom:55px;
 
     display:flex;
 
     gap:35px;
 }
 
+/* ---------------- CAPAS ---------------- */
+
 .livros img{
-    width:180px;
+
+    width:185px;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:3px;
 
     box-shadow:
-    0 15px 35px rgba(0,0,0,.25);
+    0 15px 30px rgba(0,0,0,.25);
+
+    transition:.4s;
 }
 
-/* CARTÃO */
+.livros img:hover{
+
+    transform:translateY(-8px);
+}
+
+/* ---------------- CARTÃO ---------------- */
 
 .cartao{
+
     position:absolute;
 
-    right:5%;
-    bottom:7%;
+    right:70px;
+    bottom:60px;
 
     width:280px;
+
     height:280px;
 
-    background:#5a304f;
+    background:#653853;
 
-    border-radius:30px;
+    border-radius:25px;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.2);
 }
 
 .cartao p{
+
     color:white;
 
     text-align:center;
 
     font-size:2rem;
 
-    line-height:1.4;
+    font-weight:300;
+
+    line-height:1.5;
+}
+
+/* ---------------- TABLET ---------------- */
+
+@media(max-width:1200px){
+
+    .branding h1{
+        font-size:4.5rem;
+    }
+
+    .frase h2{
+        font-size:3rem;
+    }
+
+    .livros img{
+        width:150px;
+    }
+
+    .cartao{
+        width:220px;
+        height:220px;
+    }
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:900px){
+
+    body{
+        overflow:auto;
+    }
+
+    .landing{
+        min-height:100vh;
+        height:auto;
+    }
+
+    header{
+
+        position:relative;
+
+        left:auto;
+        right:auto;
+        top:auto;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        padding:30px;
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        margin-top:25px;
+    }
+
+    .frase{
+
+        position:relative;
+
+        top:auto;
+        right:auto;
+
+        margin-top:60px;
+    }
+
+    .frase h2{
+
+        font-size:2.5rem;
+    }
+
+    .livros{
+
+        position:relative;
+
+        left:auto;
+        bottom:auto;
+
+        padding:60px 30px;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+    }
+
+    .cartao{
+
+        position:relative;
+
+        right:auto;
+        bottom:auto;
+
+        margin:30px auto 60px;
+    }
 }
