@@ -26,7 +26,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <!-- Adicionada a fonte Alex Brush para a assinatura manuscrita -->
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
 
   <!-- OPEN GRAPH -->
   <meta property="og:locale" content="pt_PT" />
@@ -58,7 +59,7 @@
     :root {
       --bg: #F4EFE6;
       --paper: #FCF9F2;
-      --ink: #3B2E35;
+      --ink: #2B1F24; /* Escurecido para melhor contraste */
       --muted: #6B5760;
       --rosa-velho: #D6B5B8;
       --rosa-soft: #F1E5E7;
@@ -66,7 +67,7 @@
       --terracota: #B87368;
       --terracota-text: #965349;
       --line: #DFD2C7;
-      --radius: 20px;
+      --dark-bg: #3a2a35; /* Fundo escuro do quadrado da citação */
       --shadow: 0 12px 35px rgba(59, 46, 53, 0.08);
       --shadow-lg: 0 20px 50px rgba(59, 46, 53, 0.14);
     }
@@ -84,6 +85,7 @@
       overflow-x: hidden;
     }
 
+    /* Textura de fundo sutil */
     body::before {
       content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
       background:
@@ -112,12 +114,10 @@
 
     .wrap { width: min(1120px, calc(100% - 2.5rem)); margin-inline: auto; position: relative; z-index: 1; }
 
-    section { padding: 5.5rem 0; position: relative; }
-
     /* ---------- HEADER ESTILO BRAND KIT ---------- */
     .site-header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(244, 239, 230, 0.92);
+      background: rgba(244, 239, 230, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
@@ -127,115 +127,146 @@
     }
     .brand {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-weight: 600; font-size: 1.5rem; color: var(--ink);
-      text-decoration: none; display: flex; align-items: center; gap: .6rem;
+      font-weight: 500; font-size: 1.4rem; color: var(--ink);
+      text-decoration: none; display: flex; flex-direction: column; align-items: center; line-height: 1;
     }
-    .brand span { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; color: var(--muted); font-family: "Newsreader", Georgia, serif; }
+    .brand span {
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-top: 4px;
+    }
 
-    .site-nav { display: flex; gap: 1.6rem; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .site-nav { display: flex; gap: 1.5rem; align-items: center; overflow-x: auto; scrollbar-width: none; }
     .site-nav::-webkit-scrollbar { display: none; }
     .site-nav a {
-      color: var(--muted); font-weight: 500; font-size: .95rem;
-      letter-spacing: .08em; text-transform: uppercase;
-      padding: .3rem 0; border-bottom: 1px solid transparent;
-      transition: color .2s, border-color .2s; white-space: nowrap;
+      color: var(--muted); font-weight: 500; font-size: .85rem;
+      letter-spacing: .15em; text-transform: uppercase;
+      padding: .3rem 0; transition: color .2s; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem;
     }
-    .site-nav a:hover { color: var(--rosa-text); border-color: var(--rosa-velho); }
-
-    /* ---------- BOTÕES ---------- */
-    .btn {
-      display: inline-flex; align-items: center; gap: .55rem;
-      padding: .8rem 1.8rem; border-radius: 999px;
-      font-family: "Newsreader", Georgia, serif;
-      font-weight: 500; font-size: 1.02rem; cursor: pointer;
-      border: 1.5px solid transparent;
-      transition: transform .2s, background .2s, border-color .2s, color .2s;
-      box-shadow: 0 4px 15px rgba(59, 46, 53, .06);
-    }
-    .btn-primary { background: var(--rosa-text); color: #FFFDF9; }
-    .btn-primary:hover { transform: translateY(-2px); background: var(--ink); }
+    .site-nav a::after { content: "✦"; font-size: 0.6rem; color: var(--rosa-velho); opacity: 0.5; }
+    .site-nav a:last-child::after { display: none; }
+    .site-nav a:hover { color: var(--ink); }
 
     /* ---------- HERO INSPIRADO NA IMAGEM ---------- */
     .hero {
-      padding-top: 4.5rem; padding-bottom: 4rem;
+      padding-top: 3rem; padding-bottom: 5rem;
     }
-    .hero-box {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: clamp(2rem, 5vw, 4.5rem);
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-box::before {
-      content: ""; position: absolute; inset: 14px; pointer-events: none;
-      border: 1.5px dashed rgba(107, 87, 96, 0.2);
-      border-radius: 18px;
-    }
+    
     .hero-grid {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center;
+      display: grid; 
+      grid-template-columns: 1fr 1.3fr; 
+      gap: 2rem; 
+      align-items: stretch;
     }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: .5rem;
-      background: var(--rosa-soft); color: var(--rosa-text);
-      border: 1px solid rgba(214, 181, 184, .5);
-      padding: .35rem 1.1rem; border-radius: 999px;
-      font-weight: 500; font-size: .92rem; font-style: italic;
-      margin-bottom: 1.5rem;
+
+    /* Lado Esquerdo: Texto */
+    .hero-content {
+      background: var(--bg);
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
     }
+    
     .hero-title {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(2.5rem, 4.5vw, 4rem);
-      line-height: 1.15;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.1;
       color: var(--ink);
       margin-bottom: 1.5rem;
-      font-weight: 500;
+      font-weight: 400;
     }
-    .hero-desc {
-      color: var(--muted);
-      font-size: 1.12rem;
-      margin-bottom: 2rem;
-      max-width: 480px;
-    }
-    .hero-visual {
-      background: linear-gradient(135deg, var(--rosa-soft), var(--line));
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
+    
+    .hero-divider {
+      width: 40px; height: 1px; background: var(--line); margin: 1.5rem 0;
       position: relative;
     }
-    .hero-visual p {
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-style: italic;
-      font-size: 1.4rem;
-      color: var(--ink);
-      margin-top: 1rem;
+    .hero-divider::after {
+      content: "✦"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+      color: var(--rosa-velho); font-size: 0.8rem; background: var(--bg); padding: 0 5px;
     }
 
-    /* ---------- FRASE DE RODAPÉ DO BRAND KIT ---------- */
-    .quote-banner {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 20px;
+    .hero-desc {
+      color: var(--muted);
+      font-size: 1.1rem;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+      max-width: 350px;
+    }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .6rem 1.8rem; border-radius: 999px;
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 500; font-size: .95rem; cursor: pointer;
+      border: 1px solid var(--muted);
+      color: var(--ink);
+      background: transparent;
+      transition: all .2s;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .btn-outline:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+    /* Lado Direito: Ilustração (Placeholder) */
+    .hero-visual {
+      background: linear-gradient(135deg, #e6d5cc, #d4c3b8); /* Placeholder para a imagem */
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      min-height: 500px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 2rem;
+      /* Para colocar a sua imagem real, descomente a linha abaixo e coloque o caminho */
+      /* background-image: url('caminho-para-sua-ilustracao.jpg'); background-size: cover; background-position: center; */
+    }
+    
+    /* Texto falso na imagem para simular o cenário */
+    .hero-visual::before {
+        content: hero.png ; 
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        color: rgba(0,0,0,0.2); font-style: italic; text-align: center; width: 80%;
+    }
+
+    /* Caixa Escura com Citação (Canto inferior direito) */
+    .quote-box {
+      background: var(--dark-bg);
+      color: #E6D5CC;
+      padding: 2.5rem;
+      width: 280px;
       text-align: center;
-      padding: 3rem 2rem;
-      margin-top: 3rem;
-      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 2;
+      box-shadow: -10px -10px 20px rgba(0,0,0,0.05);
     }
-    .quote-banner p {
+    
+    .quote-box p {
       font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-style: italic;
-      color: var(--ink);
-      margin-bottom: .8rem;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    
+    .quote-box .divider-small {
+      width: 30px; height: 1px; background: rgba(230, 213, 204, 0.3); margin: 0 auto 1rem;
+    }
+    
+    .quote-box .icon-libelinula {
+      font-size: 1.5rem; opacity: 0.8;
     }
 
-    @media (max-width: 850px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-content { padding: 2rem 1rem; text-align: center; align-items: center; }
+      .hero-desc { margin-inline: auto; }
       .site-nav { display: none; }
+      .hero-visual { min-height: 400px; justify-content: center; align-items: center; }
+      .quote-box { width: 100%; box-shadow: none; }
     }
   </style>
 </head>
@@ -247,7 +278,8 @@
   <header class="site-header">
     <div class="wrap">
       <a href="#" class="brand">
-        Marylelin Lelinsky
+        Marylelin<br>Lelinsky
+        <span>Autora + Ilustradora</span>
       </a>
       <nav class="site-nav">
         <a href="#livros">Livros</a>
@@ -263,28 +295,30 @@
   <main id="conteudo">
     <section class="hero">
       <div class="wrap">
-        <div class="hero-box">
-          <div class="hero-grid">
-            <div>
-              <div class="eyebrow">✨ Autora + Ilustradora</div>
-              <h1 class="hero-title">Entre livros, imagens e mundos possíveis.</h1>
-              <p class="hero-desc">Bem-vinda ao meu universo, onde a imaginação encontra novos caminhos na poesia, na ficção e na ilustração.</p>
-              <a href="#livros" class="btn btn-primary">
-                Explorar 
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-            <div class="hero-visual">
-              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--rosa-text)" stroke-width="1.5" style="margin: 0 auto; opacity: 0.8;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              <p>"A imaginação é o primeiro passo para habitar outros mundos."</p>
+        <div class="hero-grid">
+          
+          <!-- Bloco Esquerdo: Texto -->
+          <div class="hero-content">
+            <h1 class="hero-title">Entre livros,<br>imagens e mundos<br>possíveis.</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-desc">
+              Bem-vinda ao meu universo, onde a imaginação encontra novos caminhos.
+            </p>
+            <a href="#livros" class="btn-outline">
+              Explorar ✦
+            </a>
+          </div>
+
+          <!-- Bloco Direito: Imagem e Citação -->
+          <div class="hero-visual">
+            <!-- Caixa Escura com Citação (sobreposta à imagem) -->
+            <div class="quote-box">
+              <p>Há sempre outra história por começar.</p>
+              <div class="divider-small"></div>
+              <div class="icon-libelinula">🦋</div>
             </div>
           </div>
-        </div>
 
-        <!-- CITAÇÃO INSPIRADA NO BRAND KIT -->
-        <div class="quote-banner">
-          <p>Há sempre outra história por começar.</p>
-          <span style="font-size: 1.2rem; color: var(--rosa-text);">🦋</span>
         </div>
       </div>
     </section>
