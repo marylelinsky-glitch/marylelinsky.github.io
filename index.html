@@ -1,1 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marylelin Lelinsky — Autora & Ilustradora</title>
+<meta name="description" content="Entre livros, imagens e mundos possíveis. Bem-vinda ao universo de Marylelin Lelinsky, autora e ilustradora.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Italiana&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f3ecdc;
+    --paper-2:#ece2cc;
+    --ink:#3d3128;
+    --ink-soft:#6d5c4d;
+    --wine:#6e3040;
+    --lavanda:#8a7ba6;
+    --gold:#a98d5f;
+    --line:rgba(61,49,40,.28);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-size:20px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  /* textura de papel */
+  body::before{
+    content:"";
+    position:fixed; inset:0; z-index:-2;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(169,141,95,.12), transparent 55%),
+      radial-gradient(ellipse at 85% 90%, rgba(110,48,64,.10), transparent 55%),
+      var(--paper);
+  }
+  body::after{
+    content:"";
+    position:fixed; inset:0; z-index:-1; opacity:.5; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.24 0 0 0 0 0.19 0 0 0 0 0.16 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ---------- HEADER ---------- */
+  header{padding:64px 24px 24px;text-align:center;position:relative}
+  .brand-sig{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:clamp(20px,3vw,28px);color:var(--ink-soft);letter-spacing:.04em;
+  }
+  .logo{
+    font-family:'Italiana',serif;
+    font-size:clamp(52px,9vw,96px);
+    line-height:1.02; letter-spacing:.02em; color:var(--ink);
+    margin:10px 0 4px;
+  }
+  .logo em{font-style:normal;color:var(--wine)}
+  .role{
+    font-size:15px;letter-spacing:.45em;text-transform:uppercase;
+    color:var(--ink-soft);margin-top:14px;
+  }
+  .role .star{color:var(--gold);letter-spacing:0}
+  .ornament{display:flex;align-items:center;justify-content:center;gap:14px;margin:26px auto 0;max-width:420px}
+  .ornament .rule{flex:1;height:1px;background:var(--line)}
+  .dragonfly{width:64px;height:auto;color:var(--ink-soft)}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(243,236,220,.88);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  nav ul{display:flex;justify-content:center;flex-wrap:wrap;list-style:none;gap:6px 34px;padding:14px 16px}
+  nav a{
+    font-size:14px;letter-spacing:.35em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;position:relative;padding:4px 2px;
+  }
+  nav a::after{
+    content:"";position:absolute;left:50%;bottom:-2px;width:0;height:1px;
+    background:var(--wine);transition:width .35s ease, left .35s ease;
+  }
+  nav a:hover{color:var(--wine)}
+  nav a:hover::after{width:100%;left:0}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    text-align:center;padding:110px 24px 90px;position:relative;
+  }
+  .hero h1{
+    font-family:'Cormorant Garamond',serif;font-weight:500;font-style:italic;
+    font-size:clamp(38px,6.4vw,74px);line-height:1.15;max-width:820px;margin:0 auto;
+  }
+  .hero h1 .wine{color:var(--wine)}
+  .hero p{
+    max-width:520px;margin:34px auto 0;color:var(--ink-soft);font-size:22px;font-style:italic;
+  }
+  .btn{
+    display:inline-block;margin-top:44px;padding:14px 46px;
+    border:1px solid var(--ink);border-radius:999px;
+    font-size:14px;letter-spacing:.35em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;background:transparent;
+    transition:all .35s ease;
+  }
+  .btn:hover{background:var(--wine);border-color:var(--wine);color:var(--paper)}
+  .btn .star{color:var(--gold);margin-left:10px}
+
+  /* ---------- SECÇÕES ---------- */
+  section{padding:96px 24px}
+  .section-title{
+    text-align:center;font-family:'Italiana',serif;
+    font-size:clamp(34px,5vw,52px);letter-spacing:.06em;margin-bottom:8px;
+  }
+  .section-sub{
+    text-align:center;font-style:italic;color:var(--ink-soft);margin-bottom:56px;font-size:21px;
+  }
+  .divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto 0;max-width:260px}
+  .divider .rule{flex:1;height:1px;background:var(--line)}
+  .divider svg{width:22px;height:22px;color:var(--gold)}
+
+  /* LIVROS */
+  .books{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:34px;max-width:980px;margin:0 auto}
+  .book{
+    background:var(--paper-2);border:1px solid var(--line);border-radius:14px;
+    padding:38px 32px;text-align:center;position:relative;overflow:hidden;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .book:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(61,49,40,.15)}
+  .book .num{
+    font-family:'Italiana',serif;font-size:15px;letter-spacing:.4em;color:var(--gold);
+    text-transform:uppercase;display:block;margin-bottom:14px;
+  }
+  .book h3{font-size:27px;font-weight:600;font-style:italic;line-height:1.25;margin-bottom:12px}
+  .book .meta{font-size:15px;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);margin-bottom:16px}
+  .book p{font-size:18px;color:var(--ink-soft);font-style:italic}
+  .book .tag{
+    display:inline-block;margin-top:20px;font-size:13px;letter-spacing:.25em;text-transform:uppercase;
+    border:1px solid var(--line);border-radius:999px;padding:6px 18px;color:var(--ink-soft);
+  }
+
+  /* ATELIER / CADERNO */
+  .duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:34px;max-width:980px;margin:0 auto}
+  .card{
+    border:1px solid var(--line);border-radius:14px;padding:46px 36px;text-align:center;
+    background:linear-gradient(160deg, rgba(138,123,166,.10), rgba(169,141,95,.08));
+  }
+  .card h3{font-family:'Italiana',serif;font-size:32px;letter-spacing:.05em;margin:16px 0 12px}
+  .card p{color:var(--ink-soft);font-style:italic;font-size:19px}
+  .card svg{width:46px;height:46px;color:var(--wine)}
+
+  /* SOBRE */
+  .about{max-width:720px;margin:0 auto;text-align:center}
+  .about p{font-size:22px;font-style:italic;color:var(--ink-soft);margin-bottom:22px}
+  .about .sig{
+    font-size:clamp(26px,4vw,38px);font-style:italic;color:var(--wine);margin-top:34px;
+  }
+
+  /* CONTACTO */
+  .contact{max-width:640px;margin:0 auto;text-align:center}
+  .contact p{font-style:italic;color:var(--ink-soft);font-size:21px;margin-bottom:30px}
+  .contact a.mail{
+    font-size:clamp(22px,3.4vw,30px);color:var(--ink);text-decoration:none;
+    border-bottom:1px solid var(--gold);transition:color .3s;
+  }
+  .contact a.mail:hover{color:var(--wine)}
+
+  /* FOOTER */
+  footer{
+    border-top:1px solid var(--line);text-align:center;
+    padding:70px 24px 54px;position:relative;
+  }
+  footer .quote{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:clamp(24px,3.6vw,34px);color:var(--wine);max-width:560px;margin:18px auto 0;line-height:1.4;
+  }
+  footer .fine{margin-top:36px;font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
+  footer svg{width:34px;height:34px;color:var(--ink-soft)}
+
+  /* decorações flutuantes */
+  .deco{position:absolute;pointer-events:none;opacity:.55;color:var(--ink-soft)}
+  .hero .deco.fl{left:4%;top:18%;width:110px;transform:rotate(-14deg)}
+  .hero .deco.fr{right:4%;bottom:12%;width:120px;transform:rotate(12deg)}
+
+  @media (max-width:640px){
+    nav ul{gap:6px 18px}
+    .hero .deco{display:none}
+    body{font-size:18px}
+  }
+</style>
+</head>
+<body>
+
+<!-- símbolos reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="libelula" viewBox="0 0 120 120">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M60 34 C58 52 58 74 60 100" />
+        <path d="M56 34 C58 30 62 30 64 34" />
+        <ellipse cx="60" cy="28" rx="4.5" ry="7"/>
+        <path d="M60 40 C36 22 14 20 8 34 C4 46 26 54 58 46" />
+        <path d="M60 40 C84 22 106 20 112 34 C116 46 94 54 62 46" />
+        <path d="M60 50 C40 42 20 44 16 56 C13 66 34 70 58 56" opacity=".8"/>
+        <path d="M60 50 C80 42 100 44 104 56 C107 66 86 70 62 56" opacity=".8"/>
+        <path d="M30 36 C38 34 46 36 54 40 M90 36 C82 34 74 36 66 40" opacity=".7"/>
+      </g>
+      <path d="M60 8 l2.4 5 5 2.4 -5 2.4 -2.4 5 -2.4 -5 -5 -2.4 5 -2.4 z" fill="currentColor"/>
+    </symbol>
+    <symbol id="estrela" viewBox="0 0 24 24">
+      <path d="M12 2 l2 8 8 2 -8 2 -2 8 -2 -8 -8 -2 8 -2 z" fill="currentColor"/>
+    </symbol>
+    <symbol id="flor" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="1.4">
+        <circle cx="24" cy="24" r="5"/>
+        <path d="M24 6 C28 12 28 17 24 19 C20 17 20 12 24 6 Z"/>
+        <path d="M42 24 C36 28 31 28 29 24 C31 20 36 20 42 24 Z"/>
+        <path d="M24 42 C20 36 20 31 24 29 C28 31 28 36 24 42 Z"/>
+        <path d="M6 24 C12 20 17 20 19 24 C17 28 12 28 6 24 Z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <p class="brand-sig">Marylelin Lelinsky</p>
+  <h1 class="logo">Marylelin<br><em>Lelinsky</em></h1>
+  <p class="role">Autora <span class="star">✦</span> Ilustradora</p>
+  <div class="ornament">
+    <span class="rule"></span>
+    <svg class="dragonfly"><use href="#libelula"/></svg>
+    <span class="rule"></span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#livros">Livros</a></li>
+    <li><a href="#atelier">Atelier</a></li>
+    <li><a href="#caderno">Caderno</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="inicio">
+  <svg class="deco fl"><use href="#libelula"/></svg>
+  <svg class="deco fr"><use href="#flor"/></svg>
+  <h1>Entre livros,<br>imagens <span class="wine">e mundos</span><br>possíveis.</h1>
+  <p>Bem-vinda ao meu universo, onde a imaginação encontra novos caminhos.</p>
+  <a class="btn" href="#livros">Explorar <span class="star">✦</span></a>
+</section>
+
+<section id="livros">
+  <h2 class="section-title">Livros</h2>
+  <div class="divider"><span class="rule"></span><svg><use href="#estrela"/></svg><span class="rule"></span></div>
+  <p class="section-sub">Histórias ilustradas, feitas de papel e sonho.</p>
+  <div class="books">
+    <article class="book">
+      <span class="num">№ 04 · Ilustração</span>
+      <h3>Margarida e a sinfonia da planície</h3>
+      <p class="meta">de Ana Gomes · ilustrado por Marylelin</p>
+      <p>Uma menina, uma planície inteira e a música que só ela ouve.</p>
+      <span class="tag">📘 Chiado Books</span>
+    </article>
+    <article class="book">
+      <span class="num">Em breve</span>
+      <h3>Novos mundos por abrir</h3>
+      <p class="meta">Projeto ainda em segredo</p>
+      <p>Entre esboços e aguarelas, nasce a próxima história.</p>
+      <span class="tag">Atelier</span>
+    </article>
+  </div>
+</section>
+
+<section id="atelier">
+  <h2 class="section-title">Atelier & Caderno</h2>
+  <div class="divider"><span class="rule"></span><svg><use href="#estrela"/></svg><span class="rule"></span></div>
+  <p class="section-sub">Do rascunho à página final.</p>
+  <div class="duo">
+    <div class="card">
+      <svg><use href="#flor"/></svg>
+      <h3>Atelier</h3>
+      <p>Ilustração, capas e projectos especiais — feitos à mão, com calma e coração.</p>
+    </div>
+    <div class="card">
+      <svg><use href="#libelula"/></svg>
+      <h3>Caderno</h3>
+      <p>Notas, bastidores e pequenos mundos em construção, partilhados ao longo do caminho.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <h2 class="section-title">Sobre</h2>
+  <div class="divider"><span class="rule"></span><svg><use href="#estrela"/></svg><span class="rule"></span></div>
+  <div class="about">
+    <p>Sou a Marylelin — autora e ilustradora. Desenho entre flores, libélulas e histórias que ainda não foram contadas.</p>
+    <p>Este site é o meu caderno aberto: um lugar entre livros, imagens e mundos possíveis.</p>
+    <p class="sig">— Marylelin Lelinsky</p>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2 class="section-title">Contacto</h2>
+  <div class="divider"><span class="rule"></span><svg><use href="#estrela"/></svg><span class="rule"></span></div>
+  <div class="contact">
+    <p>Para projectos, parcerias ou apenas dizer olá:</p>
+    <a class="mail" href="mailto:ola@marylelinsky.com">ola@marylelinsky.com</a>
+  </div>
+</section>
+
+<footer>
+  <svg><use href="#libelula"/></svg>
+  <p class="quote">“Há sempre outra história por começar.”</p>
+  <p class="fine">© 2026 Marylelin Lelinsky · Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
 
