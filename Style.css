@@ -5,315 +5,303 @@ box-sizing:border-box;
 }
 
 body{
-
 font-family:'Cormorant Garamond',serif;
-
-background:#f5ece3;
-
-color:#4a3048;
-
-line-height:1.6;
-
+background:#f3e6d8;
+color:#4b2e39;
 }
-.frase{
-   font-size:1.8rem;
-   font-style:italic;
-   margin:20px 0;
-}
+
+/* HERO */
 
 .hero{
-
 min-height:100vh;
 
-background-image:url("images/hero.png");
+background:
+linear-gradient(
+rgba(244,228,214,.15),
+rgba(244,228,214,.15)
+),
+url("images/hero.png");
 
 background-size:cover;
-
 background-position:center;
-
 position:relative;
-
-padding:40px;
-
+overflow:hidden;
 }
 
+/* MENU */
+
 nav{
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
+padding:30px 70px;
+}
 
+.logo-area{
+display:flex;
+align-items:center;
+gap:25px;
 }
 
 .logo{
-
-font-size:3rem;
-
-font-weight:500;
-
-color:#4a3048;
-
-}
-.libelinha{
-   width:60px;
-   height:auto;
+width:140px;
 }
 
-text-align:center;
-
-padding:50px 20px;
-
-background:#f5ece3;
-
+.titulo h1{
+font-size:4rem;
+font-weight:400;
+line-height:1;
 }
 
-.assinatura{
-
-width:220px;
-
-max-width:80%;
-
-margin-bottom:20px;
-
+.titulo p{
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:1rem;
+margin-top:10px;
 }
 
 nav ul{
-
 display:flex;
-
-gap:30px;
-
+gap:40px;
 list-style:none;
-
 }
 
 nav a{
-
 text-decoration:none;
-
-color:#4a3048;
-
-font-size:1.3rem;
-
+color:#4b2e39;
+font-size:1.2rem;
 font-weight:600;
-
+letter-spacing:2px;
 }
+
+/* TEXTO HERO */
 
 .hero-texto{
-
-max-width:500px;
-
-margin-top:200px;
-
-margin-left:auto;
-
-margin-right:8%;
-
+position:absolute;
+right:12%;
+top:34%;
 text-align:center;
-
-background:rgba(255,245,235,.65);
-
-padding:30px;
-
-border-radius:20px;
-
-backdrop-filter:blur(4px);
-
 }
 
-.hero-texto h1{
-
-font-size:4rem;
-
-margin-bottom:20px;
-
-}
-
-.hero-texto p{
-
-font-size:1.4rem;
-
-margin-bottom:20px;
-
+.hero-texto h2{
+font-size:3.5rem;
+font-style:italic;
+font-weight:400;
+line-height:1.25;
+margin-bottom:40px;
 }
 
 .botao{
+display:inline-block;
+padding:18px 45px;
+border-radius:40px;
+border:1px solid #916b54;
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(8px);
 
-background:#5b3856;
+text-decoration:none;
+color:#4b2e39;
 
-padding:14px 34px;
+font-size:1.2rem;
+letter-spacing:2px;
+
+transition:.3s;
+}
+
+.botao:hover{
+background:#fff5eb;
+}
+
+/* LIVROS */
+
+.livros-faixa{
+position:absolute;
+bottom:30px;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:center;
+align-items:flex-end;
+gap:35px;
+padding:0 50px;
+}
+
+.livro-capa img{
+width:170px;
+height:260px;
+object-fit:cover;
+
+border-radius:4px;
+
+box-shadow:
+0 15px 25px rgba(0,0,0,.30);
+}
+
+.texto-livros{
+text-align:center;
+padding:0 30px 20px;
+}
+
+.texto-livros p{
+font-size:2rem;
+font-style:italic;
+margin-bottom:20px;
+}
+
+.botao-secundario{
+display:inline-block;
+
+padding:14px 35px;
+
+border:1px solid #8d715d;
+border-radius:30px;
+
+text-decoration:none;
+color:#4b2e39;
+}
+
+/* CARTÃO ROXO */
+
+.cartao{
+width:280px;
+height:280px;
+
+background:#5a3856;
 
 border-radius:30px;
 
-color:white;
-
-text-decoration:none;
-
-display:inline-block;
-
-}
-
-.cartao{
-
-position:absolute;
-
-right:60px;
-
-bottom:60px;
-
-background:rgba(82,49,78,.90);
-
-color:white;
-
 padding:30px;
 
-border-radius:20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 
-font-size:2rem;
+color:white;
 
-text-align:center;
-
-max-width:260px;
-
+box-shadow:
+0 15px 40px rgba(0,0,0,.25);
 }
 
+.cartao img{
+width:50px;
+margin-bottom:20px;
+filter:brightness(2);
+}
+
+.cartao p{
+font-size:2rem;
+font-style:italic;
+text-align:center;
+line-height:1.3;
+}
+
+/* SECÇÃO LIVROS */
+
 #livros{
-
-padding:80px 10%;
-
+padding:100px 10%;
+background:#f5ece3;
 }
 
 #livros h2{
-
-font-size:3rem;
-
+font-size:4rem;
 text-align:center;
-
-margin-bottom:50px;
-
+margin-bottom:60px;
 }
 
 .livros-grid{
-
 display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:40px;
-
 }
 
 .livro{
-
 background:white;
-
 padding:25px;
-
 border-radius:20px;
 
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
 text-align:center;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
 }
 
 .livro img{
-
 width:100%;
-
-max-width:260px;
-
-height:auto;
-
+max-width:250px;
 }
 
 .livro h3{
-
 margin:20px 0;
-
 font-size:2rem;
-
 }
 
 .livro a{
-
 display:inline-block;
-
 margin-top:20px;
 
 padding:12px 25px;
 
-background:#5b3856;
-
+background:#5a3856;
 color:white;
 
 text-decoration:none;
 
 border-radius:30px;
-
 }
 
-#sobre,
-#contacto{
+/* RESPONSIVO */
 
-padding:80px 10%;
+@media(max-width:1200px){
 
-text-align:center;
-
+.livros-faixa{
+flex-wrap:wrap;
+position:relative;
+margin-top:600px;
 }
 
-#sobre h2,
-#contacto h2{
-
-font-size:3rem;
-
-margin-bottom:20px;
+.hero{
+padding-bottom:100px;
+}
 
 }
 
 @media(max-width:900px){
 
 nav{
-
 flex-direction:column;
-
-gap:20px;
-
+gap:30px;
 }
 
 nav ul{
-
 flex-wrap:wrap;
-
 justify-content:center;
-
 }
 
 .hero-texto{
-
-margin-top:100px;
-
-margin-left:auto;
-
-margin-right:auto;
-
+position:relative;
+top:auto;
+right:auto;
+margin-top:60px;
+padding:20px;
 }
 
-.hero-texto h1{
+.hero-texto h2{
+font-size:2.5rem;
+}
 
+.logo{
+width:90px;
+}
+
+.titulo h1{
 font-size:2.8rem;
-
 }
 
 .cartao{
-
-position:static;
-
-margin:30px auto;
-
+width:240px;
+height:240px;
 }
 
 }
