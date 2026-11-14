@@ -1,110 +1,398 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>O universo lelinsky</title>
+<title>O Meu Universo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#efe2d2;
+font-family:'Cormorant Garamond', serif;
+color:#4e3c38;
+padding:10px;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+.container{
+max-width:1600px;
+margin:auto;
+}
+
+/* TOPO */
+
+.top-grid{
+
+display:grid;
+
+grid-template-columns:
+2fr 1fr;
+
+gap:10px;
+
+margin-bottom:10px;
+}
+
+.brand{
+
+background:#f2e6d7;
+
+padding:40px;
+
+min-height:450px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:10px;
+}
+
+.brand-content{
+text-align:center;
+}
+
+.brand-content h1{
+
+font-size:6rem;
+font-weight:400;
+line-height:0.95;
+}
+
+.brand-content p{
+
+margin-top:20px;
+font-size:1.2rem;
+letter-spacing:4px;
+}
+
+.brand-right{
+
+display:grid;
+grid-template-rows:
+1fr 1fr;
+
+gap:10px;
+}
+
+.logo-card,
+.signature-card{
+
+background:#f2e6d7;
+border-radius:10px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+.logo-card img{
+max-width:250px;
+}
+
+.signature-card{
+
+font-size:3rem;
+font-style:italic;
+}
+
+/* MAIN */
+
+.main-grid{
+
+display:grid;
+
+grid-template-columns:
+320px
+1fr
+320px;
+
+gap:10px;
+}
+
+/* LEFT */
+
+.left-panel{
+
+background:#f2e6d7;
+
+border-radius:10px;
+
+padding:40px;
+}
+
+.left-panel h2{
+
+font-size:4rem;
+line-height:1;
+margin-bottom:30px;
+}
+
+.left-panel p{
+
+font-size:1.6rem;
+line-height:1.4;
+margin-bottom:30px;
+}
+
+.btn{
+
+display:inline-block;
+
+padding:14px 40px;
+
+border:1px solid #856853;
+
+border-radius:40px;
+
+text-decoration:none;
+
+color:#856853;
+font-size:1.2rem;
+}
+
+/* CENTER */
+
+.hero{
+
+position:relative;
+
+border-radius:10px;
+
+overflow:hidden;
+
+min-height:700px;
+}
+
+.hero img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+}
+
+.nav-overlay{
+
+position:absolute;
+
+top:0;
+left:0;
+right:0;
+
+background:rgba(242,230,215,.75);
+
+padding:20px;
+
+display:flex;
+justify-content:center;
+gap:40px;
+
+backdrop-filter:blur(8px);
+}
+
+.nav-overlay a{
+
+text-decoration:none;
+color:#4e3c38;
+
+font-size:1.2rem;
+letter-spacing:2px;
+}
+
+/* RIGHT */
+
+.right-panel{
+
+display:grid;
+
+grid-template-rows:
+2fr
+1fr;
+
+gap:10px;
+}
+
+.flower-card{
+
+border-radius:10px;
+overflow:hidden;
+}
+
+.flower-card img{
+height:100%;
+object-fit:cover;
+}
+
+.quote-card{
+
+background:#59445a;
+
+border-radius:10px;
+
+color:white;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+}
+
+.quote-card h3{
+
+font-size:2.5rem;
+font-weight:400;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1200px){
+
+.main-grid{
+
+grid-template-columns:1fr;
+}
+
+.top-grid{
+
+grid-template-columns:1fr;
+}
+
+.brand-content h1{
+
+font-size:4rem;
+}
+
+.left-panel h2{
+
+font-size:3rem;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
+<div class="container">
 
-<div class="logo">
-🪶 O Meu Universo
-</div>
+<div class="top-grid">
 
-<nav>
-<a href="#inicio">Início</a>
-<a href="#sobre">Sobre</a>
-<a href="#galeria">Galeria</a>
-<a href="#contacto">Contacto</a>
-</nav>
+<div class="brand">
 
-</header>
+<div class="brand-content">
 
-<section id="inicio" class="fundo-fantasia.png">
-
-<div class="fundo-fantasia.png-overlay">
-
-<img src="images/libelinha.png" alt="Libélula" class="dragonfly">
+<img
+src="images/libelinha.png"
+style="max-width:350px;margin:auto;margin-bottom:20px;"
+>
 
 <h1>
-Entre livros,<br>
-imagens e mundos possíveis
+O Meu<br>
+Universo
 </h1>
 
 <p>
-Bem-vindo ao meu universo onde a imaginação encontra novos caminhos.
+AUTORA ✦ ILUSTRADORA ✦ CRIADORA
 </p>
 
-<a href="#sobre" class="btn">
+</div>
+
+</div>
+
+<div class="brand-right">
+
+<div class="logo-card">
+<img src="images/logo-circle.png">
+</div>
+
+<div class="signature-card">
+Marylelinsky
+</div>
+
+</div>
+
+</div>
+
+<div class="main-grid">
+
+<div class="left-panel">
+
+<h2>
+Entre livros,<br>
+imagens e mundos possíveis.
+</h2>
+
+<p>
+Bem-vinda ao meu universo,
+onde a imaginação encontra
+novos caminhos.
+</p>
+
+<a href="#" class="btn">
 Explorar
 </a>
 
 </div>
 
-</section>
+<div class="hero">
 
-<section id="sobre" class="about">
+<div class="nav-overlay">
 
-<div class="section-box">
-
-<h2>Sobre Mim</h2>
-
-<p>
-Este espaço reúne ilustração, escrita, criatividade e fantasia.
-Inspiro-me na natureza, nas histórias antigas, nos livros e nos pequenos detalhes que tornam cada projecto único.
-</p>
+<a href="#">LIVROS</a>
+<a href="#">ATELIER</a>
+<a href="#">CADERNO</a>
+<a href="#">SOBRE</a>
+<a href="#">CONTACTO</a>
 
 </div>
 
-</section>
-
-<section id="galeria" class="gallery">
-
-<h2>Galeria</h2>
-
-<div class="gallery-grid">
-
-<div class="card"></div>
-<div class="card"></div>
-<div class="card"></div>
-<div class="card"></div>
+<img src="images/hero.jpg">
 
 </div>
 
-</section>
+<div class="right-panel">
 
-<section class="quote">
+<div class="flower-card">
+<img src="images/flowers.jpg">
+</div>
 
-<h2>
-"Há sempre outra história por começar."
-</h2>
+<div class="quote-card">
 
-</section>
+<h3>
+Há sempre<br>
+outra história<br>
+por começar.
+</h3>
 
-<section id="contacto" class="contact">
+</div>
 
-<h2>Contacto</h2>
+</div>
 
-<p>Email: marylelinsky@gmail.com</p>
+</div>
 
-</section>
-
-<footer>
-
-<p>
-©️ Marylelin Lelinsky 2026 • Todos os direitos reservados
-</p>
-
-</footer>
+</div>
 
 </body>
 </html>
