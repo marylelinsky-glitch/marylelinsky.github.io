@@ -6,6 +6,11 @@
 
 <title>Marylelin Lelinsky</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 
 *{
@@ -15,27 +20,167 @@
 }
 
 body{
-    background:#efe3d4;
+    font-family:'Cormorant Garamond',serif;
+
+    background-image:url("images/hero.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:100vh;
 }
 
-.hero{
-    width:100%;
+/* MENU */
+
+.menu{
+    position:absolute;
+    top:40px;
+    right:60px;
+
+    display:flex;
+    gap:30px;
 }
 
-.hero img{
-    width:100%;
-    height:auto;
-    display:block;
+.menu a{
+    text-decoration:none;
+    color:#4a2f39;
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+/* NOME */
+
+.logo{
+    position:absolute;
+    top:40px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    color:#4a2f39;
+}
+
+.logo h1{
+    font-size:5rem;
+    line-height:0.9;
+    font-weight:400;
+}
+
+.logo p{
+    margin-top:10px;
+    letter-spacing:4px;
+}
+
+/* TEXTO */
+
+.texto{
+    position:absolute;
+
+    top:35%;
+    right:10%;
+
+    text-align:center;
+
+    color:#4a2f39;
+}
+
+.texto h2{
+    font-size:3rem;
+    font-weight:400;
+    line-height:1.2;
+}
+
+.botao{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:12px 35px;
+
+    border:1px solid #6e544e;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    color:#4a2f39;
+
+    background:rgba(255,255,255,0.2);
+}
+
+/* TELEMÓVEL */
+
+@media(max-width:900px){
+
+    .logo{
+        top:20px;
+        width:100%;
+    }
+
+    .logo h1{
+        font-size:2.8rem;
+    }
+
+    .menu{
+        top:120px;
+        left:0;
+        right:0;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+    }
+
+    .texto{
+
+        top:auto;
+        bottom:40px;
+
+        right:0;
+        left:0;
+
+        padding:20px;
+    }
+
+    .texto h2{
+        font-size:2rem;
+    }
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="hero">
-    <img src="imagens/hero.png" alt="Marylelin Lelinsky">
+<div class="logo">
+    <h1>Marylelin<br>Lelinsky</h1>
+    <p>AUTORA ✦ ILUSTRADORA</p>
+</div>
+
+<nav class="menu">
+    <a href="#">Livros</a>
+    <a href="#">Atelier</a>
+    <a href="#">Caderno</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contacto</a>
+</nav>
+
+<div class="texto">
+
+    <h2>
+        Entre livros,<br>
+        imagens e mundos<br>
+        possíveis.
+    </h2>
+
+    <a href="#" class="botao">EXPLORAR</a>
+
 </div>
 
 </body>
