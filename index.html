@@ -3,25 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Marylelin Lelinsky</title>
-<link rel="stylesheet" href="Style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#efe3d4;
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+width:100%;
+min-height:100vh;
+overflow:hidden;
+}
+
+.hero img{
+width:100%;
+display:block;
+}
+
+/* LOGO */
+
+.logo{
+position:absolute;
+top:4%;
+left:32%;
+transform:translateX(-50%);
+text-align:center;
+color:#4d2f38;
+}
+
+.logo h1{
+font-size:clamp(2rem,5vw,5rem);
+font-weight:400;
+line-height:0.9;
+}
+
+.logo p{
+margin-top:10px;
+letter-spacing:4px;
+font-size:clamp(.8rem,1vw,1.2rem);
+}
+
+/* MENU */
+
+.menu{
+position:absolute;
+top:8%;
+right:8%;
+
+display:flex;
+gap:35px;
+}
+
+.menu a{
+text-decoration:none;
+color:#5c4036;
+font-size:clamp(.9rem,1.2vw,1.3rem);
+font-weight:600;
+}
+
+/* FRASE */
+
+.frase{
+position:absolute;
+
+top:36%;
+right:12%;
+
+width:28%;
+text-align:center;
+
+color:#4f373b;
+}
+
+.frase h2{
+font-size:clamp(1.7rem,3vw,4rem);
+font-weight:400;
+line-height:1.1;
+}
+
+.botao{
+display:inline-block;
+
+margin-top:25px;
+
+padding:12px 38px;
+
+border:1px solid #7b6658;
+border-radius:40px;
+
+text-decoration:none;
+color:#513944;
+
+background:rgba(255,255,255,.2);
+}
+
+/* LIVROS */
+
+.livros{
+position:absolute;
+
+left:8%;
+bottom:5%;
+
+display:flex;
+gap:2%;
+width:55%;
+}
+
+.livros img{
+width:22%;
+border-radius:4px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.25);
+}
+
+/* SELO */
+
+.selo{
+position:absolute;
+
+right:4%;
+bottom:4%;
+
+width:18%;
+max-width:280px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.logo{
+top:3%;
+left:50%;
+}
+
+.menu{
+position:relative;
+top:auto;
+right:auto;
+
+justify-content:center;
+flex-wrap:wrap;
+
+padding:15px;
+background:#efe3d4;
+}
+
+.frase{
+position:relative;
+width:90%;
+margin:30px auto;
+right:auto;
+top:auto;
+}
+
+.livros{
+position:relative;
+
+left:auto;
+bottom:auto;
+
+width:90%;
+
+margin:30px auto;
+
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.livros img{
+width:45%;
+margin-bottom:15px;
+}
+
+.selo{
+display:none;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Marylelin Lelinsky</h1>
+<section class="hero">
 
-    <nav>
-        <a href="#">Livros</a>
-        <a href="#">Atelier</a>
-        <a href="#">Caderno</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contacto</a>
-    </nav>
-</header>
+<img src="images/hero.png" alt="Marylelin Lelinsky">
 
-<img src="imagens/hero.png" alt="Marylelin Lelinsky" class="hero">
+<div class="logo">
+<h1>Marylelin<br>Lelinsky</h1>
+<p>AUTORA ✦ ILUSTRADORA</p>
+</div>
+
+<nav class="menu">
+<a href="#livros">LIVROS</a>
+<a href="#atelier">ATELIER</a>
+<a href="#caderno">CADERNO</a>
+<a href="#sobre">SOBRE</a>
+<a href="#contacto">CONTACTO</a>
+</nav>
+
+<div class="frase">
+<h2>
+Entre livros,<br>
+imagens e mundos<br>
+possíveis.
+</h2>
+
+<a href="#livros" class="botao">
+EXPLORAR
+</a>
+</div>
+
+<img src="images/Selo.png" class="selo" alt="">
+
+</section>
 
 </body>
 </html>
