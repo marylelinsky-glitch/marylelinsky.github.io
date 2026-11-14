@@ -1,52 +1,202 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Language" content="pt-PT" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Marylelin Lelinsky" />
-  <meta name="description" content="Marylelin Lelinsky — autora e ilustradora portuguesa. Entra num universo de livros, ilustração e fantasia." />
-  <meta name="theme-color" content="#f2e5d2" />
-  <title>Marylelin Lelinsky — Autora &amp; Ilustradora</title>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <meta name="description" content="Autora e ilustradora portuguesa. Entre livros, imagens e mundos possíveis. Poesia, ficção literária e livros para crianças." />
+  <meta name="keywords" content="Marylelin Lelinsky, autora portuguesa, ilustradora portuguesa, poesia, ficção literária, livros, literatura infantil, ilustração, pastel, aguarela" />
+  <meta name="theme-color" content="#E2D0C6" />
+
+  <title>Marylelin Lelinsky | Autora e Ilustradora</title>
+
+  <link rel="canonical" href="https://marylelinsky.com/" />
+  <link rel="alternate" hreflang="pt-PT" href="https://marylelinsky.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://marylelinsky.com/" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Marylelin Lelinsky | Autora e Ilustradora" />
+  <meta property="og:description" content="Entre livros, imagens e mundos possíveis." />
+  <meta property="og:url" content="https://marylelinsky.com/" />
+  <meta property="og:site_name" content="Marylelin Lelinsky" />
+  <meta property="og:image" content="https://marylelinsky.com/images/Logo.png" />
+
+  <!-- SCHEMA.ORG -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Marylelin Lelinsky",
+    "url": "https://marylelinsky.com/",
+    "jobTitle": "Autora e ilustradora",
+    "inLanguage": "pt-PT",
+    "sameAs": [
+      "https://www.instagram.com/marylelinsky",
+      "https://www.facebook.com/share/14rrHsrfXHx/",
+      "https://www.goodreads.com/author/show/29479593.Marylelin_Lelinsky"
+    ]
+  }
+  </script>
+
   <style>
-    :root{--ink:#39272b;--plum:#49303d;--paper:#f4e8d6;--gold:#92724f;--muted:#66504a;--line:rgba(68,45,43,.22);--panel:rgba(250,243,231,.92);--serif:'Cormorant Garamond',Georgia,serif;--sans:Montserrat,Arial,sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;color:var(--ink);font-family:var(--serif);background:#eee1cf}a{color:inherit}img{display:block;max-width:100%}.wrap{width:min(1440px,calc(100% - 64px));margin-inline:auto}
-    .hero-shell{min-height:100vh;padding:18px 0 30px;background:linear-gradient(rgba(46,31,34,.08),rgba(46,31,34,.08)),url('images/Hero.png') center/cover no-repeat;display:flex;flex-direction:column}
-    .site-header{width:min(1440px,calc(100% - 64px));margin:0 auto;background:rgba(248,239,225,.86);border:1px solid rgba(68,45,43,.18);border-radius:8px;backdrop-filter:blur(8px)}.header-inner{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:10px 24px}.brand{display:grid;grid-template-columns:54px auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;text-decoration:none}.brand-seal{grid-row:1/3;width:54px;height:54px;object-fit:contain}.brand-name{font-size:1.65rem;line-height:.86;font-weight:500}.brand-sub{font:500 .52rem var(--sans);letter-spacing:.17em;color:var(--muted);margin-top:7px}.brand-sub b{color:var(--gold);font-weight:500}nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(8px,1.3vw,20px);font:500 .65rem var(--sans);letter-spacing:.12em;text-transform:uppercase}nav a{text-decoration:none;white-space:nowrap}nav a:hover,nav a:focus-visible{color:var(--gold)}.nav-star{color:var(--gold);font-size:.62rem}
-    .hero-content{width:min(1440px,calc(100% - 64px));margin:auto;flex:1;display:flex;align-items:center;position:relative;padding:70px 0}.hero-copy{width:min(510px,48%);padding:clamp(28px,4vw,58px);background:linear-gradient(135deg,rgba(248,239,225,.94),rgba(248,239,225,.78));border:1px solid rgba(75,48,42,.2);border-radius:5px 28px 5px 28px;box-shadow:0 18px 48px rgba(48,31,29,.16)}.eyebrow{font:600 .64rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#765640}.hero h1{font-size:clamp(3.1rem,5.6vw,5.7rem);line-height:.9;font-weight:400;margin:20px 0;color:#3d2c31}.hero h1 em{color:#69414b}.ornament{display:flex;align-items:center;gap:10px;width:175px;margin:20px 0;color:var(--gold)}.ornament span{height:1px;flex:1;background:var(--gold);opacity:.72}.ornament i{font-style:normal;font-size:.8rem}.hero-copy p{font-size:clamp(1.2rem,1.7vw,1.48rem);font-style:italic;line-height:1.4;color:#59453e;max-width:360px}.pill-link,.buy-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border:1px solid #6c5543;border-radius:40px;padding:12px 21px;font:500 .63rem var(--sans);letter-spacing:.14em;transition:background .2s,color .2s,transform .2s}.pill-link{margin-top:23px;background:rgba(250,242,229,.75)}.pill-link:hover,.buy-link:hover{background:var(--plum);color:var(--paper);transform:translateY(-2px)}.hero-seal{position:absolute;right:4%;top:8%;width:clamp(95px,12vw,155px);height:clamp(95px,12vw,155px);object-fit:contain;padding:7px;border-radius:50%;background:rgba(248,239,225,.74);box-shadow:0 6px 24px rgba(48,31,29,.14)}
-    .section{padding:76px 0;scroll-margin-top:90px}.section-heading{text-align:center;max-width:720px;margin:0 auto 34px;padding:0 16px}.section-heading h2{font-size:clamp(2.5rem,4vw,3.8rem);line-height:1.05;font-weight:500;color:var(--plum);margin:8px 0 12px}.section-heading p{font-size:1.18rem;line-height:1.55;color:var(--muted)}.eyebrow{font:600 .64rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#765640}
-    .book-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.book-card{overflow:hidden;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:13px;box-shadow:0 12px 30px rgba(55,35,32,.12)}.book-cover{min-height:220px;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#f8f0e2,#decab0)}.book-cover img{width:min(100%,145px);height:145px;object-fit:contain}.book-info{padding:17px 18px 20px;display:flex;flex-direction:column;flex:1}.book-tag{font:600 .57rem var(--sans);letter-spacing:.13em;text-transform:uppercase;color:#79533f}.book-info h3{font-size:1.45rem;font-weight:500;line-height:1.06;color:var(--plum);margin:8px 0 18px}.buy-link{margin-top:auto;align-self:flex-start;border-radius:30px;padding:9px 12px;font-size:.54rem;letter-spacing:.08em;background:transparent}
-    .atelier-section{background:rgba(248,239,225,.5);border-block:1px solid rgba(90,62,62,.13)}.atelier-grid{display:grid;grid-template-columns:1.65fr 1fr;gap:18px}.atelier-card{position:relative;min-height:340px;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#dfcbb1;box-shadow:0 14px 32px rgba(55,35,32,.13)}.atelier-card img{width:100%;height:100%;min-height:340px;object-fit:cover}.atelier-card.brand-art{display:grid;place-items:center;background:linear-gradient(145deg,#f9f1e4,#ddc9ae)}.atelier-card.brand-art img{width:min(84%,360px);height:280px;min-height:0;object-fit:contain}.atelier-card figcaption{position:absolute;inset:auto 0 0;padding:38px 20px 16px;color:#fff;font-size:1.35rem;font-style:italic;background:linear-gradient(transparent,rgba(42,27,31,.74))}.atelier-card.brand-art figcaption{position:static;background:none;color:var(--plum);text-align:center;padding:0 15px 20px}
-    .about-row{display:grid;grid-template-columns:.75fr 1.25fr;gap:22px;align-items:stretch}.quote-card,.about-card,.contact-card{border:1px solid var(--line);border-radius:14px;padding:clamp(28px,4vw,50px);background:var(--panel);box-shadow:0 12px 30px rgba(55,35,32,.1)}.quote-card{background:var(--plum);color:var(--paper);display:grid;place-content:center;text-align:center}.quote-card p{font-size:clamp(1.8rem,2.7vw,2.7rem);line-height:1.18;font-style:italic}.quote-card .ornament{margin:22px auto 0}.quote-card .ornament span{background:var(--paper)}.about-card h2,.contact-card h2{font-size:2.6rem;line-height:1;font-weight:500;color:var(--plum);margin:9px 0 16px}.about-card p,.contact-card p{font-size:1.22rem;line-height:1.6;color:var(--muted);margin-top:10px}.contact-card{text-align:center;max-width:850px;margin:auto}.contact-card .pill-link{margin-top:22px}footer{padding:27px 16px;text-align:center;background:rgba(248,239,225,.9);border-top:1px solid var(--line);font:500 .65rem var(--sans);letter-spacing:.1em}footer a{margin:0 8px;text-decoration:none}
-    @media(max-width:1050px){.header-inner{width:calc(100% - 40px);padding:12px 18px;align-items:center}.hero-content{width:calc(100% - 40px)}.hero-copy{width:min(500px,56%)}.book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.atelier-card,.atelier-card img{min-height:280px}}
-    @media(max-width:700px){.site-header{width:calc(100% - 24px)}.header-inner{flex-direction:column;gap:12px}.brand{grid-template-columns:46px auto}.brand-seal{width:46px;height:46px}.brand-name{font-size:1.45rem}nav{justify-content:center;flex-wrap:wrap;gap:8px 11px;font-size:.56rem;letter-spacing:.07em}nav .nav-star{display:none}.hero-shell{min-height:100svh;padding-top:12px}.hero-content{width:calc(100% - 24px);min-height:calc(100svh - 120px);align-items:flex-end;padding:190px 0 20px}.hero-image{object-position:58% center}.hero:after{background:linear-gradient(180deg,rgba(246,236,220,.08) 0%,rgba(246,236,220,.12) 30%,rgba(247,238,222,.96) 74%)}.hero-copy{width:100%;padding:26px 20px;text-align:center}.hero h1{font-size:clamp(2.8rem,11vw,4rem)}.hero-copy p{margin:auto}.hero-copy .ornament{margin:17px auto}.hero-seal{top:12px;right:12px;width:78px;height:78px}.section{padding:52px 0}.book-grid{grid-template-columns:1fr 1fr;gap:10px}.book-cover{min-height:150px;padding:12px}.book-cover img{width:94px;height:94px}.book-info{padding:12px}.book-info h3{font-size:1.2rem}.book-tag{font-size:.46rem}.buy-link{font-size:.45rem;padding:8px}.atelier-grid{grid-template-columns:1fr}.atelier-card,.atelier-card img{min-height:240px;height:60vw}.atelier-card.brand-art{height:280px}.atelier-card.brand-art img{height:220px;min-height:0}.about-row{grid-template-columns:1fr}}
-    @media(max-width:420px){.book-grid{grid-template-columns:1fr}.book-cover{min-height:220px}.book-cover img{width:130px;height:130px}}
-  </style>
-</head>
-<body>
-  <header class="site-header"><div class="wrap header-inner">
-    <a class="brand" href="#inicio" aria-label="Marylelin Lelinsky — início"><img class="brand-seal" src="images/Selo.png" alt=""><span class="brand-name">Marylelin<br>Lelinsky<span class="brand-sub">AUTORA <b>✦</b> ILUSTRADORA</span></span></a>
-    <nav aria-label="Navegação principal"><a href="#livros">Livros</a><span class="nav-star" aria-hidden="true">✦</span><a href="#atelier">Atelier</a><span class="nav-star" aria-hidden="true">✦</span><a href="blog.html">Caderno</a><span class="nav-star" aria-hidden="true">✦</span><a href="#sobre">Sobre</a><span class="nav-star" aria-hidden="true">✦</span><a href="#contacto">Contacto</a></nav>
-  </div></header>
-  <main>
-    <section class="hero-shell" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-content"><div class="hero-copy"><span class="eyebrow">Autora ✦ Ilustradora</span><h1 id="hero-title">Entre livros,<br>imagens e mundos<br><em>possíveis.</em></h1><div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div><p>Bem-vinda ao meu universo, onde a imaginação encontra novos caminhos.</p><a href="#livros" class="pill-link">EXPLORAR <span aria-hidden="true">✦</span></a></div><img class="hero-seal" src="images/Selo.png" alt="Selo de libelinha de Marylelin Lelinsky"></div>
-    </section>
-    <section id="livros" class="section"><div class="wrap"><div class="section-heading"><span class="eyebrow">Obras publicadas</span><h2>Livros &amp; Histórias</h2><p>Histórias para ler, guardar e voltar a descobrir.</p></div><div class="book-grid">
-      <article class="book-card"><div class="book-cover"><img src="images/Selo.png" alt="" loading="lazy"></div><div class="book-info"><span class="book-tag">Ficção literária</span><h3>O Sonho dos Mortos</h3><a class="buy-link" href="mailto:marylelinsky@gmail.com?subject=O%20Sonho%20dos%20Mortos">PEDIR INFORMAÇÕES ✦</a></div></article>
-      <article class="book-card"><div class="book-cover"><img src="images/Selo.png" alt="" loading="lazy"></div><div class="book-info"><span class="book-tag">Poesia &amp; reflexão</span><h3>Alma na Neblina</h3><a class="buy-link" href="mailto:marylelinsky@gmail.com?subject=Alma%20na%20Neblina">PEDIR INFORMAÇÕES ✦</a></div></article>
-      <article class="book-card"><div class="book-cover"><img src="images/Selo.png" alt="" loading="lazy"></div><div class="book-info"><span class="book-tag">Livro ilustrado</span><h3>Saudade é Nome de Flor</h3><a class="buy-link" href="mailto:marylelinsky@gmail.com?subject=Saudade%20%C3%A9%20Nome%20de%20Flor">PEDIR INFORMAÇÕES ✦</a></div></article>
-      <article class="book-card"><div class="book-cover"><img src="images/Selo.png" alt="" loading="lazy"></div><div class="book-info"><span class="book-tag">Conto infantil</span><h3>O que faz uma Bota no Céu das Melancias?</h3><a class="buy-link" href="mailto:marylelinsky@gmail.com?subject=O%20que%20faz%20uma%20Bota%20no%20C%C3%A9u%20das%20Melancias">PEDIR INFORMAÇÕES ✦</a></div></article>
-    </div></div></section>
-    <section id="atelier" class="section atelier-section"><div class="wrap"><div class="section-heading"><span class="eyebrow">O meu universo visual</span><h2>Atelier</h2><p>Ilustrações, personagens e pequenos mundos de fantasia.</p></div><div class="atelier-grid">
-      <figure class="atelier-card"><img src="images/Sobre.png" alt="Ilustração do universo de Marylelin Lelinsky" loading="lazy"><figcaption>Um mundo de histórias possíveis</figcaption></figure>
-      <figure class="atelier-card brand-art"><img src="images/libelinha.png" alt="Libelinha, imagem de marca" loading="lazy"><figcaption>A libelinha — símbolo da marca</figcaption></figure>
-    </div></div></section>
-    <section id="sobre" class="section"><div class="wrap about-row"><div class="quote-card"><p>“Há sempre outra história por começar.”</p><div class="ornament" aria-hidden="true"><span></span><i>✦</i><span></span></div></div><div class="about-card"><span class="eyebrow">Sobre a autora</span><h2>Marylelin Lelinsky</h2><p>Autora e ilustradora portuguesa. Crio histórias e imagens onde a fantasia, a poesia e a emoção se encontram.</p><p>A libelinha acompanha este universo como símbolo de imaginação, delicadeza e transformação.</p><img src="images/Assinatura.png" alt="Assinatura de Marylelin Lelinsky" style="width:min(260px,80%);margin-top:20px" loading="lazy"></div></div></section>
-    <section id="contacto" class="section"><div class="wrap"><div class="contact-card"><span class="eyebrow">Convites e colaborações</span><h2>Vamos conversar?</h2><p>Para projetos, ilustração ou informações sobre os livros, escreve-me.</p><a class="pill-link" href="mailto:marylelinsky@gmail.com">MARYLELINSKY@GMAIL.COM ✦</a></div></div></section>
-  </main>
-  <footer>© 2026 Marylelin Lelinsky · <a href="https://www.instagram.com/marylelinsky">Instagram</a> · <a href="https://www.facebook.com/share/14rrHsrfXHx/">Facebook</a> · <a href="blog.html">Caderno</a></footer>
-</body>
-</html>
+    :root {
+      /* Paleta inspirada na imagem brand kit (Pergaminho, Rosa Velho, Pérola, Castanho Sépia Antigo) */
+      --bg: #F4EFE6;            /* Fundo tom pergaminho antigo / marfim */
+      --paper: #FCF9F2;         /* Branco pérola dos cartões */
+      --ink: #3B2E35;           /* Castanho-vinho escuro literário para texto */
+      --muted: #6B5760;         /* Tom secundário suave */
+
+      --rosa-velho: #D6B5B8;    /* Rosa velho poeirento */
+      --rosa-soft: #F1E5E7;     /* Rosa claro de fundo */
+      --rosa-text: #8C5963;     /* Tom de destaque para rótulos e títulos */
+
+      --terracota: #B87368;     /* Terracota suave / Acento */
+      --terracota-text: #965349;
+      
+      --line: #DFD2C7;          /* Linha de caderno/perfil */
+      --radius: 20px;
+      --shadow: 0 12px 35px rgba(59, 46, 53, 0.08);
+      --shadow-lg: 0 20px 50px rgba(59, 46, 53, 0.14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+    body {
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 18px;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* Textura de papel envelhecido / vinhetas suaves */
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(800px 500px at 90% -10%, rgba(214, 181, 184, .3), transparent 70%),
+        radial-gradient(700px 500px at -10% 30%, rgba(184, 193, 180, .25), transparent 70%),
+        radial-gradient(700px 500px at 100% 90%, rgba(184, 115, 104, .12), transparent 70%);
+    }
+
+    body::after {
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      opacity: .28; mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .23  0 0 0 0 .18  0 0 0 0 .20  0 0 0 .4 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: var(--terracota-text); text-decoration: none; }
+    a:hover { color: var(--rosa-text); }
+
+    :focus-visible { outline: 2px solid var(--terracota-text); outline-offset: 3px; border-radius: 6px; }
+
+    .skip {
+      position: absolute; left: -999px; top: 0; z-index: 200;
+      background: var(--ink); color: var(--bg); padding: .6rem 1rem; border-radius: 0 0 12px 0;
+    }
+    .skip:focus { left: 0; }
+
+    .wrap { width: min(1120px, calc(100% - 2.5rem)); margin-inline: auto; position: relative; z-index: 1; }
+
+    section { padding: 5.5rem 0; position: relative; }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50%      { transform: translateY(-10px) rotate(4deg); }
+    }
+
+    /* ---------- HEADER ESTILO BRAND KIT ---------- */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(244, 239, 230, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .site-header .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; padding-block: 1rem;
+    }
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600; font-size: 1.5rem; color: var(--ink);
+      text-decoration: none; display: flex; align-items: center; gap: .6rem;
+    }
+    .brand svg { width: 32px; height: 32px; }
+
+    .site-nav { display: flex; gap: 1.6rem; align-items: center; overflow-x: auto; scrollbar-width: none; }
+    .site-nav::-webkit-scrollbar { display: none; }
+    .site-nav a {
+      color: var(--muted); font-weight: 500; font-size: .95rem;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: .3rem 0; border-bottom: 1px solid transparent;
+      transition: color .2s, border-color .2s; white-space: nowrap;
+    }
+    .site-nav a:hover { color: var(--rosa-text); border-color: var(--rosa-velho); }
+
+    /* ---------- BOTÕES ---------- */
+    .btn {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .8rem 1.8rem; border-radius: 999px;
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 500; font-size: 1.02rem; cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: transform .2s, background .2s, border-color .2s, color .2s;
+      box-shadow: 0 4px 15px rgba(59, 46, 53, .06);
+    }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-primary { background: var(--rosa-text); color: #FFFDF9; }
+    .btn-primary:hover { transform: translateY(-2px); background: var(--ink); }
+    .btn-ghost { background: transparent; border-color: var(--ink); color: var(--ink); }
+    .btn-ghost:hover { transform: translateY(-2px); border-color: var(--rosa-text); color: var(--rosa-text); }
+    .btn-rosa { background: var(--rosa-velho); color: var(--ink); }
+    .btn-rosa:hover { transform: translateY(-2px); background: #C8A3A7; }
+    .btn-small { padding: .5rem 1.15rem; font-size: .95rem; }
+    .btn-block { width: 100%; justify-content: center; }
+
+    /* ---------- HERO INSPIRADO NA IMAGEM CENTRAL ---------- */
+    .hero {
+      padding-top: 4.5rem; padding-bottom: 4rem;
+    }
+    .hero-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: clamp(2rem, 5vw, 4.5rem);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Sutil detalhe de moldura estilo gravura antiga */
+    .hero-box::before {
+      content: ""; position: absolute; inset: 14px; pointer-events: none;
+      border: 1px dashed rgba(107, 87, 96, 0.25);
+      border-radius: 18px;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--rosa-soft); color: var(--rosa-text);
+      border: 1px solid rgba(214, 181, 184, .5);
+      padding: .35rem 1.1rem; border-radius: 999px;
+      font-weight: 500; font-size: .92rem; font-style: italic;
