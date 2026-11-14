@@ -1,3 +1,28 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cormorant Garamond', serif;
+    background:#f4e5d7;
+    color:#4a3048;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   HERO
+========================== */
+
 .hero{
     position:relative;
 
@@ -7,4 +32,337 @@
     background-size:cover;
     background-position:center top;
     background-repeat:no-repeat;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    padding:40px 80px;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    width:90px;
+    height:auto;
+}
+
+.marca h1{
+    font-size:4rem;
+    line-height:.9;
+    font-weight:400;
+    color:#452a3d;
+}
+
+.marca p{
+    margin-top:12px;
+    font-size:.95rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+nav ul{
+    list-style:none;
+
+    display:flex;
+    gap:35px;
+
+    margin-top:25px;
+}
+
+nav a{
+    text-decoration:none;
+
+    color:#4c3245;
+
+    font-size:1.1rem;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    opacity:.7;
+}
+
+/* ==========================
+   TEXTO HERO
+========================== */
+
+.hero-texto{
+    position:absolute;
+
+    right:11%;
+    top:30%;
+
+    text-align:center;
+
+    width:420px;
+}
+
+.hero-texto h2{
+    font-size:3.8rem;
+    font-weight:400;
+    font-style:italic;
+    color:#573b4a;
+
+    line-height:1.2;
+
+    margin-bottom:40px;
+}
+
+.botao{
+    display:inline-block;
+
+    padding:18px 55px;
+
+    border:1px solid #8f7059;
+    border-radius:40px;
+
+    color:#5f4251;
+    text-decoration:none;
+
+    font-size:1.2rem;
+    letter-spacing:2px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(4px);
+
+    transition:.3s;
+}
+
+.botao:hover{
+    background:rgba(255,255,255,.3);
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   LIVROS SOBRE O HERO
+========================== */
+
+.livros-home{
+    position:absolute;
+
+    bottom:5%;
+
+    left:8%;
+
+    display:flex;
+    gap:30px;
+
+    align-items:flex-end;
+}
+
+.livros-home img{
+    width:170px;
+
+    border-radius:4px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.25);
+
+    transition:.4s ease;
+}
+
+.livros-home img:hover{
+    transform:translateY(-10px);
+}
+
+/* ==========================
+   SECÇÃO LIVROS
+========================== */
+
+#livros{
+    padding:100px 10%;
+    background:#f4e5d7;
+}
+
+#livros h2{
+    text-align:center;
+
+    font-size:4rem;
+
+    margin-bottom:70px;
+
+    font-weight:400;
+}
+
+.livros-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:40px;
+}
+
+.livro{
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.livro img{
+    width:100%;
+    max-width:250px;
+}
+
+.livro h3{
+    margin:20px 0;
+
+    font-size:2rem;
+    font-weight:500;
+}
+
+.livro p{
+    font-size:1.2rem;
+}
+
+.livro a{
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#5b3856;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 30px;
+
+    border-radius:30px;
+}
+
+.livro a:hover{
+    background:#432740;
+}
+
+/* ==========================
+   SOBRE
+========================== */
+
+#sobre{
+    padding:100px 15%;
+    text-align:center;
+    background:#f8efe8;
+}
+
+#sobre h2{
+    font-size:3.5rem;
+    margin-bottom:30px;
+}
+
+#sobre p{
+    max-width:900px;
+    margin:auto;
+
+    font-size:1.5rem;
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+#contacto{
+    padding:100px 15%;
+    text-align:center;
+    background:#f4e5d7;
+}
+
+#contacto h2{
+    font-size:3.5rem;
+    margin-bottom:25px;
+}
+
+#contacto p{
+    font-size:1.4rem;
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:1200px){
+
+    nav{
+        padding:30px;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav ul{
+        margin-top:30px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-texto{
+        position:relative;
+
+        top:auto;
+        right:auto;
+
+        width:auto;
+
+        margin:80px auto;
+    }
+
+    .livros-home{
+        position:relative;
+
+        left:auto;
+        bottom:auto;
+
+        justify-content:center;
+        flex-wrap:wrap;
+
+        margin-top:100px;
+        padding-bottom:80px;
+    }
+}
+
+@media(max-width:768px){
+
+    .marca h1{
+        font-size:2.8rem;
+    }
+
+    .logo{
+        width:60px;
+    }
+
+    .hero-texto h2{
+        font-size:2.5rem;
+    }
+
+    .livros-home img{
+        width:130px;
+    }
+
+    #livros h2,
+    #sobre h2,
+    #contacto h2{
+        font-size:2.5rem;
+    }
+
 }
