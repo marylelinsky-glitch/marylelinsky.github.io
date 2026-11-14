@@ -28,22 +28,22 @@ body{
     position:relative;
 }
 .branding h1{
-    color:#8c496b;
+    color:#ffa1bf;
 }
 
 .branding p{
-    color:#8c496b;
+    color:#ffa1bf;
 }
 
 nav ul li a{
-    color:#8c496b;
+    color:#ffa1bf;
 }
 
 .hero-texto h2{
-    color:#8c496b;
+    color:#ffa1bf;
 }
 .branding h1{
-    color:#8c496b;
+    color:#ffa1bf;
 
     text-shadow:
     2px 2px 6px rgba(255,255,255,0.7);
@@ -67,7 +67,7 @@ nav{
     font-size:4.5rem;
     line-height:.9;
     font-weight:400;
-    color:#4f3746;
+    color:#ffa1bf;
 }
 
 .branding p{
@@ -77,7 +77,7 @@ nav{
 
     font-size:1rem;
 
-    color:#4f3746;
+    color:#ffa1bf;
 }
 
 /* LINKS */
@@ -124,7 +124,7 @@ nav ul li a:hover{
 
     line-height:1.2;
 
-    color:#553b49;
+    color:#ffa1bf;
 }
 
 /* BOTÃO */
