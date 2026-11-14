@@ -24,14 +24,11 @@ body{
 ========================== */
 
 .hero{
-    position:relative;
-
     min-height:100vh;
-
-    background:url("images/hero.png");
+    background:url("images/hero.png") center center;
     background-size:cover;
-    background-position:center top;
     background-repeat:no-repeat;
+    position:relative;
 }
 
 /* ==========================
