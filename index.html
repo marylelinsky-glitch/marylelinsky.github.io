@@ -18,7 +18,6 @@ box-sizing:border-box;
 }
 
 body{
-
 background:#efe2d2;
 font-family:'Cormorant Garamond', serif;
 color:#4e3c38;
@@ -36,31 +35,20 @@ margin:auto;
 }
 
 /* TOPO */
-
 .top-grid{
-
 display:grid;
-
-grid-template-columns:
-2fr 1fr;
-
+grid-template-columns:2fr 1fr;
 gap:10px;
-
 margin-bottom:10px;
 }
 
 .brand{
-
 background:#f2e6d7;
-
 padding:40px;
-
 min-height:450px;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 border-radius:10px;
 }
 
@@ -69,34 +57,27 @@ text-align:center;
 }
 
 .brand-content h1{
-
 font-size:6rem;
 font-weight:400;
 line-height:0.95;
 }
 
 .brand-content p{
-
 margin-top:20px;
 font-size:1.2rem;
 letter-spacing:4px;
 }
 
 .brand-right{
-
 display:grid;
-grid-template-rows:
-1fr 1fr;
-
+grid-template-rows:1fr 1fr;
 gap:10px;
 }
 
 .logo-card,
 .signature-card{
-
 background:#f2e6d7;
 border-radius:10px;
-
 display:flex;
 justify-content:center;
 align-items:center;
@@ -108,130 +89,88 @@ max-width:250px;
 }
 
 .signature-card{
-
 font-size:3rem;
 font-style:italic;
 }
 
 /* MAIN */
-
 .main-grid{
-
 display:grid;
-
-grid-template-columns:
-320px
-1fr
-320px;
-
+grid-template-columns:320px 1fr 320px;
 gap:10px;
 }
 
 /* LEFT */
-
 .left-panel{
-
 background:#f2e6d7;
-
 border-radius:10px;
-
 padding:40px;
 }
 
 .left-panel h2{
-
 font-size:4rem;
 line-height:1;
 margin-bottom:30px;
 }
 
 .left-panel p{
-
 font-size:1.6rem;
 line-height:1.4;
 margin-bottom:30px;
 }
 
 .btn{
-
 display:inline-block;
-
 padding:14px 40px;
-
 border:1px solid #856853;
-
 border-radius:40px;
-
 text-decoration:none;
-
 color:#856853;
 font-size:1.2rem;
 }
 
 /* CENTER */
-
 .hero{
-
 position:relative;
-
 border-radius:10px;
-
 overflow:hidden;
-
 min-height:700px;
 }
 
 .hero img{
-
 width:100%;
 height:100%;
-
 object-fit:cover;
 }
 
 .nav-overlay{
-
 position:absolute;
-
 top:0;
 left:0;
 right:0;
-
 background:rgba(242,230,215,.75);
-
 padding:20px;
-
 display:flex;
 justify-content:center;
 gap:40px;
-
 backdrop-filter:blur(8px);
 }
 
 .nav-overlay a{
-
 text-decoration:none;
 color:#4e3c38;
-
 font-size:1.2rem;
 letter-spacing:2px;
 }
 
 /* RIGHT */
-
 .right-panel{
-
 display:grid;
-
-grid-template-rows:
-2fr
-1fr;
-
+grid-template-rows:2fr 1fr;
 gap:10px;
 }
 
 .flower-card{
-
 border-radius:10px;
 overflow:hidden;
 }
@@ -242,157 +181,100 @@ object-fit:cover;
 }
 
 .quote-card{
-
 background:#59445a;
-
 border-radius:10px;
-
 color:white;
-
 display:flex;
 justify-content:center;
 align-items:center;
-
 text-align:center;
-
 padding:30px;
 }
 
 .quote-card h3{
-
 font-size:2.5rem;
 font-weight:400;
 }
 
 /* RESPONSIVO */
-
 @media(max-width:1200px){
-
 .main-grid{
-
 grid-template-columns:1fr;
 }
-
 .top-grid{
-
 grid-template-columns:1fr;
 }
-
 .brand-content h1{
-
 font-size:4rem;
 }
-
 .left-panel h2{
-
 font-size:3rem;
 }
-
 }
 
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
 <div class="top-grid">
-
 <div class="brand">
-
 <div class="brand-content">
-
-<img
-src="images/libelinha.png"
-style="max-width:350px;margin:auto;margin-bottom:20px;"
->
-
-<h1>
-O Meu<br>
-Universo
-</h1>
-
-<p>
-AUTORA ✦ ILUSTRADORA ✦ CRIADORA
-</p>
-
+<img src="images/libelinha.png" alt="Libelinha, símbolo da marca Marylelin Lelinsky" style="max-width:350px;margin:auto;margin-bottom:20px;">
+<h1>O Meu<br>Universo</h1>
+<p>AUTORA ✦ ILUSTRADORA ✦ CRIADORA</p>
 </div>
-
 </div>
 
 <div class="brand-right">
-
 <div class="logo-card">
-<img src="images/logo-circle.png">
+<img src="images/logo-circle.png" alt="Logótipo circular de Marylelin Lelinsky">
 </div>
-
-<div class="signature-card">
-Marylelinsky
+<div class="signature-card">Marylelinsky</div>
 </div>
-
-</div>
-
 </div>
 
 <div class="main-grid">
-
 <div class="left-panel">
-
-<h2>
-Entre livros,<br>
-imagens e mundos possíveis.
-</h2>
-
-<p>
-Bem-vinda ao meu universo,
-onde a imaginação encontra
-novos caminhos.
-</p>
-
-<a href="#" class="btn">
-Explorar
-</a>
-
+<h2>Entre livros,<br>imagens e mundos possíveis.</h2>
+<p>Bem-vinda ao meu universo, onde a imaginação encontra novos caminhos.</p>
+<a href="#livros" class="btn">Explorar</a>
 </div>
 
-<div class="hero">
-
+<div class="hero" id="livros">
 <div class="nav-overlay">
-
-<a href="#">LIVROS</a>
-<a href="#">ATELIER</a>
-<a href="#">CADERNO</a>
-<a href="#">SOBRE</a>
-<a href="#">CONTACTO</a>
-
+<a href="#livros">LIVROS</a>
+<a href="#atelier">ATELIER</a>
+<a href="blog.html">CADERNO</a>
+<a href="#sobre">SOBRE</a>
+<a href="#contacto">CONTACTO</a>
 </div>
-
-<img src="images/hero.jpg">
-
+<img src="images/Hero.png" alt="Ilustração de fantasia com uma autora e o seu gato diante de um castelo">
 </div>
 
 <div class="right-panel">
-
 <div class="flower-card">
-<img src="images/flowers.jpg">
+<img src="images/flowers.jpeg" alt="Ilustração de flores em tons de fantasia">
 </div>
-
 <div class="quote-card">
-
-<h3>
-Há sempre<br>
-outra história<br>
-por começar.
-</h3>
-
+<h3>Há sempre<br>outra história<br>por começar.</h3>
+</div>
+</div>
 </div>
 
+<section id="atelier" style="padding:50px 20px;text-align:center;background:#f2e6d7;margin-top:10px;border-radius:10px;">
+<h2 style="font-size:3rem;font-weight:400;margin-bottom:18px;">Atelier</h2>
+<p>Ilustrações, personagens e pequenos mundos de fantasia.</p>
+</section>
+<section id="sobre" style="padding:50px 20px;text-align:center;background:#f2e6d7;margin-top:10px;border-radius:10px;">
+<h2 style="font-size:3rem;font-weight:400;margin-bottom:18px;">Sobre</h2>
+<p>Marylelin Lelinsky — autora e ilustradora portuguesa.</p>
+</section>
+<section id="contacto" style="padding:50px 20px;text-align:center;background:#f2e6d7;margin-top:10px;border-radius:10px;">
+<h2 style="font-size:3rem;font-weight:400;margin-bottom:18px;">Contacto</h2>
+<p><a href="mailto:marylelinsky@gmail.com">marylelinsky@gmail.com</a></p>
+</section>
 </div>
-
-</div>
-
-</div>
-
 </body>
 </html>
