@@ -1,466 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Marylelin Lelinsky</title>
+<title>Marylelin Lelinsky | Autora e Ilustradora</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
+<link rel="stylesheet" href="Style.css">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family:'Cormorant Garamond', serif;
-    min-height:100vh;
-
-    background-image:url('images/hero.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    color:#4d3441;
-}
-
-/* camada para melhorar leitura */
-
-.overlay{
-    min-height:100vh;
-    background:rgba(248,236,225,0.15);
-    position:relative;
-}
-
-/* nome */
-
-.logo{
-    text-align:center;
-    padding-top:30px;
-}
-
-.logo h1{
-    font-size:clamp(3rem,6vw,6rem);
-    line-height:0.9;
-    font-weight:400;
-}
-
-.logo p{
-    margin-top:10px;
-    letter-spacing:4px;
-    font-size:1rem;
-}
-
-/* menu */
-
-.menu{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
-
-    margin-top:25px;
-}
-
-.menu a{
-    text-decoration:none;
-    color:#4d3441;
-    font-size:1.2rem;
-    font-weight:600;
-}
-
-/* texto principal */
-
-.hero{
-    width:100%;
-    display:flex;
-    justify-content:flex-end;
-
-    padding-top:120px;
-    padding-right:8%;
-}
-
-.caixa{
-    max-width:420px;
-
-    background:rgba(255,255,255,.20);
-
-    backdrop-filter:blur(5px);
-
-    padding:30px;
-
-    border-radius:20px;
-
-    text-align:center;
-}
-
-.caixa h2{
-    font-size:clamp(2rem,4vw,4rem);
-    font-weight:400;
-    line-height:1.2;
-}
-
-.botao{
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:12px 35px;
-
-    border:1px solid #7c6254;
-
-    border-radius:40px;
-
-    text-decoration:none;
-    color:#4d3441;
-
-    background:rgba(255,255,255,.35);
-}
-
-/* cartão */
-
-.cartao{
-
-    position:absolute;
-
-    right:50px;
-    bottom:50px;
-
-    background:rgba(74,39,59,0.9);
-
-    color:#f3e5d6;
-
-    padding:30px;
-
-    border-radius:18px;
-
-    text-align:center;
-
-    max-width:260px;
-}
-
-.cartao p{
-    font-size:2rem;
-    line-height:1.2;
-}
-
-/* telemóvel */
-
-@media(max-width:900px){
-
-.hero{
-    justify-content:center;
-    padding:40px 20px;
-}
-
-.caixa{
-    width:100%;
-}
-
-.cartao{
-    position:relative;
-
-    right:auto;
-    bottom:auto;
-
-    margin:40px auto;
-}
-
-.menu{
-    gap:15px;
-}
-
-}
-
-</style>
 </head>
 
 <body>
 
-<div class="overlay">
+<header class="hero">
 
-    <div class="logo">
-        <h1>Marylelin<br>Lelinsky</h1>
-        <p>AUTORA ✦ ILUSTRADORA</p>
-    </div>
+<nav>
 
-    <nav class="menu">
-        <a href="#">LIVROS</a>
-        <a href="#">ATELIER</a>
-        <a href="#">CADERNO</a>
-        <a href="#">SOBRE</a>
-        <a href="#">CONTACTO</a>
-    </nav>
+<div class="logo">
+Marylelin Lelinsky
+</div>
 
-    <section class="hero">
+<ul>
+<li><a href="#livros">Livros</a></li>
+<li><a href="#atelier">Atelier</a></li>
+<li><a href="#caderno">Caderno</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
 
-        <div class="caixa">
+</nav>
 
-            <h2>
-                Entre livros,<br>
-                imagens e mundos<br>
-                possíveis.
-            </h2>
+<div class="hero-texto">
 
-            <a href="#" class="botao">
-                EXPLORAR
-            </a>
+<h1>
+Entre livros,<br>
+imagens e mundos<br>
+possíveis.
+</h1>
 
-        </div>
+<p>
+Bem-vinda ao meu universo,
+onde as palavras e as ilustrações
+caminham lado a lado.
+</p>
 
-    </section>
-
-    <div class="cartao">
-
-        <p>
-            Há sempre<br>
-            outra história<br>
-            por começar.
-        </p>
-
-    </div>
+<a href="#livros" class="botao">
+Explorar
+</a>
 
 </div>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Marylelin Lelinsky</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family:'Cormorant Garamond', serif;
-    min-height:100vh;
-
-    background-image:url('images/hero.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    color:#4d3441;
-}
-
-/* camada para melhorar leitura */
-
-.overlay{
-    min-height:100vh;
-    background:rgba(248,236,225,0.15);
-    position:relative;
-}
-
-/* nome */
-
-.logo{
-    text-align:center;
-    padding-top:30px;
-}
-
-.logo h1{
-    font-size:clamp(3rem,6vw,6rem);
-    line-height:0.9;
-    font-weight:400;
-}
-
-.logo p{
-    margin-top:10px;
-    letter-spacing:4px;
-    font-size:1rem;
-}
-
-/* menu */
-
-.menu{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
-
-    margin-top:25px;
-}
-
-.menu a{
-    text-decoration:none;
-    color:#4d3441;
-    font-size:1.2rem;
-    font-weight:600;
-}
-
-/* texto principal */
-
-.hero{
-    width:100%;
-    display:flex;
-    justify-content:flex-end;
-
-    padding-top:120px;
-    padding-right:8%;
-}
-
-.caixa{
-    max-width:420px;
-
-    background:rgba(255,255,255,.20);
-
-    backdrop-filter:blur(5px);
-
-    padding:30px;
-
-    border-radius:20px;
-
-    text-align:center;
-}
-
-.caixa h2{
-    font-size:clamp(2rem,4vw,4rem);
-    font-weight:400;
-    line-height:1.2;
-}
-
-.botao{
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:12px 35px;
-
-    border:1px solid #7c6254;
-
-    border-radius:40px;
-
-    text-decoration:none;
-    color:#4d3441;
-
-    background:rgba(255,255,255,.35);
-}
-
-/* cartão */
-
-.cartao{
-
-    position:absolute;
-
-    right:50px;
-    bottom:50px;
-
-    background:rgba(74,39,59,0.9);
-
-    color:#f3e5d6;
-
-    padding:30px;
-
-    border-radius:18px;
-
-    text-align:center;
-
-    max-width:260px;
-}
-
-.cartao p{
-    font-size:2rem;
-    line-height:1.2;
-}
-
-/* telemóvel */
-
-@media(max-width:900px){
-
-.hero{
-    justify-content:center;
-    padding:40px 20px;
-}
-
-.caixa{
-    width:100%;
-}
-
-.cartao{
-    position:relative;
-
-    right:auto;
-    bottom:auto;
-
-    margin:40px auto;
-}
-
-.menu{
-    gap:15px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="overlay">
-
-    <div class="logo">
-        <h1>Marylelin<br>Lelinsky</h1>
-        <p>AUTORA ✦ ILUSTRADORA</p>
-    </div>
-
-    <nav class="menu">
-        <a href="#">LIVROS</a>
-        <a href="#">ATELIER</a>
-        <a href="#">CADERNO</a>
-        <a href="#">SOBRE</a>
-        <a href="#">CONTACTO</a>
-    </nav>
-
-    <section class="hero">
-
-        <div class="caixa">
-
-            <h2>
-                Entre livros,<br>
-                imagens e mundos<br>
-                possíveis.
-            </h2>
-
-            <a href="#" class="botao">
-                EXPLORAR
-            </a>
-
-        </div>
-
-    </section>
-
-    <div class="cartao">
-
-        <p>
-            Há sempre<br>
-            outra história<br>
-            por começar.
-        </p>
-
-    </div>
+<div class="cartao">
+
+<p>
+Há sempre<br>
+outra história<br>
+por começar.
+</p>
 
 </div>
+
+</header>
+
+<section id="livros">
+
+<h2>Livros</h2>
+
+<div class="livros-grid">
+
+<div class="livro">
+
+<img src="images/sonho-dos-mortos.jpg"
+alt="O Sonho dos Mortos">
+
+<h3>O Sonho dos Mortos</h3>
+
+<p>
+Onde o tempo ainda nos mastiga.
+</p>
+
+<a
+href="https://www.fnac.pt/mp27489996/O-Sonho-Dos-Mortos-Onde-O-Tempo-Nos-Mastiga"
+target="_blank">
+Comprar
+</a>
+
+</div>
+
+<div class="livro">
+
+<img src="images/bota-melancias.jpg"
+alt="O que faz uma bota no céu das melancias">
+
+<h3>
+O Que Faz Uma Bota<br>
+No Céu Das Melancias?
+</h3>
+
+<p>
+Livro ilustrado.
+</p>
+
+<a
+href="https://www.fnac.pt/mp28038790/O-Que-Faz-Uma-Bota-No-Ceu-Das-Melancias"
+target="_blank">
+Comprar
+</a>
+
+</div>
+
+<div class="livro">
+
+<img src="images/saudade-flor.jpg"
+alt="Saudade é nome de flor">
+
+<h3>
+Saudade é Nome de Flor
+</h3>
+
+<p>
+Conto simples sobre a vida.
+</p>
+
+<a
+href="https://a.co/d/0hxODee5"
+target="_blank">
+Comprar
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<h2>Sobre Mim</h2>
+
+<p>
+Sou Marylelin Lelinsky, autora e ilustradora portuguesa.
+Escrevo poesia, ficção literária, contos infantis e dou vida
+a histórias através da ilustração.
+</p>
+
+</section>
+
+<section id="contacto">
+
+<h2>Contacto</h2>
+
+<p>
+Instagram · Goodreads · Facebook
+</p>
+
+</section>
 
 </body>
 </html>
