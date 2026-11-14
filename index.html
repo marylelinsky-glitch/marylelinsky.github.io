@@ -56,20 +56,16 @@
 
   <style>
     :root {
-      /* Paleta inspirada na imagem brand kit (Pergaminho, Rosa Velho, Pérola, Castanho Sépia Antigo) */
-      --bg: #F4EFE6;            /* Fundo tom pergaminho antigo / marfim */
-      --paper: #FCF9F2;         /* Branco pérola dos cartões */
-      --ink: #3B2E35;           /* Castanho-vinho escuro literário para texto */
-      --muted: #6B5760;         /* Tom secundário suave */
-
-      --rosa-velho: #D6B5B8;    /* Rosa velho poeirento */
-      --rosa-soft: #F1E5E7;     /* Rosa claro de fundo */
-      --rosa-text: #8C5963;     /* Tom de destaque para rótulos e títulos */
-
-      --terracota: #B87368;     /* Terracota suave / Acento */
+      --bg: #F4EFE6;
+      --paper: #FCF9F2;
+      --ink: #3B2E35;
+      --muted: #6B5760;
+      --rosa-velho: #D6B5B8;
+      --rosa-soft: #F1E5E7;
+      --rosa-text: #8C5963;
+      --terracota: #B87368;
       --terracota-text: #965349;
-      
-      --line: #DFD2C7;          /* Linha de caderno/perfil */
+      --line: #DFD2C7;
       --radius: 20px;
       --shadow: 0 12px 35px rgba(59, 46, 53, 0.08);
       --shadow-lg: 0 20px 50px rgba(59, 46, 53, 0.14);
@@ -88,7 +84,6 @@
       overflow-x: hidden;
     }
 
-    /* Textura de papel envelhecido / vinhetas suaves */
     body::before {
       content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
       background:
@@ -119,11 +114,6 @@
 
     section { padding: 5.5rem 0; position: relative; }
 
-    @keyframes floaty {
-      0%, 100% { transform: translateY(0) rotate(-4deg); }
-      50%      { transform: translateY(-10px) rotate(4deg); }
-    }
-
     /* ---------- HEADER ESTILO BRAND KIT ---------- */
     .site-header {
       position: sticky; top: 0; z-index: 50;
@@ -140,7 +130,7 @@
       font-weight: 600; font-size: 1.5rem; color: var(--ink);
       text-decoration: none; display: flex; align-items: center; gap: .6rem;
     }
-    .brand svg { width: 32px; height: 32px; }
+    .brand span { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; color: var(--muted); font-family: "Newsreader", Georgia, serif; }
 
     .site-nav { display: flex; gap: 1.6rem; align-items: center; overflow-x: auto; scrollbar-width: none; }
     .site-nav::-webkit-scrollbar { display: none; }
@@ -162,17 +152,10 @@
       transition: transform .2s, background .2s, border-color .2s, color .2s;
       box-shadow: 0 4px 15px rgba(59, 46, 53, .06);
     }
-    .btn svg { width: 18px; height: 18px; flex: none; }
     .btn-primary { background: var(--rosa-text); color: #FFFDF9; }
     .btn-primary:hover { transform: translateY(-2px); background: var(--ink); }
-    .btn-ghost { background: transparent; border-color: var(--ink); color: var(--ink); }
-    .btn-ghost:hover { transform: translateY(-2px); border-color: var(--rosa-text); color: var(--rosa-text); }
-    .btn-rosa { background: var(--rosa-velho); color: var(--ink); }
-    .btn-rosa:hover { transform: translateY(-2px); background: #C8A3A7; }
-    .btn-small { padding: .5rem 1.15rem; font-size: .95rem; }
-    .btn-block { width: 100%; justify-content: center; }
 
-    /* ---------- HERO INSPIRADO NA IMAGEM CENTRAL ---------- */
+    /* ---------- HERO INSPIRADO NA IMAGEM ---------- */
     .hero {
       padding-top: 4.5rem; padding-bottom: 4rem;
     }
@@ -185,10 +168,9 @@
       position: relative;
       overflow: hidden;
     }
-    /* Sutil detalhe de moldura estilo gravura antiga */
     .hero-box::before {
       content: ""; position: absolute; inset: 14px; pointer-events: none;
-      border: 1px dashed rgba(107, 87, 96, 0.25);
+      border: 1.5px dashed rgba(107, 87, 96, 0.2);
       border-radius: 18px;
     }
     .hero-grid {
@@ -200,3 +182,113 @@
       border: 1px solid rgba(214, 181, 184, .5);
       padding: .35rem 1.1rem; border-radius: 999px;
       font-weight: 500; font-size: .92rem; font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    .hero-desc {
+      color: var(--muted);
+      font-size: 1.12rem;
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+    .hero-visual {
+      background: linear-gradient(135deg, var(--rosa-soft), var(--line));
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .hero-visual p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-top: 1rem;
+    }
+
+    /* ---------- FRASE DE RODAPÉ DO BRAND KIT ---------- */
+    .quote-banner {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+      box-shadow: var(--shadow);
+    }
+    .quote-banner p {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: .8rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .site-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#" class="brand">
+        Marylelin Lelinsky
+      </a>
+      <nav class="site-nav">
+        <a href="#livros">Livros</a>
+        <a href="#atelier">Atelier</a>
+        <a href="#caderno">Caderno</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main id="conteudo">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-box">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">✨ Autora + Ilustradora</div>
+              <h1 class="hero-title">Entre livros, imagens e mundos possíveis.</h1>
+              <p class="hero-desc">Bem-vinda ao meu universo, onde a imaginação encontra novos caminhos na poesia, na ficção e na ilustração.</p>
+              <a href="#livros" class="btn btn-primary">
+                Explorar 
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div class="hero-visual">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--rosa-text)" stroke-width="1.5" style="margin: 0 auto; opacity: 0.8;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <p>"A imaginação é o primeiro passo para habitar outros mundos."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CITAÇÃO INSPIRADA NO BRAND KIT -->
+        <div class="quote-banner">
+          <p>Há sempre outra história por começar.</p>
+          <span style="font-size: 1.2rem; color: var(--rosa-text);">🦋</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
