@@ -4,306 +4,170 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Cormorant Garamond', serif;
-    background:#faf7f5;
-    color:#5d4b55;
-    overflow-x:hidden;
+    font-family:'Cormorant Garamond',serif;
+    overflow:hidden;
 }
 
-/* HERO */
+/* FUNDO */
 
-.hero{
-    min-height:100vh;
+.landing{
+    position:relative;
 
-    background-image:
-    linear-gradient(
-        rgba(250,247,245,.75),
-        rgba(250,247,245,.75)
-    ),
-    url("images/hero.png");
+    width:100vw;
+    height:100vh;
 
+    background:url("images/hero.png");
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
+}
 
-    position:relative;
+/* TOPO */
+
+header{
+    position:absolute;
+
+    top:4%;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    gap:120px;
+}
+
+/* LOGO */
+
+.logo{
+    text-align:center;
+}
+
+.logo h1{
+    font-size:5rem;
+    line-height:.9;
+    font-weight:400;
+
+    color:#4e3035;
+}
+
+.logo p{
+    margin-top:10px;
+
+    letter-spacing:4px;
+
+    color:#5f4045;
 }
 
 /* MENU */
 
 nav{
     display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
+    gap:35px;
 
-    padding:50px 80px;
+    margin-top:60px;
 }
 
-.branding{
-    text-align:center;
-}
+nav a{
+    text-decoration:none;
 
-.branding h1{
-    font-size:4.5rem;
-    line-height:.9;
-    font-weight:400;
+    color:#5b403f;
 
-    color:#8a6c77;
-}
-
-.branding p{
-    margin-top:10px;
-    letter-spacing:3px;
     font-size:1rem;
 
-    color:#a78693;
+    letter-spacing:2px;
 }
 
-/* LINKS */
+/* FRASE */
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:35px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:#8a6c77;
-    font-size:1.3rem;
-    transition:.3s;
-}
-
-nav ul li a:hover{
-    color:#c4839d;
-}
-
-/* TEXTO HERO */
-
-.hero-texto{
+.frase{
     position:absolute;
 
-    top:50%;
-    left:50%;
-
-    transform:translate(-50%,-50%);
+    top:38%;
+    right:20%;
 
     text-align:center;
-    width:80%;
 }
 
-.hero-texto h2{
-    font-size:4.5rem;
-    font-style:italic;
-    font-weight:400;
-    line-height:1.25;
+.frase h2{
+    font-size:3.8rem;
 
-    color:#c4839d;
+    font-style:italic;
+    font-weight:300;
+
+    line-height:1.4;
+
+    color:#7c5461;
 }
 
 /* BOTÃO */
 
-.btn-explorar{
+.explorar{
     display:inline-block;
 
-    margin-top:40px;
-    padding:16px 55px;
+    margin-top:30px;
 
-    text-decoration:none;
+    padding:18px 50px;
 
-    background:#c4839d;
-    color:white;
+    border:1px solid #a2866c;
 
     border-radius:50px;
 
-    font-size:1.2rem;
-    letter-spacing:1px;
+    text-decoration:none;
 
-    transition:.3s;
+    color:#5b403f;
+
+    background:rgba(255,255,255,.15);
 }
 
-.btn-explorar:hover{
-    background:#b9708b;
-    transform:translateY(-2px);
-}
+/* LIVROS */
 
-/* CARTÃO FRASE */
-
-.cartao-frase{
+.livros{
     position:absolute;
 
-    right:80px;
-    bottom:60px;
+    left:8%;
+    bottom:5%;
 
-    width:300px;
-    height:220px;
+    display:flex;
 
-    background:rgba(255,255,255,.90);
+    gap:35px;
+}
 
-    backdrop-filter:blur(12px);
+.livros img{
+    width:180px;
 
-    border-radius:25px;
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
+}
+
+/* CARTÃO */
+
+.cartao{
+    position:absolute;
+
+    right:5%;
+    bottom:7%;
+
+    width:280px;
+    height:280px;
+
+    background:#5a304f;
+
+    border-radius:30px;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-.cartao-frase p{
-    color:#c4839d;
+.cartao p{
+    color:white;
 
     text-align:center;
 
     font-size:2rem;
 
     line-height:1.4;
-}
-
-/* SECÇÕES */
-
-#livros,
-#sobre,
-#contacto{
-    padding:100px 10%;
-}
-
-#livros h2,
-#sobre h2,
-#contacto h2{
-    text-align:center;
-
-    font-size:3.5rem;
-
-    margin-bottom:50px;
-
-    color:#c4839d;
-}
-
-/* LIVROS */
-
-.livros-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
-}
-
-.livro{
-    background:white;
-
-    border-radius:25px;
-
-    padding:25px;
-
-    text-align:center;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-}
-
-.livro:hover{
-    transform:translateY(-6px);
-}
-
-.livro img{
-    width:100%;
-    max-width:240px;
-
-    border-radius:12px;
-}
-
-.livro h3{
-    font-size:2rem;
-    margin:20px 0;
-
-    color:#8a6c77;
-}
-
-.livro p{
-    font-size:1.25rem;
-    color:#6f5a63;
-}
-
-.livro a{
-    display:inline-block;
-
-    margin-top:20px;
-
-    text-decoration:none;
-
-    background:#c4839d;
-    color:white;
-
-    padding:12px 25px;
-
-    border-radius:30px;
-
-    transition:.3s;
-}
-
-.livro a:hover{
-    background:#b9708b;
-}
-
-/* SOBRE E CONTACTO */
-
-#sobre,
-#contacto{
-    text-align:center;
-}
-
-#sobre p,
-#contacto p{
-    font-size:1.4rem;
-
-    max-width:900px;
-
-    margin:auto;
-
-    color:#6f5a63;
-}
-
-/* RESPONSIVO */
-
-@media (max-width:900px){
-
-    nav{
-        flex-direction:column;
-        align-items:center;
-        gap:30px;
-        padding:30px;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .branding h1{
-        font-size:3rem;
-    }
-
-    .hero-texto{
-        width:90%;
-    }
-
-    .hero-texto h2{
-        font-size:2.7rem;
-    }
-
-    .cartao-frase{
-        position:relative;
-
-        right:auto;
-        bottom:auto;
-
-        margin:40px auto;
-    }
 }
