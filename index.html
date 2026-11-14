@@ -13,66 +13,60 @@
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     font-family:'Cormorant Garamond', serif;
     min-height:100vh;
 
-    background-image:url("images/hero.png");
+    background-image:url('images/hero.png');
     background-size:cover;
-    background-position:center center;
+    background-position:center;
     background-repeat:no-repeat;
-    background-attachment:fixed;
 
     color:#4d3441;
 }
 
-/* camada suave para ajudar a ler o texto */
+/* camada para melhorar leitura */
 
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:rgba(255,245,235,0.08);
-    pointer-events:none;
+.overlay{
+    min-height:100vh;
+    background:rgba(248,236,225,0.15);
+    position:relative;
 }
 
-/* LOGO */
+/* nome */
 
 .logo{
-    position:absolute;
-    top:35px;
-    left:50%;
-    transform:translateX(-50%);
     text-align:center;
+    padding-top:30px;
 }
 
 .logo h1{
-    font-size:clamp(2.8rem,6vw,5rem);
+    font-size:clamp(3rem,6vw,6rem);
     line-height:0.9;
     font-weight:400;
 }
 
 .logo p{
-    margin-top:12px;
+    margin-top:10px;
     letter-spacing:4px;
-    font-size:0.95rem;
+    font-size:1rem;
 }
 
-/* MENU */
+/* menu */
 
 .menu{
-    position:absolute;
-    top:60px;
-    right:60px;
-
     display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
     gap:30px;
+
+    margin-top:25px;
 }
 
 .menu a{
@@ -82,65 +76,74 @@ body::before{
     font-weight:600;
 }
 
-/* TEXTO */
+/* texto principal */
 
-.hero-texto{
+.hero{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
 
-    position:absolute;
-
-    top:34%;
-    right:11%;
-
-    text-align:center;
-    max-width:420px;
+    padding-top:120px;
+    padding-right:8%;
 }
 
-.hero-texto h2{
+.caixa{
+    max-width:420px;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(5px);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+}
+
+.caixa h2{
     font-size:clamp(2rem,4vw,4rem);
-    line-height:1.2;
     font-weight:400;
+    line-height:1.2;
 }
 
 .botao{
-
     display:inline-block;
 
-    margin-top:30px;
+    margin-top:25px;
 
-    padding:14px 40px;
+    padding:12px 35px;
+
+    border:1px solid #7c6254;
+
+    border-radius:40px;
 
     text-decoration:none;
-
     color:#4d3441;
 
-    border:1px solid #7a605b;
-    border-radius:50px;
-
-    background:rgba(255,255,255,.18);
-
-    backdrop-filter:blur(4px);
+    background:rgba(255,255,255,.35);
 }
 
-/* CARTÃO */
+/* cartão */
 
 .cartao{
 
     position:absolute;
 
-    bottom:60px;
-    right:70px;
+    right:50px;
+    bottom:50px;
 
-    background:rgba(73,36,60,.85);
+    background:rgba(74,39,59,0.9);
 
-    color:#f7e7da;
+    color:#f3e5d6;
 
-    padding:35px;
+    padding:30px;
 
-    border-radius:20px;
-
-    max-width:260px;
+    border-radius:18px;
 
     text-align:center;
+
+    max-width:260px;
 }
 
 .cartao p{
@@ -148,52 +151,30 @@ body::before{
     line-height:1.2;
 }
 
-/* MOBILE */
+/* telemóvel */
 
 @media(max-width:900px){
 
-.menu{
-    position:relative;
-
-    top:auto;
-    right:auto;
-
+.hero{
     justify-content:center;
-    flex-wrap:wrap;
-
-    padding-top:180px;
+    padding:40px 20px;
 }
 
-.logo{
+.caixa{
     width:100%;
 }
 
-.hero-texto{
-
-    position:relative;
-
-    top:auto;
-    right:auto;
-
-    margin:50px auto;
-
-    padding:20px;
-
-    background:rgba(255,255,255,.45);
-
-    border-radius:15px;
-
-    width:90%;
-}
-
 .cartao{
-
     position:relative;
 
     right:auto;
     bottom:auto;
 
-    margin:30px auto 60px;
+    margin:40px auto;
+}
+
+.menu{
+    gap:15px;
 }
 
 }
@@ -203,37 +184,282 @@ body::before{
 
 <body>
 
-<div class="logo">
-    <h1>Marylelin<br>Lelinsky</h1>
-    <p>AUTORA ✦ ILUSTRADORA</p>
+<div class="overlay">
+
+    <div class="logo">
+        <h1>Marylelin<br>Lelinsky</h1>
+        <p>AUTORA ✦ ILUSTRADORA</p>
+    </div>
+
+    <nav class="menu">
+        <a href="#">LIVROS</a>
+        <a href="#">ATELIER</a>
+        <a href="#">CADERNO</a>
+        <a href="#">SOBRE</a>
+        <a href="#">CONTACTO</a>
+    </nav>
+
+    <section class="hero">
+
+        <div class="caixa">
+
+            <h2>
+                Entre livros,<br>
+                imagens e mundos<br>
+                possíveis.
+            </h2>
+
+            <a href="#" class="botao">
+                EXPLORAR
+            </a>
+
+        </div>
+
+    </section>
+
+    <div class="cartao">
+
+        <p>
+            Há sempre<br>
+            outra história<br>
+            por começar.
+        </p>
+
+    </div>
+
 </div>
 
-<nav class="menu">
-    <a href="#livros">Livros</a>
-    <a href="#atelier">Atelier</a>
-    <a href="#caderno">Caderno</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="hero-texto">
-    <h2>
-        Entre livros,<br>
-        imagens e mundos<br>
-        possíveis.
-    </h2>
+<title>Marylelin Lelinsky</title>
 
-    <a href="#livros" class="botao">
-        EXPLORAR
-    </a>
-</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<div class="cartao">
-    <p>
-        Há sempre<br>
-        outra história<br>
-        por começar.
-    </p>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Cormorant Garamond', serif;
+    min-height:100vh;
+
+    background-image:url('images/hero.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:#4d3441;
+}
+
+/* camada para melhorar leitura */
+
+.overlay{
+    min-height:100vh;
+    background:rgba(248,236,225,0.15);
+    position:relative;
+}
+
+/* nome */
+
+.logo{
+    text-align:center;
+    padding-top:30px;
+}
+
+.logo h1{
+    font-size:clamp(3rem,6vw,6rem);
+    line-height:0.9;
+    font-weight:400;
+}
+
+.logo p{
+    margin-top:10px;
+    letter-spacing:4px;
+    font-size:1rem;
+}
+
+/* menu */
+
+.menu{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+
+    margin-top:25px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#4d3441;
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+/* texto principal */
+
+.hero{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+
+    padding-top:120px;
+    padding-right:8%;
+}
+
+.caixa{
+    max-width:420px;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(5px);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+}
+
+.caixa h2{
+    font-size:clamp(2rem,4vw,4rem);
+    font-weight:400;
+    line-height:1.2;
+}
+
+.botao{
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:12px 35px;
+
+    border:1px solid #7c6254;
+
+    border-radius:40px;
+
+    text-decoration:none;
+    color:#4d3441;
+
+    background:rgba(255,255,255,.35);
+}
+
+/* cartão */
+
+.cartao{
+
+    position:absolute;
+
+    right:50px;
+    bottom:50px;
+
+    background:rgba(74,39,59,0.9);
+
+    color:#f3e5d6;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    max-width:260px;
+}
+
+.cartao p{
+    font-size:2rem;
+    line-height:1.2;
+}
+
+/* telemóvel */
+
+@media(max-width:900px){
+
+.hero{
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.caixa{
+    width:100%;
+}
+
+.cartao{
+    position:relative;
+
+    right:auto;
+    bottom:auto;
+
+    margin:40px auto;
+}
+
+.menu{
+    gap:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="logo">
+        <h1>Marylelin<br>Lelinsky</h1>
+        <p>AUTORA ✦ ILUSTRADORA</p>
+    </div>
+
+    <nav class="menu">
+        <a href="#">LIVROS</a>
+        <a href="#">ATELIER</a>
+        <a href="#">CADERNO</a>
+        <a href="#">SOBRE</a>
+        <a href="#">CONTACTO</a>
+    </nav>
+
+    <section class="hero">
+
+        <div class="caixa">
+
+            <h2>
+                Entre livros,<br>
+                imagens e mundos<br>
+                possíveis.
+            </h2>
+
+            <a href="#" class="botao">
+                EXPLORAR
+            </a>
+
+        </div>
+
+    </section>
+
+    <div class="cartao">
+
+        <p>
+            Há sempre<br>
+            outra história<br>
+            por começar.
+        </p>
+
+    </div>
+
 </div>
 
 </body>
