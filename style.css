@@ -27,6 +27,27 @@ body{
 
     position:relative;
 }
+.branding h1{
+    color:#5b3856;
+}
+
+.branding p{
+    color:#5b3856;
+}
+
+nav ul li a{
+    color:#5b3856;
+}
+
+.hero-texto h2{
+    color:#5b3856;
+}
+.branding h1{
+    color:#5b3856;
+
+    text-shadow:
+    2px 2px 6px rgba(255,255,255,0.7);
+}
 
 /* MENU */
 
