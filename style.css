@@ -360,32 +360,18 @@
             letter-spacing: 1px;
         }
 
-        @media (max-width: 960px) {
-            .canvas-site {
-                padding: 25px;
-            }
-            .header {
-                padding-left: 0;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .nav-menu {
-                margin-top: 20px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hero {
-                justify-content: center;
-                padding-right: 0;
-            }
-            .bottom-area {
-                grid-template-columns: 1fr;
-            }
-            .books-row {
-                grid-template-columns: repeat(2, 1fr);
-                padding-left: 0;
-            }@media (max-width: 960px) {
+        /* --- RESPONSIVIDADE: TABLETS --- */
+@media (max-width: 960px) {
+    .canvas-site {
+        padding: 25px;
+    }
+
+    .header {
+        padding-left: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
     .brand-title {
         gap: 15px;
@@ -404,9 +390,37 @@
     .brand-signature {
         width: 230px !important;
     }
+
+    .nav-menu {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .bottom-area {
+        grid-template-columns: 1fr;
+    }
+
+    .books-row {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0;
+    }
 }
 
+/* --- RESPONSIVIDADE: TELEMÓVEIS --- */
 @media (max-width: 600px) {
+    .canvas-site {
+        padding: 18px;
+    }
+
+    .brand-title {
+        gap: 10px;
+    }
 
     .brand-logo {
         width: 105px !important;
@@ -420,5 +434,21 @@
     .brand-signature {
         width: 190px !important;
     }
+
+    .nav-menu {
+        gap: 10px;
+        font-size: 0.68rem;
+        padding-right: 0;
+        letter-spacing: 1px;
+    }
+
+    .hero-box h2 {
+        font-size: 1.8rem;
+    }
+
+    .books-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
 }
     </style>
