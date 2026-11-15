@@ -3,66 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marylelin Lelinsky - Autora + Ilustradora</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Marylelin Lelinsky — Autora + Ilustradora</title>
+    <!-- Fontes Clássicas Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-parchment: #f3e6d3;
+            --bg-parchment-dark: #e6d2b5;
+            --text-ink: #38211b;
+            --accent-burgundy: #582228;
+            --accent-gold: #8c6d46;
+            --border-delicate: rgba(56, 33, 27, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background-color: var(--bg-parchment);
+            color: var(--text-ink);
+            /* Textura sutil de papel vintage + imagem de fundo opcional */
+            background-image: 
+                radial-gradient(circle at 50% 30%, rgba(255, 248, 238, 0.65), rgba(226, 204, 173, 0.85)),
+                url('images/fundo.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Moldura decorativa envolvente */
+        .page-wrapper {
+            max-width: 1360px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 25px 40px 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* --- CABEÇALHO --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 15px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Emblema circular com libélula */
+        .emblem {
+            width: 95px;
+            height: 95px;
+            border: 1px solid var(--border-delicate);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: rgba(243, 230, 211, 0.5);
+            box-shadow: 0 0 0 4px rgba(243, 230, 211, 0.3), inset 0 0 12px rgba(140, 109, 70, 0.2);
+        }
+
+        .emblem svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--text-ink);
+            fill: none;
+            stroke-width: 1.2;
+        }
+
+        .brand-title h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 3.1rem;
+            line-height: 0.95;
+            letter-spacing: -0.5px;
+            color: var(--text-ink);
+        }
+
+        .brand-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            letter-spacing: 3.5px;
+            margin-top: 8px;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Menu de Navegação */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            border-top: 1px solid var(--border-delicate);
+            border-bottom: 1px solid var(--border-delicate);
+            padding: 10px 18px;
+            background: rgba(243, 230, 211, 0.55);
+            backdrop-filter: blur(2px);
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-ink);
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-burgundy);
+        }
+
+        .nav-star {
+            color: var(--accent-gold);
+            font-size: 0.7rem;
+        }
+
+        /* --- SECÇÃO HERO (DESTAQUE) --- */
+        .hero {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 360px;
+            padding: 40px 20px;
+        }
+
+        .hero-box {
+            max-width: 420px;
+            text-align: center;
+            padding: 30px;
+            background: radial-gradient(circle, rgba(243, 230, 211, 0.85) 0%, rgba(243, 230, 211, 0) 75%);
+        }
+
+        .hero-box h2 {
+            font-size: 2.15rem;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.25;
+            color: var(--text-ink);
+            margin-bottom: 18px;
+        }
+
+        .ornament-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--accent-gold);
+            margin-bottom: 22px;
+            font-size: 0.9rem;
+        }
+
+        .ornament-divider::before,
+        .ornament-divider::after {
+            content: "";
+            width: 55px;
+            height: 1px;
+            background: var(--border-delicate);
+        }
+
+        .btn-pill {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 2.5px;
+            color: var(--text-ink);
+            text-decoration: none;
+            padding: 11px 28px;
+            border: 1px solid var(--text-ink);
+            border-radius: 30px;
+            background: rgba(243, 230, 211, 0.75);
+            transition: all 0.3s ease;
+        }
+
+        .btn-pill:hover {
+            background: var(--accent-burgundy);
+            border-color: var(--accent-burgundy);
+            color: #f3e6d3;
+        }
+
+        /* --- SECÇÃO INFERIOR: LIVROS + CARTÕES --- */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 2fr 1.1fr;
+            gap: 30px;
+            align-items: end;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-delicate);
+            background: linear-gradient(to top, rgba(243, 230, 211, 0.95) 60%, rgba(243, 230, 211, 0.6));
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        /* Grelha dos 4 Livros */
+        .books-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .book-item {
+            text-decoration: none;
+            color: var(--text-ink);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-item:hover {
+            transform: translateY(-6px);
+        }
+
+        .book-cover {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            background-color: var(--bg-parchment-dark);
+            border: 1px solid var(--border-delicate);
+            box-shadow: -4px 6px 14px rgba(35, 18, 12, 0.28);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 12px;
+        }
+
+        /* Estilo de capa caso a imagem ainda não exista */
+        .book-cover.dark-cover {
+            background-color: #2b211e;
+            color: #e8dcc8;
+        }
+
+        .book-cover img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+        }
+
+        .book-fallback-title {
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.2;
+            z-index: 1;
+        }
+
+        /* Painel Lateral Direito (Citação + Cartão Vinho) */
+        .side-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            align-items: stretch;
+        }
+
+        .light-note-card {
+            border-left: 1px solid var(--border-delicate);
+            padding: 15px 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .light-note-card p {
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.3;
+            margin: 10px 0 16px;
+        }
+
+        .burgundy-medallion {
+            background-color: var(--accent-burgundy);
+            color: #f3e6d3;
+            padding: 22px 16px;
+            border-radius: 28px;
+            border: 2px solid #8c6d46;
+            box-shadow: inset 0 0 0 4px var(--accent-burgundy), inset 0 0 0 5px rgba(243, 230, 211, 0.35), 0 8px 20px rgba(35, 18, 12, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .burgundy-medallion p {
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.35;
+            margin: 10px 0;
+        }
+
+        .mini-icon {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+
+        /* Responsividade para Telemóvel e Tablet */
+        @media (max-width: 1024px) {
+            .bottom-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                justify-content: center;
+                min-height: 260px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .page-wrapper {
+                padding: 20px;
+            }
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .brand {
+                flex-direction: column;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            .books-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .side-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <div class="site-container">
-        <!-- Cabeçalho (Topo) -->
+    <div class="page-wrapper">
+        <!-- CABEÇALHO -->
         <header class="header">
-            <div class="logo-section">
-                <!-- Ícone da Libélula e Título -->
-                <div class="dragonfly-top">✦ 🪰 ✦</div>
-                <h1>Marylelin Lelinsky</h1>
-                <p class="subtitle">AUTORA <span>+</span> ILUSTRADORA</p>
+            <div class="brand">
+                <!-- Ilustração Vetorial da Libélula -->
+                <div class="emblem" aria-hidden="true">
+                    <svg viewBox="0 0 100 100">
+                        <line x1="50" y1="18" x2="50" y2="85" />
+                        <circle cx="50" cy="22" r="3" />
+                        <path d="M50 32 C30 20, 10 22, 12 32 C14 40, 35 38, 50 35" />
+                        <path d="M50 32 C70 20, 90 22, 88 32 C86 40, 65 38, 50 35" />
+                        <path d="M50 38 C32 36, 15 44, 18 52 C21 58, 38 48, 50 42" />
+                        <path d="M50 38 C68 36, 85 44, 82 52 C79 58, 62 48, 50 42" />
+                    </svg>
+                </div>
+
+                <div class="brand-title">
+                    <h1>Marylelin<br>Lelinsky</h1>
+                    <p class="brand-subtitle">AUTORA <span>✦</span> ILUSTRADORA</p>
+                </div>
             </div>
-            
+
             <nav class="nav-menu">
-                <a href="#livros">LIVROS</a> <span>+</span> 
-                <a href="#atelier">ATELIER</a> <span>+</span> 
-                <a href="#caderno">CADERNO</a> <span>+</span> 
-                <a href="#sobre">SOBRE</a> <span>+</span> 
+                <a href="#livros">LIVROS</a>
+                <span class="nav-star">✦</span>
+                <a href="#atelier">ATELIER</a>
+                <span class="nav-star">✦</span>
+                <a href="#caderno">CADERNO</a>
+                <span class="nav-star">✦</span>
+                <a href="#sobre">SOBRE</a>
+                <span class="nav-star">✦</span>
                 <a href="#contacto">CONTACTO</a>
             </nav>
         </header>
 
-        <!-- Seção Principal (Hero) -->
-        <main class="hero-section">
-            <div class="hero-text">
-                <h2>"Entre livros, imagens e mundos possíveis."</h2>
-                <a href="#explorar" class="btn-explorer">EXPLORAR <span>+</span></a>
+        <!-- FRASE DE DESTAQUE -->
+        <main class="hero">
+            <div class="hero-box">
+                <h2>Entre livros,<br>imagens e mundos<br>possíveis.</h2>
+                <div class="ornament-divider">✦</div>
+                <a href="#livros" class="btn-pill">EXPLORAR +</a>
             </div>
         </main>
 
-        <!-- Seção Inferior: Livros e Bloco de Citação -->
-        <section class="bottom-section">
-            <!-- Galeria de Livros -->
-            <div class="books-gallery">
-                <div class="book-card">
-                    <img src="images/livro1.jpg" alt="Saudade é Nome de Flor">
-                    <p>Saudade é Nome de Flor</p>
-                </div>
-                <div class="book-card">
-                    <img src="images/livro2.jpg" alt="O Que Faz uma Bota no Céu das Melancias?">
-                    <p>O Que Faz uma Bota no Céu das Melancias?</p>
-                </div>
-                <div class="book-card">
-                    <img src="images/livro3.jpg" alt="O Sonho dos Mortos">
-                    <p>O Sonho dos Mortos</p>
-                </div>
-                <div class="book-card">
-                    <img src="images/livro4.jpg" alt="As Luzes da Chuva">
-                    <p>As Luzes da Chuva</p>
-                </div>
+        <!-- SECÇÃO INFERIOR: LIVROS E MENSAGENS -->
+        <section id="livros" class="bottom-grid">
+            <!-- 4 Capas de Livros -->
+            <div class="books-row">
+                <a href="#" class="book-item">
+                    <div class="book-cover">
+                        <span class="book-fallback-title">Saudade é<br>Nome de Flor</span>
+                        <img src="images/livro1.jpg" alt="Saudade é Nome de Flor" onerror="this.style.display='none'">
+                    </div>
+                </a>
+
+                <a href="#" class="book-item">
+                    <div class="book-cover">
+                        <span class="book-fallback-title">O Que Faz<br>uma Bota no Céu<br>das Melancias?</span>
+                        <img src="images/livro2.jpg" alt="O Que Faz uma Bota no Céu das Melancias?" onerror="this.style.display='none'">
+                    </div>
+                </a>
+
+                <a href="#" class="book-item">
+                    <div class="book-cover dark-cover">
+                        <span class="book-fallback-title">O Sonho<br>dos Mortos</span>
+                        <img src="images/livro3.jpg" alt="O Sonho dos Mortos" onerror="this.style.display='none'">
+                    </div>
+                </a>
+
+                <a href="#" class="book-item">
+                    <div class="book-cover">
+                        <span class="book-fallback-title">As Luzes<br>da Chuva</span>
+                        <img src="images/livro4.jpg" alt="As Luzes da Chuva" onerror="this.style.display='none'">
+                    </div>
+                </a>
             </div>
 
-            <!-- Bloco de Destaque à Direita -->
-            <div class="quote-card">
-                <div class="dragonfly-icon">🪰</div>
-                <p class="quote-text">Livros que nos levam mais longe.</p>
-                <a href="#descobrir" class="btn-discover">DESCOBRIR <span>+</span></a>
-                <p class="quote-footer">Há sempre outra história por começar.</p>
+            <!-- Cartões Laterais -->
+            <div class="side-cards">
+                <div class="light-note-card">
+                    <span class="mini-icon">✧</span>
+                    <p>Livros que nos levam mais longe.</p>
+                    <a href="#atelier" class="btn-pill" style="padding: 8px 18px; font-size: 0.68rem;">DESCOBRIR +</a>
+                </div>
+
+                <div class="burgundy-medallion">
+                    <span class="mini-icon">✦</span>
+                    <p>Há sempre outra história por começar.</p>
+                    <span class="mini-icon">✦</span>
+                </div>
             </div>
         </section>
     </div>
