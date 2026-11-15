@@ -361,6 +361,57 @@
         }
 
         /* --- RESPONSIVIDADE: TABLETS --- */
+⁶
+/* --- LIBELINHA E MENU: MAIS DESTAQUE --- */
+
+.brand-logo {
+    width: 290px !important;
+    height: 290px !important;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.nav-menu {
+    gap: 9px;
+    font-size: 0.88rem;
+    letter-spacing: 1.5px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: #38211b;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 13px;
+    border: 1px solid rgba(88, 34, 40, 0.45);
+    border-radius: 22px;
+    background: rgba(255, 245, 228, 0.58);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+    color: #fff4e5;
+    background: #582228;
+    border-color: #582228;
+}
+
+.btn-pill {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 13px 32px;
+    border: 1.5px solid #582228;
+    background: rgba(255, 245, 228, 0.72);
+    box-shadow: 0 3px 10px rgba(56, 33, 27, 0.15);
+}
+
+.btn-pill:hover {
+    background: #582228;
+    color: #f3e6d3;
+}
+
+/* --- TABLETS --- */
 @media (max-width: 960px) {
     .canvas-site {
         padding: 25px;
@@ -379,8 +430,8 @@
     }
 
     .brand-logo {
-        width: 135px !important;
-        height: 150px !important;
+        width: 190px !important;
+        height: 210px !important;
     }
 
     .brand-title h1 {
@@ -393,7 +444,6 @@
 
     .nav-menu {
         margin-top: 20px;
-        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -412,38 +462,44 @@
     }
 }
 
-/* --- RESPONSIVIDADE: TELEMÓVEIS --- */
+/* --- TELEMÓVEIS --- */
 @media (max-width: 600px) {
     .canvas-site {
         padding: 18px;
     }
 
     .brand-title {
-        gap: 10px;
+        gap: 8px;
     }
 
     .brand-logo {
-        width: 105px !important;
-        height: 120px !important;
+        width: 115px !important;
+        height: 130px !important;
     }
 
     .brand-title h1 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
 
     .brand-signature {
-        width: 190px !important;
+        width: 175px !important;
     }
 
     .nav-menu {
-        gap: 10px;
-        font-size: 0.68rem;
-        padding-right: 0;
-        letter-spacing: 1px;
+        gap: 7px;
+        font-size: 0.72rem;
+    }
+
+    .nav-menu a {
+        padding: 9px 11px;
     }
 
     .hero-box h2 {
         font-size: 1.8rem;
+    }
+
+    .btn-pill {
+        padding: 12px 25px;
     }
 
     .books-row {
