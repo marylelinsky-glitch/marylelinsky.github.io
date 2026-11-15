@@ -7,27 +7,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="header">
-        <div class="logo-area">
-            <h1>Marylelin Lelinsky</h1>
-            <p>AUTORA + ILUSTRADORA</p>
-        </div>
-        <nav class="menu">
-            <a href="#">LIVROS</a> + 
-            <a href="#">ATELIER</a> + 
-            <a href="#">CADERNO</a> + 
-            <a href="#">SOBRE</a> + 
-            <a href="#">CONTACTO</a>
-        </nav>
-    </header>
 
-    <!-- Seção Principal (Hero) -->
-    <main class="hero">
-        <div class="hero-content">
-            <h2>"Entre livros, imagens e mundos possíveis."</h2>
-            <a href="#livros" class="btn">EXPLORAR +</a>
-        </div>
-    </main>
+    <div class="site-container">
+        <!-- Cabeçalho (Topo) -->
+        <header class="header">
+            <div class="logo-section">
+                <!-- Ícone da Libélula e Título -->
+                <div class="dragonfly-top">✦ 🪰 ✦</div>
+                <h1>Marylelin Lelinsky</h1>
+                <p class="subtitle">AUTORA <span>+</span> ILUSTRADORA</p>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#livros">LIVROS</a> <span>+</span> 
+                <a href="#atelier">ATELIER</a> <span>+</span> 
+                <a href="#caderno">CADERNO</a> <span>+</span> 
+                <a href="#sobre">SOBRE</a> <span>+</span> 
+                <a href="#contacto">CONTACTO</a>
+            </nav>
+        </header>
+
+        <!-- Seção Principal (Hero) -->
+        <main class="hero-section">
+            <div class="hero-text">
+                <h2>"Entre livros, imagens e mundos possíveis."</h2>
+                <a href="#explorar" class="btn-explorer">EXPLORAR <span>+</span></a>
+            </div>
+        </main>
+
+        <!-- Seção Inferior: Livros e Bloco de Citação -->
+        <section class="bottom-section">
+            <!-- Galeria de Livros -->
+            <div class="books-gallery">
+                <div class="book-card">
+                    <img src="images/livro1.jpg" alt="Saudade é Nome de Flor">
+                    <p>Saudade é Nome de Flor</p>
+                </div>
+                <div class="book-card">
+                    <img src="images/livro2.jpg" alt="O Que Faz uma Bota no Céu das Melancias?">
+                    <p>O Que Faz uma Bota no Céu das Melancias?</p>
+                </div>
+                <div class="book-card">
+                    <img src="images/livro3.jpg" alt="O Sonho dos Mortos">
+                    <p>O Sonho dos Mortos</p>
+                </div>
+                <div class="book-card">
+                    <img src="images/livro4.jpg" alt="As Luzes da Chuva">
+                    <p>As Luzes da Chuva</p>
+                </div>
+            </div>
+
+            <!-- Bloco de Destaque à Direita -->
+            <div class="quote-card">
+                <div class="dragonfly-icon">🪰</div>
+                <p class="quote-text">Livros que nos levam mais longe.</p>
+                <a href="#descobrir" class="btn-discover">DESCOBRIR <span>+</span></a>
+                <p class="quote-footer">Há sempre outra história por começar.</p>
+            </div>
+        </section>
+    </div>
+
 </body>
 </html>
