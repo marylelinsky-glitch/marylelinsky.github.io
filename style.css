@@ -659,3 +659,120 @@ img {
         line-height: 1.7;
     }
 }
+/* =========================================
+   CORREÇÃO FINAL — ASSINATURA E SELO
+   LANDING PAGE
+========================================= */
+
+/* COMPUTADORES */
+
+@media screen and (min-width: 1101px) {
+
+    .canvas-site .header {
+        align-items: flex-start;
+    }
+
+    .canvas-site .brand-text {
+        width: auto;
+        align-items: flex-start;
+        flex-shrink: 0;
+    }
+
+    .canvas-site .brand-text h1 {
+        text-align: left;
+    }
+
+    .canvas-site .brand-signature-row {
+        display: flex;
+        width: auto;
+        max-width: none;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+        margin: 8px 0 0 0;
+    }
+
+    .canvas-site .brand-signature {
+        width: 190px;
+        height: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .canvas-site .brand-header-seal {
+        width: 220px;
+        height: 220px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+}
+
+/* TABLETS */
+
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+
+    .canvas-site .brand-text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .canvas-site .brand-text h1 {
+        text-align: center;
+    }
+
+    .canvas-site .brand-signature-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 15px;
+        margin: 10px auto 0;
+    }
+
+    .canvas-site .brand-signature {
+        width: 175px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .canvas-site .brand-header-seal {
+        width: 195px;
+        height: 195px;
+        object-fit: contain;
+    }
+}
+
+/* TELEMÓVEIS */
+
+@media screen and (max-width: 600px) {
+
+    .canvas-site .brand-text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .canvas-site .brand-text h1 {
+        text-align: center;
+    }
+
+    .canvas-site .brand-signature-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 8px;
+        margin: 8px auto 0;
+    }
+
+    .canvas-site .brand-signature {
+        width: 125px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .canvas-site .brand-header-seal {
+        width: 145px;
+        height: 145px;
+        object-fit: contain;
+    }
+}
