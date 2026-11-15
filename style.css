@@ -498,38 +498,45 @@
     .content-section {
         padding: 45px 18px;
     }
+  }
 /* =====================================
-   CORREÇÃO DO FUNDO PRINCIPAL
+   FUNDO PRINCIPAL - COMPUTADORES
    ===================================== */
-
-html, body {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-}
-
-body {
-    overflow-x: hidden;
-}
 
 .canvas-site {
     width: 100%;
     max-width: none;
     min-height: 100vh;
     margin: 0;
-    padding: 35px 55px 40px;
-
     background-image: url('images/hero.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
-/* TESTE DE TAMANHO DO SELO */
 
-.canvas-site .brand-title .brand-logo {
-    width: 500px !important;
-    height: 500px !important;
-    min-width: 500px;
+/* SELO DA LIBELINHA */
+
+.brand-logo {
+    width: 420px !important;
+    height: 420px !important;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 960px) {
+    .brand-logo {
+        width: 320px !important;
+        height: 320px !important;
+    }
+}
+
+/* TELEMÓVEIS */
+
+@media screen and (max-width: 600px) {
+    .brand-logo {
+        width: 230px !important;
+        height: 230px !important;
+    }
 }
