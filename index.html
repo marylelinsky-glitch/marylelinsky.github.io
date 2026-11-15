@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,157 +12,342 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cormorant Garamond',serif;
+    background:#faf7f5;
+    color:#5d4b55;
+    overflow-x:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    background:#faf7f5;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px 8%;
+}
+
+.branding h1{
+    font-size:4rem;
+    font-weight:400;
+    line-height:.9;
+    color:#866c76;
+}
+
+.branding p{
+    margin-top:10px;
+    letter-spacing:4px;
+    color:#a48b95;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav ul a{
+    text-decoration:none;
+    color:#866c76;
+    font-size:1.2rem;
+}
+
+nav ul a:hover{
+    color:#c488a2;
+}
+
+.hero-content{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.hero-content h2{
+    font-size:5rem;
+    font-weight:400;
+    color:#c488a2;
+    line-height:1.2;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:40px;
+    text-decoration:none;
+    background:#c488a2;
+    color:white;
+    padding:16px 50px;
+    border-radius:40px;
+    font-size:1.2rem;
+}
+
+.btn:hover{
+    background:#b37691;
+}
+
+.frase{
+    width:320px;
+    margin:80px auto 0;
+    background:white;
+    padding:40px;
+    border-radius:24px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.frase p{
+    text-align:center;
+    font-size:2rem;
+    color:#c488a2;
+}
+
+section{
+    padding:100px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:3.5rem;
+    color:#c488a2;
+}
+
+.livros-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.livro{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.livro img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.livro h3{
+    margin:20px 0;
+    font-size:2rem;
+    color:#866c76;
+}
+
+.livro p{
+    font-size:1.2rem;
+}
+
+.livro a{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    background:#c488a2;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+}
+
+.livro a:hover{
+    background:#b37691;
+}
+
+#sobre,
+#contacto{
+    text-align:center;
+}
+
+#sobre p,
+#contacto p{
+    font-size:1.5rem;
+    max-width:900px;
+    margin:auto;
+    line-height:1.6;
+}
+
+footer{
+    padding:40px;
+    text-align:center;
+    color:#866c76;
+}
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .branding h1{
+        font-size:3rem;
+    }
+
+    .hero-content h2{
+        font-size:2.8rem;
+    }
+
+    section h2{
+        font-size:2.5rem;
+    }
+
+    .frase{
+        width:90%;
+    }
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header class="hero">
 
-    <!-- MENU -->
-    <nav>
+<nav>
 
-        <div class="titulo-site">
+<div class="branding">
+<h1>Marylelin<br>Lelinsky</h1>
+<p>AUTORA ✦ ILUSTRADORA</p>
+</div>
 
-            <h1>
-                Marylelin<br>
-                Lelinsky
-            </h1>
+<ul>
+<li><a href="#livros">Livros</a></li>
+<li><a href="#atelier">Atelier</a></li>
+<li><a href="#caderno">Caderno</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
 
-            <div class="subtitulo">
-                AUTORA ✦ ILUSTRADORA
-            </div>
+</nav>
 
-        </div>
+<div class="hero-content">
 
-        <ul>
-            <li><a href="#livros">Livros</a></li>
-            <li><a href="#atelier">Atelier</a></li>
-            <li><a href="#caderno">Caderno</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+<h2>
+Entre livros,<br>
+imagens e mundos<br>
+possíveis.
+</h2>
 
-    </nav>
+<a href="#livros" class="btn">
+Explorar
+</a>
 
-    <!-- TEXTO PRINCIPAL -->
-    <div class="hero-texto">
+<div class="frase">
+<p>
+Há sempre<br>
+outra história<br>
+por começar.
+</p>
+</div>
 
-        <h2>
-            Entre livros,<br>
-            imagens e mundos<br>
-            possíveis.
-        </h2>
-
-        <a href="#livros" class="btn-explorar">
-            EXPLORAR
-        </a>
-
-    </div>
-
-    <!-- CARTÃO -->
-    <div class="cartao-frase">
-
-        <p>
-            Há sempre<br>
-            outra história<br>
-            por começar.
-        </p>
-
-    </div>
+</div>
 
 </header>
 
 <section id="livros">
 
-    <h2>Livros</h2>
+<h2>Livros</h2>
 
-    <div class="livros-grid">
+<div class="livros-grid">
 
-        <div class="livro">
+<div class="livro">
+<img src="images/saudade-flor.jpg" alt="Saudade é Nome de Flor">
+<h3>Saudade é Nome de Flor</h3>
+<p>Conto delicado sobre memória, crescimento e afeto.</p>
+<a href="#">Comprar</a>
+</div>
 
-            <img src="images/saudade-flor.jpg"
-                 alt="Saudade é Nome de Flor">
+<div class="livro">
+<img src="images/bota-melancias.jpg" alt="O Que Faz Uma Bota No Céu Das Melancias">
+<h3>O Que Faz Uma Bota No Céu Das Melancias?</h3>
+<p>Uma viagem ilustrada pela imaginação.</p>
+<a href="#">Comprar</a>
+</div>
 
-            <h3>Saudade é Nome de Flor</h3>
+<div class="livro">
+<img src="images/sonho-dos-mortos.jpg" alt="O Sonho dos Mortos">
+<h3>O Sonho dos Mortos</h3>
+<p>Onde o tempo ainda nos mastiga.</p>
+<a href="#">Comprar</a>
+</div>
 
-            <a href="#">
-                Comprar
-            </a>
+</div>
 
-        </div>
+</section>
 
-        <div class="livro">
+<section id="atelier">
 
-            <img src="images/bota-melancias.jpg"
-                 alt="O Que Faz Uma Bota no Céu das Melancias">
+<h2>Atelier</h2>
 
-            <h3>
-                O Que Faz Uma Bota
-                No Céu Das Melancias?
-            </h3>
+<p>
+Um espaço dedicado ao desenho, à pintura e à criação de universos
+visuais que acompanham as histórias e personagens dos meus livros.
+</p>
 
-            <a href="#">
-                Comprar
-            </a>
+</section>
 
-        </div>
+<section id="caderno">
 
-        <div class="livro">
+<h2>Caderno</h2>
 
-            <img src="images/sonho-dos-mortos.jpg"
-                 alt="O Sonho dos Mortos">
-
-            <h3>
-                O Sonho dos Mortos
-            </h3>
-
-            <a href="#">
-                Comprar
-            </a>
-
-        </div>
-
-        <div class="livro">
-
-            <img src="images/luzes-da-chuva.jpg"
-                 alt="As Luzes da Chuva">
-
-            <h3>
-                As Luzes da Chuva
-            </h3>
-
-            <a href="#">
-                Comprar
-            </a>
-
-        </div>
-
-    </div>
+<p>
+Apontamentos, processos criativos, esboços, pensamentos e pequenos
+fragmentos de histórias em construção.
+</p>
 
 </section>
 
 <section id="sobre">
 
-    <h2>Sobre Mim</h2>
+<h2>Sobre Mim</h2>
 
-    <p>
-        Sou Marylelin Lelinsky, autora e ilustradora portuguesa.
-        Escrevo poesia, ficção literária, contos infantis e ilustro
-        histórias onde a imaginação encontra o fantástico.
-    </p>
+<p>
+Sou Marylelin Lelinsky, autora e ilustradora. Escrevo poesia,
+ficção e livros ilustrados onde a imaginação encontra novos
+mundos. O meu trabalho procura unir palavra e imagem numa linguagem
+sensível, simbólica e profundamente humana.
+</p>
 
 </section>
 
 <section id="contacto">
 
-    <h2>Contacto</h2>
+<h2>Contacto</h2>
 
-    <p>
-        Instagram • Goodreads • Facebook
-    </p>
+<p>
+Instagram • Facebook • Goodreads • Email
+</p>
 
 </section>
+
+<footer>
+
+© 2026 Marylelin Lelinsky
+
+</footer>
 
 </body>
 </html>
