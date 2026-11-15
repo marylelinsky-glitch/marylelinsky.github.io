@@ -524,3 +524,12 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
 }
+/* TESTE DE TAMANHO DO SELO */
+
+.canvas-site .brand-title .brand-logo {
+    width: 500px !important;
+    height: 500px !important;
+    min-width: 500px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
