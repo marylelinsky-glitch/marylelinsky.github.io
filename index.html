@@ -18,18 +18,15 @@
         body {
             font-family: 'Cormorant Garamond', Georgia, serif;
             color: #38211b;
-            background-color: #e6d2b5;
+            background-color: #2b1d16;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .canvas-site {
             width: 100%;
             max-width: 1440px;
+            margin: 0 auto;
             min-height: 100vh;
-            /* CORRIGIDO: Adicionados os parênteses e o caminho completo para a pasta images/ */
             background-image: url('images/hero.png');
             background-size: cover;
             background-position: center;
@@ -144,7 +141,7 @@
         .books-row {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 15px;
             padding-left: 25px;
         }
 
@@ -161,7 +158,7 @@
         .book-cover {
             width: 100%;
             aspect-ratio: 2 / 3;
-            background: rgba(243, 230, 211, 0.5);
+            background: rgba(243, 230, 211, 0.85);
             border: 1px solid rgba(56, 33, 27, 0.35);
             box-shadow: -5px 6px 14px rgba(35, 18, 12, 0.35);
             position: relative;
@@ -174,7 +171,7 @@
         }
 
         .book-cover.dark {
-            background: rgba(43, 33, 30, 0.85);
+            background: rgba(43, 33, 30, 0.95);
             color: #e8dcc8;
         }
 
@@ -189,8 +186,9 @@
 
         .book-title-fallback {
             font-style: italic;
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 1.2;
+            z-index: 1;
         }
 
         .right-notes {
@@ -224,6 +222,65 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
         }
 
+        /* --- SECÇÕES ADICIONAIS PARA OS BOTÕES E RODAPÉ --- */
+        .content-section {
+            background: #f3e6d3;
+            color: #38211b;
+            padding: 80px 40px;
+            text-align: center;
+            border-top: 1px solid #c8b196;
+        }
+
+        .content-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .content-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 20px auto;
+            line-height: 1.6;
+        }
+
+        /* Rodapé / Footer */
+        .site-footer {
+            background: #1a120b;
+            color: #d4af37;
+            text-align: center;
+            padding: 50px 20px;
+            font-family: 'Cinzel', serif;
+            border-top: 2px solid #582228;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .footer-socials a {
+            color: #f3e5ab;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: #ffffff;
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: #a38d74;
+            margin-top: 15px;
+            letter-spacing: 1px;
+        }
+
         @media (max-width: 960px) {
             .canvas-site {
                 padding: 25px;
@@ -255,6 +312,7 @@
 </head>
 <body>
 
+    <!-- PÁGINA PRINCIPAL (HERO) -->
     <div class="canvas-site">
         <header class="header">
             <div class="brand-title">
@@ -262,6 +320,7 @@
                 <p class="brand-subtitle">AUTORA + ILUSTRADORA</p>
             </div>
 
+            <!-- Botões ligados às secções abaixo -->
             <nav class="nav-menu">
                 <a href="#livros">LIVROS</a>
                 <span class="nav-plus">+</span>
@@ -282,31 +341,34 @@
             </div>
         </main>
 
-        <section id="livros" class="bottom-area">
+        <section id="livros-destaque" class="bottom-area">
             <div class="books-row">
-                <!-- CORRIGIDO: Adicionadas as aspas e o caminho images/ -->
-                <a href="#" class="book-item">
+                <!-- Capa 1 -->
+                <a href="#livros" class="book-item">
                     <div class="book-cover">
                         <span class="book-title-fallback">Saudade é<br>Nome de Flor</span>
                         <img src="images/saudade-flor.jpg" alt="Saudade é Nome de Flor" onerror="this.style.display='none'">
                     </div>
                 </a>
 
-                <a href="#" class="book-item">
+                <!-- Capa 2 -->
+                <a href="#livros" class="book-item">
                     <div class="book-cover">
                         <span class="book-title-fallback">O Que Faz<br>uma Bota no Céu<br>das Melancias?</span>
                         <img src="images/Bota-melancias.jpg" alt="O Que Faz uma Bota no Céu das Melancias?" onerror="this.style.display='none'">
                     </div>
                 </a>
 
-                <a href="#" class="book-item">
+                <!-- Capa 3 -->
+                <a href="#livros" class="book-item">
                     <div class="book-cover dark">
                         <span class="book-title-fallback">O Sonho<br>dos Mortos</span>
                         <img src="images/sonho-dos-mortos.jpg" alt="O Sonho dos Mortos" onerror="this.style.display='none'">
                     </div>
                 </a>
 
-                <a href="#" class="book-item">
+                <!-- Capa 4 -->
+                <a href="#livros" class="book-item">
                     <div class="book-cover">
                         <span class="book-title-fallback">As Luzes<br>da Chuva</span>
                         <img src="images/luzes-da-chuva.jpg" alt="As Luzes da Chuva" onerror="this.style.display='none'">
@@ -326,6 +388,45 @@
             </div>
         </section>
     </div>
+
+    <!-- SECÇÕES DE CONTEÚDO PARA OS BOTÕES DO MENU -->
+    <section id="livros" class="content-section">
+        <h3>LIVROS</h3>
+        <p>Conheça o universo literário, sinopses e obras publicadas.</p>
+    </section>
+
+    <section id="atelier" class="content-section" style="background: #e8d7c0;">
+        <h3>ATELIER</h3>
+        <p>O espaço onde nascem as ilustrações, pinturas e processos criativos.</p>
+    </section>
+
+    <section id="caderno" class="content-section">
+        <h3>CADERNO</h3>
+        <p>Notas de campo, reflexões, rascunhos e diário de bordo da autora.</p>
+    </section>
+
+    <section id="sobre" class="content-section" style="background: #e8d7c0;">
+        <h3>SOBRE</h3>
+        <p>Marylelin Lelinsky é autora e ilustradora apaixonada por mundos fantásticos e narrativas visuais.</p>
+    </section>
+
+    <!-- RODAPÉ / CONTACTO E REDES SOCIAIS -->
+    <footer id="contacto" class="site-footer">
+        <h3>CONTACTO</h3>
+        <p style="color: #f3e5ab; font-size: 1rem; margin-top: 10px;">Para parcerias, projetos ou mensagens mágicas:</p>
+        <p style="color: #ffffff; font-size: 1.1rem; margin: 5px 0;">marylelinlelinsky@gmail.com</p>
+
+        <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank">INSTAGRAM</a> + 
+            <a href="https://facebook.com" target="_blank">FACEBOOK</a> + 
+            <a href="https://pinterest.com" target="_blank">PINTEREST</a> + 
+            <a href="https://substack.com" target="_blank">SUBSTACK</a>
+        </div>
+
+        <div class="footer-copy">
+            &copy; 2026 Marylelin Lelinsky. Todos os direitos reservados.
+        </div>
+    </footer>
 
 </body>
 </html>
