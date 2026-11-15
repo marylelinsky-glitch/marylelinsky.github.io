@@ -1216,3 +1216,88 @@ img {
         height: 320px;
     }
 }
+/* =================================
+   PÁGINA SOBRE
+================================= */
+
+.sobre-page {
+    margin: 0;
+    min-height: 100vh;
+    padding: 55px 25px;
+    box-sizing: border-box;
+    background: #f7f2eb;
+    color: #40352f;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.sobre-page .sobre-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.sobre-page .btn-pill {
+    display: inline-block;
+    margin-bottom: 65px;
+    padding: 11px 24px;
+    border: 1px solid #9a806c;
+    border-radius: 30px;
+    color: #6b5142;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.sobre-page .sobre-text {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 55px 45px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #e5d9cc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.sobre-page .sobre-text h1 {
+    margin: 0 0 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.sobre-page .sobre-text p {
+    margin: 0 0 25px;
+    font-size: 23px;
+    line-height: 1.8;
+}
+
+.sobre-page .sobre-text p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+@media (max-width: 550px) {
+    .sobre-page {
+        padding: 30px 16px;
+    }
+
+    .sobre-page .btn-pill {
+        margin-bottom: 40px;
+    }
+
+    .sobre-page .sobre-text {
+        padding: 35px 22px;
+    }
+
+    .sobre-page .sobre-text h1 {
+        font-size: 27px;
+    }
+
+    .sobre-page .sobre-text p {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
