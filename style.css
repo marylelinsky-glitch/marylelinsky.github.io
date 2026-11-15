@@ -49,8 +49,8 @@
 }
 
 .brand-logo {
-    width: 340px !important;
-    height: 340px !important;
+    width: 420px !important;
+    height: 420px !important;
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -379,8 +379,8 @@
     }
 
     .brand-logo {
-        width: 260px !important;
-        height: 260px !important;
+        width: 320px !important;
+        height: 320px !important;
         object-fit: contain;
     }
 
@@ -446,8 +446,8 @@
     }
 
     .brand-logo {
-        width: 190px !important;
-        height: 190px !important;
+        width: 230px !important;
+        height: 230px !important;
         object-fit: contain;
     }
 
