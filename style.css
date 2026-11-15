@@ -1,5 +1,4 @@
-<style>
-        * {
+* {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -499,5 +498,3 @@
     .content-section {
         padding: 45px 18px;
     }
-}
-    </style>
