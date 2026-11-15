@@ -1301,3 +1301,134 @@ img {
         line-height: 1.6;
     }
 }
+/* =================================
+   PÁGINA CONTACTO
+================================= */
+
+.contacto-page {
+    margin: 0;
+    min-height: 100vh;
+    padding: 55px 25px;
+    box-sizing: border-box;
+    background: #f7f2eb;
+    color: #40352f;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.contacto-page .contacto-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contacto-page .btn-pill {
+    display: inline-block;
+    margin-bottom: 65px;
+    padding: 11px 24px;
+    border: 1px solid #9a806c;
+    border-radius: 30px;
+    color: #6b5142;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.contacto-page .contacto-card {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #e5d9cc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.contacto-page .contacto-card h1 {
+    margin: 0 0 35px;
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.contacto-page .contacto-intro {
+    margin: 0 0 20px;
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+.contacto-page .contacto-email {
+    margin: 25px 0 45px;
+}
+
+.contacto-page .contacto-email a {
+    color: #806653;
+    font-size: 23px;
+    text-decoration: none;
+    border-bottom: 1px solid #c5ad99;
+    padding-bottom: 5px;
+}
+
+.contacto-page .contacto-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.contacto-page .contacto-socials a {
+    display: inline-block;
+    padding: 11px 18px;
+    border: 1px solid #bda58f;
+    border-radius: 25px;
+    color: #6b5142;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contacto-page .contacto-socials a:hover {
+    background: #806653;
+    color: #fff;
+}
+
+@media (max-width: 550px) {
+    .contacto-page {
+        padding: 30px 16px;
+    }
+
+    .contacto-page .btn-pill {
+        margin-bottom: 40px;
+    }
+
+    .contacto-page .contacto-card {
+        padding: 40px 20px;
+    }
+
+    .contacto-page .contacto-card h1 {
+        font-size: 27px;
+    }
+
+    .contacto-page .contacto-intro {
+        font-size: 20px;
+    }
+
+    .contacto-page .contacto-email a {
+        font-size: 19px;
+    }
+
+    .contacto-page .contacto-socials {
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .contacto-page .contacto-socials a {
+        width: 170px;
+        box-sizing: border-box;
+    }
+}
