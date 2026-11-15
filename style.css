@@ -1,6 +1,6 @@
 /* =========================================
    MARYLELIN LELINSKY
-   ESTILO GERAL DO SITE
+   ESTILO GERAL
 ========================================= */
 
 * {
@@ -9,9 +9,10 @@
     padding: 0;
 }
 
-html, body {
+html {
     width: 100%;
     min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,15 +22,19 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 /* =========================================
-   IMAGEM PRINCIPAL
+   PÁGINA INICIAL
 ========================================= */
 
 .canvas-site {
     width: 100%;
     min-height: 100vh;
     min-height: 100svh;
-
     background-image: url('images/hero.png');
     background-size: cover;
     background-position: center;
@@ -37,39 +42,25 @@ body {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
     padding: 35px 45px;
 }
 
-/* =========================================
-   CABEÇALHO
-========================================= */
-
 .header {
-    position: relative;
-
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-
+    gap: 25px;
     width: 100%;
-    min-height: 260px;
 }
-
-/* NOME DA AUTORA */
 
 .brand-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: fit-content;
-    max-width: 100%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
+    flex-shrink: 0;
 }
 
 .brand-text h1 {
@@ -77,87 +68,57 @@ body {
     line-height: 0.95;
     font-weight: 400;
     text-align: center;
-    color: #38211b;
 }
-
-/* =========================================
-   ASSINATURA E SELO
-========================================= */
 
 .brand-signature-row {
     display: flex;
     flex-direction: row;
-
     justify-content: center;
     align-items: center;
-
-    gap: 18px;
-
     width: fit-content;
     max-width: 100%;
-
+    gap: 15px;
     margin: 15px auto 0;
 }
 
 .brand-signature {
     display: block;
-
     width: 220px;
     height: auto;
-
     object-fit: contain;
-
     flex-shrink: 0;
 }
-
-/* SELO */
 
 .brand-header-seal {
     display: block;
-
     width: 150px;
     height: 150px;
-
-    object-fit: cover;
-    object-position: center;
-
+    object-fit: contain;
     flex-shrink: 0;
 }
 
-/* =========================================
-   MENU DE NAVEGAÇÃO
-========================================= */
+/* MENU */
 
 .nav-menu {
-    position: absolute;
-    top: 35px;
-    right: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-wrap: wrap;
     gap: 12px;
+    margin-top: 35px;
 }
 
 .nav-menu a {
     font-family: 'Cinzel', serif;
-
     font-size: 0.85rem;
     letter-spacing: 1.5px;
-
     color: #38211b;
     text-decoration: none;
     font-weight: 600;
-
     padding: 12px 17px;
-
     border: 1px solid rgba(56,33,27,0.65);
     border-radius: 25px;
-
     background: rgba(255,245,228,0.88);
-
     transition: 0.3s;
 }
 
@@ -166,18 +127,13 @@ body {
     color: #fff1df;
 }
 
-/* =========================================
-   FRASE CENTRAL
-========================================= */
+/* FRASE PRINCIPAL */
 
 .hero {
     display: flex;
     justify-content: flex-end;
-
     padding-right: 11%;
-
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0;
 }
 
 .hero-box {
@@ -189,37 +145,25 @@ body {
     font-size: 2.3rem;
     font-weight: 400;
     font-style: italic;
-
     line-height: 1.2;
-
     color: #38211b;
-
     margin-bottom: 28px;
 }
 
-/* =========================================
-   BOTÃO EXPLORAR
-========================================= */
+/* BOTÕES */
 
 .btn-pill {
     display: inline-block;
-
     font-family: 'Cinzel', serif;
     font-size: 0.9rem;
-
     letter-spacing: 2px;
     font-weight: 600;
-
     color: #38211b;
     text-decoration: none;
-
     padding: 14px 32px;
-
     border: 1px solid #582228;
     border-radius: 30px;
-
     background: rgba(255,245,228,0.92);
-
     transition: 0.3s;
 }
 
@@ -228,21 +172,14 @@ body {
     color: #fff1df;
 }
 
-/* =========================================
-   RODAPÉ
-========================================= */
+/* RODAPÉ GERAL */
 
 .site-footer {
     background: #1a120b;
-
     color: #d4af37;
-
     text-align: center;
-
     padding: 45px 20px;
-
     font-family: 'Cinzel', serif;
-
     border-top: 2px solid #582228;
 }
 
@@ -259,15 +196,11 @@ body {
 
 .footer-socials {
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 18px;
     margin: 25px 0;
-
     font-size: 0.85rem;
     letter-spacing: 1.5px;
 }
@@ -288,7 +221,233 @@ body {
 }
 
 /* =========================================
-   TABLETS E IPAD
+   ATELIER
+   ESTILO INDEPENDENTE
+========================================= */
+
+.atelier-page {
+    background: #f5e8d8;
+    color: #38211b;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO DO ATELIER */
+
+.atelier-page .atelier-header {
+    width: 100%;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    background: #f1dfca;
+    border-bottom: 1px solid rgba(88,34,40,0.25);
+}
+
+.atelier-page .atelier-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #582228;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.atelier-page .atelier-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.atelier-page .atelier-nav a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.3px;
+    color: #582228;
+    text-decoration: none;
+
+    padding: 10px 15px;
+    border: 1px solid rgba(88,34,40,0.4);
+    border-radius: 25px;
+
+    background: rgba(255,250,242,0.7);
+    transition: 0.3s;
+}
+
+.atelier-page .atelier-nav a:hover {
+    background: #582228;
+    color: #fff1df;
+}
+
+/* APRESENTAÇÃO */
+
+.atelier-page .atelier-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 90px 25px 65px;
+    text-align: center;
+}
+
+.atelier-page .atelier-small-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    color: #9a6b55;
+    margin-bottom: 18px;
+}
+
+.atelier-page .atelier-intro h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+    color: #582228;
+}
+
+.atelier-page .atelier-decoration {
+    font-size: 2rem;
+    color: #a77c4c;
+    margin: 22px 0;
+}
+
+.atelier-page .atelier-description {
+    max-width: 620px;
+    margin: 0 auto;
+    font-size: 1.45rem;
+    line-height: 1.6;
+    color: #68483b;
+}
+
+.atelier-page .atelier-signature {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #8b514b;
+    margin-top: 30px;
+}
+
+/* =========================================
+   GALERIA DE ILUSTRAÇÕES
+========================================= */
+
+.atelier-page .atelier-gallery {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 20px 45px 100px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 45px 35px;
+}
+
+.atelier-page .artwork {
+    min-width: 0;
+    text-align: center;
+    padding: 12px;
+    background: rgba(255,250,242,0.72);
+    border: 1px solid rgba(142,99,73,0.25);
+    border-radius: 4px;
+    box-shadow: 0 8px 25px rgba(66,38,25,0.09);
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.atelier-page .artwork:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(66,38,25,0.15);
+}
+
+.atelier-page .artwork img {
+    width: 100%;
+    height: 340px;
+    object-fit: contain;
+    background: #eadbc9;
+    border-radius: 2px;
+}
+
+.atelier-page .artwork h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #582228;
+    margin: 20px 5px 5px;
+}
+
+.atelier-page .artwork p {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #846454;
+    margin: 0 5px 12px;
+    line-height: 1.4;
+}
+
+/* =========================================
+   MENSAGEM FINAL DO ATELIER
+========================================= */
+
+.atelier-page .atelier-end {
+    text-align: center;
+    padding: 65px 20px 85px;
+    background: #ead7c2;
+    border-top: 1px solid rgba(88,34,40,0.2);
+}
+
+.atelier-page .atelier-end > div {
+    font-size: 2rem;
+    color: #a77c4c;
+    margin-bottom: 18px;
+}
+
+.atelier-page .atelier-end h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #582228;
+    margin-bottom: 15px;
+}
+
+.atelier-page .atelier-end p {
+    font-size: 1.25rem;
+    color: #68483b;
+    margin-bottom: 30px;
+}
+
+.atelier-page .atelier-back {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #582228;
+    padding: 13px 27px;
+    border: 1px solid #582228;
+    border-radius: 30px;
+    background: rgba(255,250,242,0.8);
+    transition: 0.3s;
+}
+
+.atelier-page .atelier-back:hover {
+    background: #582228;
+    color: #fff1df;
+}
+
+/* RODAPÉ DO ATELIER */
+
+.atelier-page .atelier-footer {
+    background: #2b1d16;
+    color: #e6c9a9;
+    text-align: center;
+    padding: 25px 15px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   TABLETS
 ========================================= */
 
 @media screen and (max-width: 1100px) {
@@ -297,49 +456,24 @@ body {
         padding: 25px;
     }
 
-    /* CABEÇALHO */
-
     .header {
-        position: relative;
-
-        display: flex;
         flex-direction: column;
-
         align-items: center;
-        justify-content: flex-start;
-
         gap: 20px;
-        min-height: auto;
     }
 
     .brand-text {
         width: 100%;
-        max-width: 100%;
-
         align-items: center;
-
-        margin: 0 auto;
     }
 
     .brand-text h1 {
         font-size: 3rem;
-        text-align: center;
     }
 
-    /* ASSINATURA E SELO */
-
     .brand-signature-row {
-        display: flex;
-
         justify-content: center;
-        align-items: center;
-
-        width: fit-content;
-        max-width: 100%;
-
-        margin: 15px auto 0;
-
-        gap: 15px;
+        gap: 18px;
     }
 
     .brand-signature {
@@ -347,40 +481,47 @@ body {
     }
 
     .brand-header-seal {
-        width: 150px;
-        height: 150px;
+        width: 175px;
+        height: 175px;
     }
-
-    /* MENU */
 
     .nav-menu {
-        position: static;
-
-        display: flex;
-
         justify-content: center;
-        align-items: center;
-
-        width: 100%;
-
         margin-top: 5px;
-
-        gap: 12px;
     }
-
-    /* FRASE */
 
     .hero {
         justify-content: center;
-
         padding: 60px 10px;
-
-        margin-top: auto;
-        margin-bottom: auto;
     }
 
     .hero-box h2 {
         font-size: 2rem;
+    }
+
+    /* ATELIER TABLET */
+
+    .atelier-page .atelier-header {
+        flex-direction: column;
+        padding: 25px 20px;
+    }
+
+    .atelier-page .atelier-nav {
+        justify-content: center;
+    }
+
+    .atelier-page .atelier-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 20px 30px 75px;
+        gap: 30px;
+    }
+
+    .atelier-page .artwork img {
+        height: 320px;
+    }
+
+    .atelier-page .atelier-intro {
+        padding-top: 70px;
     }
 }
 
@@ -392,19 +533,13 @@ body {
 
     .canvas-site {
         padding: 20px 15px;
-
         min-height: 100svh;
-
         background-position: 43% center;
     }
-
-    /* NOME */
 
     .brand-text h1 {
         font-size: 2.5rem;
     }
-
-    /* ASSINATURA E SELO */
 
     .brand-signature-row {
         gap: 10px;
@@ -415,11 +550,9 @@ body {
     }
 
     .brand-header-seal {
-        width: 115px;
-        height: 115px;
+        width: 130px;
+        height: 130px;
     }
-
-    /* MENU */
 
     .nav-menu {
         gap: 8px;
@@ -428,13 +561,9 @@ body {
 
     .nav-menu a {
         font-size: 0.72rem;
-
         padding: 10px 12px;
-
         letter-spacing: 1px;
     }
-
-    /* FRASE */
 
     .hero {
         padding: 65px 5px;
@@ -444,52 +573,89 @@ body {
         font-size: 1.8rem;
     }
 
-    /* BOTÃO */
-
     .btn-pill {
         font-size: 0.85rem;
         padding: 13px 27px;
     }
-
-    /* RODAPÉ */
 
     .footer-socials {
         gap: 10px;
         font-size: 0.72rem;
     }
 
-}
+    /* ATELIER MOBILE */
 
-/* =========================================
-   ECRÃS MUITO PEQUENOS
-========================================= */
-
-@media screen and (max-width: 380px) {
-
-    .brand-text h1 {
-        font-size: 2.2rem;
+    .atelier-page .atelier-header {
+        padding: 22px 12px;
+        gap: 18px;
     }
 
-    .brand-signature {
-        width: 125px;
+    .atelier-page .atelier-brand {
+        font-size: 1.8rem;
     }
 
-    .brand-header-seal {
-        width: 100px;
-        height: 100px;
+    .atelier-page .atelier-nav {
+        gap: 7px;
     }
 
-    .brand-signature-row {
-        gap: 8px;
-    }
-
-    .nav-menu {
-        gap: 6px;
-    }
-
-    .nav-menu a {
+    .atelier-page .atelier-nav a {
         font-size: 0.65rem;
-        padding: 9px 10px;
+        padding: 9px 11px;
+        letter-spacing: 0.7px;
     }
 
+    .atelier-page .atelier-intro {
+        padding: 60px 20px 45px;
+    }
+
+    .atelier-page .atelier-small-title {
+        font-size: 0.65rem;
+        letter-spacing: 2.5px;
+    }
+
+    .atelier-page .atelier-description {
+        font-size: 1.2rem;
+    }
+
+    .atelier-page .atelier-signature {
+        font-size: 1.3rem;
+    }
+
+    .atelier-page .atelier-gallery {
+        grid-template-columns: 1fr;
+        padding: 15px 20px 60px;
+        gap: 25px;
+    }
+
+    .atelier-page .artwork {
+        padding: 10px;
+    }
+
+    .atelier-page .artwork img {
+        height: auto;
+        max-height: 450px;
+        min-height: 220px;
+        object-fit: contain;
+    }
+
+    .atelier-page .artwork h2 {
+        font-size: 1.65rem;
+    }
+
+    .atelier-page .atelier-end {
+        padding: 50px 20px 65px;
+    }
+
+    .atelier-page .atelier-end h2 {
+        font-size: 2rem;
+    }
+
+    .atelier-page .atelier-end p {
+        font-size: 1.1rem;
+    }
+
+    .atelier-page .atelier-footer {
+        font-size: 0.65rem;
+        line-height: 1.7;
+    }
 }
