@@ -35,20 +35,39 @@
             padding-left: 33%;
         }
 
-        .brand-title h1 {
-            font-weight: 400;
-            font-size: 3.4rem;
-            line-height: 0.92;
-            color: #38211b;
-        }
+        .brand-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
 
-        .brand-subtitle {
-            font-family: 'Cinzel', serif;
-            font-size: 0.72rem;
-            letter-spacing: 3.5px;
-            margin-top: 10px;
-            color: #5c3a2e;
-        }
+.brand-logo {
+    width: 145px;
+    height: 175px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-title h1 {
+    font-weight: 400;
+    font-size: 3.4rem;
+    line-height: 0.92;
+    color: #38211b;
+    text-align: center;
+}
+
+.brand-signature {
+    width: 190px;
+    height: auto;
+    max-height: 48px;
+    object-fit: contain;
+    margin-top: 12px;
+}
 
         .nav-menu {
             display: flex;
