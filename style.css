@@ -37,28 +37,39 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     padding: 35px 45px;
 }
+
 /* =========================================
-   CABEÇALHO — ALINHAMENTO CORRIGIDO
+   CABEÇALHO
 ========================================= */
 
 .header {
+    position: relative;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    gap: 25px;
+
     width: 100%;
+    min-height: 260px;
 }
+
+/* NOME DA AUTORA */
 
 .brand-text {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     width: fit-content;
-    flex-shrink: 0;
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
 }
 
 .brand-text h1 {
@@ -66,100 +77,51 @@ body {
     line-height: 0.95;
     font-weight: 400;
     text-align: center;
+    color: #38211b;
 }
 
-/* ASSINATURA E SELO */
+/* =========================================
+   ASSINATURA E SELO
+========================================= */
 
 .brand-signature-row {
     display: flex;
     flex-direction: row;
+
     justify-content: center;
     align-items: center;
 
+    gap: 18px;
+
     width: fit-content;
     max-width: 100%;
-    gap: 15px;
 
     margin: 15px auto 0;
 }
 
 .brand-signature {
     display: block;
+
     width: 220px;
     height: auto;
+
     object-fit: contain;
+
     flex-shrink: 0;
 }
+
+/* SELO */
 
 .brand-header-seal {
     display: block;
+
     width: 150px;
     height: 150px;
+
     object-fit: cover;
     object-position: center;
+
     flex-shrink: 0;
-}
-
-/* =========================================
-   TABLETS
-========================================= */
-
-@media screen and (max-width: 1100px) {
-
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .brand-text {
-        align-items: center;
-        margin: 0 auto;
-    }
-
-    .brand-text h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    .brand-signature-row {
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-        gap: 12px;
-    }
-
-    .brand-signature {
-        width: 180px;
-    }
-
-    .brand-header-seal {
-        width: 145px;
-        height: 145px;
-    }
-}
-
-/* =========================================
-   TELEMÓVEIS
-========================================= */
-
-@media screen and (max-width: 600px) {
-
-    .brand-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .brand-signature-row {
-        gap: 8px;
-    }
-
-    .brand-signature {
-        width: 145px;
-    }
-
-    .brand-header-seal {
-        width: 115px;
-        height: 115px;
-    }
 }
 
 /* =========================================
@@ -167,18 +129,24 @@ body {
 ========================================= */
 
 .nav-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 35px;
 }
 
 .nav-menu a {
     font-family: 'Cinzel', serif;
+
     font-size: 0.85rem;
     letter-spacing: 1.5px;
+
     color: #38211b;
     text-decoration: none;
     font-weight: 600;
@@ -205,8 +173,11 @@ body {
 .hero {
     display: flex;
     justify-content: flex-end;
+
     padding-right: 11%;
-    margin: auto 0;
+
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .hero-box {
@@ -218,8 +189,11 @@ body {
     font-size: 2.3rem;
     font-weight: 400;
     font-style: italic;
+
     line-height: 1.2;
+
     color: #38211b;
+
     margin-bottom: 28px;
 }
 
@@ -232,6 +206,7 @@ body {
 
     font-family: 'Cinzel', serif;
     font-size: 0.9rem;
+
     letter-spacing: 2px;
     font-weight: 600;
 
@@ -259,12 +234,15 @@ body {
 
 .site-footer {
     background: #1a120b;
+
     color: #d4af37;
+
     text-align: center;
 
     padding: 45px 20px;
 
     font-family: 'Cinzel', serif;
+
     border-top: 2px solid #582228;
 }
 
@@ -281,8 +259,10 @@ body {
 
 .footer-socials {
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     flex-wrap: wrap;
 
     gap: 18px;
@@ -308,7 +288,7 @@ body {
 }
 
 /* =========================================
-   TABLETS
+   TABLETS E IPAD
 ========================================= */
 
 @media screen and (max-width: 1100px) {
@@ -317,24 +297,49 @@ body {
         padding: 25px;
     }
 
+    /* CABEÇALHO */
+
     .header {
+        position: relative;
+
+        display: flex;
         flex-direction: column;
+
         align-items: center;
+        justify-content: flex-start;
+
         gap: 20px;
+        min-height: auto;
     }
 
     .brand-text {
         width: 100%;
+        max-width: 100%;
+
         align-items: center;
+
+        margin: 0 auto;
     }
 
     .brand-text h1 {
         font-size: 3rem;
+        text-align: center;
     }
 
+    /* ASSINATURA E SELO */
+
     .brand-signature-row {
+        display: flex;
+
         justify-content: center;
-        gap: 18px;
+        align-items: center;
+
+        width: fit-content;
+        max-width: 100%;
+
+        margin: 15px auto 0;
+
+        gap: 15px;
     }
 
     .brand-signature {
@@ -342,18 +347,36 @@ body {
     }
 
     .brand-header-seal {
-        width: 175px;
-        height: 175px;
+        width: 150px;
+        height: 150px;
     }
 
+    /* MENU */
+
     .nav-menu {
+        position: static;
+
+        display: flex;
+
         justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
         margin-top: 5px;
+
+        gap: 12px;
     }
+
+    /* FRASE */
 
     .hero {
         justify-content: center;
+
         padding: 60px 10px;
+
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .hero-box h2 {
@@ -369,13 +392,19 @@ body {
 
     .canvas-site {
         padding: 20px 15px;
+
         min-height: 100svh;
+
         background-position: 43% center;
     }
+
+    /* NOME */
 
     .brand-text h1 {
         font-size: 2.5rem;
     }
+
+    /* ASSINATURA E SELO */
 
     .brand-signature-row {
         gap: 10px;
@@ -386,9 +415,11 @@ body {
     }
 
     .brand-header-seal {
-        width: 130px;
-        height: 130px;
+        width: 115px;
+        height: 115px;
     }
+
+    /* MENU */
 
     .nav-menu {
         gap: 8px;
@@ -397,9 +428,13 @@ body {
 
     .nav-menu a {
         font-size: 0.72rem;
+
         padding: 10px 12px;
+
         letter-spacing: 1px;
     }
+
+    /* FRASE */
 
     .hero {
         padding: 65px 5px;
@@ -409,13 +444,52 @@ body {
         font-size: 1.8rem;
     }
 
+    /* BOTÃO */
+
     .btn-pill {
         font-size: 0.85rem;
         padding: 13px 27px;
     }
 
+    /* RODAPÉ */
+
     .footer-socials {
         gap: 10px;
         font-size: 0.72rem;
     }
+
+}
+
+/* =========================================
+   ECRÃS MUITO PEQUENOS
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .brand-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .brand-signature {
+        width: 125px;
+    }
+
+    .brand-header-seal {
+        width: 100px;
+        height: 100px;
+    }
+
+    .brand-signature-row {
+        gap: 8px;
+    }
+
+    .nav-menu {
+        gap: 6px;
+    }
+
+    .nav-menu a {
+        font-size: 0.65rem;
+        padding: 9px 10px;
+    }
+
 }
