@@ -222,7 +222,7 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
         }
 
-        /* --- SECÇÕES ADICIONAIS --- */
+        /* --- SECÇÕES DE CONTEÚDO --- */
         .content-section {
             background: #f3e6d3;
             color: #38211b;
@@ -233,16 +233,82 @@
 
         .content-section h3 {
             font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
             letter-spacing: 2px;
         }
 
-        .content-section p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 20px auto;
-            line-height: 1.6;
+        /* Grelha de livros detalhada na secção inferior */
+        .books-grid-detailed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            text-align: left;
+        }
+
+        .book-detail-card {
+            background: rgba(255, 252, 248, 0.6);
+            border: 1px solid #c8b196;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+
+        .book-detail-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #582228;
+        }
+
+        .book-detail-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #38211b;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            color: #f3e6d3;
+            background-color: #582228;
+            text-decoration: none;
+            padding: 8px 16px;
+            text-align: center;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: #38211b;
+        }
+
+        .goodreads-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 252, 248, 0.8);
+            border: 1px solid #c8b196;
+            display: inline-block;
+            border-radius: 4px;
+        }
+
+        .goodreads-box a {
+            color: #582228;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .goodreads-box a:hover {
+            text-decoration: underline;
         }
 
         /* Rodapé / Footer */
@@ -339,7 +405,7 @@
 
         <section id="livros-destaque" class="bottom-area">
             <div class="books-row">
-                <!-- 1. Saudade é Nome de Flor -->
+                <!-- 1. Saudade é Nome de Flor (Link: https://amzn.eu/d/06fLJguw) -->
                 <a href="https://amzn.eu/d/06fLJguw" target="_blank" class="book-item" title="Comprar na Amazon">
                     <div class="book-cover">
                         <span class="book-title-fallback">Saudade é<br>Nome de Flor</span>
@@ -347,24 +413,24 @@
                     </div>
                 </a>
 
-                <!-- 2. O Que Faz uma Bota no Céu das Melancias? -->
-                <a href="https://amzn.eu/d/07cgT0dI" target="_blank" class="book-item" title="Comprar na Amazon">
+                <!-- 2. Bota nas Melancias (Link: https://amzn.eu/d/01P7cTtD) -->
+                <a href="https://amzn.eu/d/01P7cTtD" target="_blank" class="book-item" title="Comprar na Amazon">
                     <div class="book-cover">
                         <span class="book-title-fallback">O Que Faz<br>uma Bota no Céu<br>das Melancias?</span>
                         <img src="images/Bota-melancias.PNG" alt="O Que Faz uma Bota no Céu das Melancias?" onerror="this.style.display='none'">
                     </div>
                 </a>
 
-                <!-- 3. O Sonho dos Mortos -->
-                <a href="https://amzn.eu/d/01P7cTtD" target="_blank" class="book-item" title="Comprar na Amazon">
+                <!-- 3. Sonho dos Mortos (Link: https://amzn.eu/d/01xz8L48) -->
+                <a href="https://amzn.eu/d/01xz8L48" target="_blank" class="book-item" title="Comprar na Amazon">
                     <div class="book-cover dark">
                         <span class="book-title-fallback">O Sonho<br>dos Mortos</span>
                         <img src="images/Sonho-dos-mortos.jpg" alt="O Sonho dos Mortos" onerror="this.style.display='none'">
                     </div>
                 </a>
 
-                <!-- 4. As Luzes da Chuva -->
-                <a href="https://amzn.eu/d/01xz8L48" target="_blank" class="book-item" title="Comprar na Amazon">
+                <!-- 4. Luzes da Chuva (Link: https://amzn.eu/d/07cgT0dI) -->
+                <a href="https://amzn.eu/d/07cgT0dI" target="_blank" class="book-item" title="Comprar na Amazon">
                     <div class="book-cover">
                         <span class="book-title-fallback">As Luzes<br>da Chuva</span>
                         <img src="images/luzes-da-chuva.jpg" alt="As Luzes da Chuva" onerror="this.style.display='none'">
@@ -385,12 +451,53 @@
         </section>
     </div>
 
-    <!-- SECÇÕES DE CONTEÚDO -->
+    <!-- SECÇÃO DE LIVROS DETALHADA -->
     <section id="livros" class="content-section">
         <h3>LIVROS</h3>
-        <p>Conheça o universo literário, sinopses e obras publicadas.</p>
+        <p style="margin-bottom: 40px;">Conheça o universo literário, sinopses e obras publicadas disponíveis para aquisição.</p>
+
+        <div class="books-grid-detailed">
+            <div class="book-detail-card">
+                <div>
+                    <h4>Saudade é Nome de Flor</h4>
+                    <p>Uma narrativa poética e delicada sobre memórias, afetos e a beleza das pequenas coisas do quotidiano.</p>
+                </div>
+                <a href="https://amzn.eu/d/06fLJguw" target="_blank" class="btn-buy">COMPRAR NA AMAZON +</a>
+            </div>
+
+            <div class="book-detail-card">
+                <div>
+                    <h4>O Que Faz uma Bota no Céu das Melancias?</h4>
+                    <p>Uma viagem divertida e imaginativa pelos recantos mais absurdos e encantados da infância e da fantasia.</p>
+                </div>
+                <a href="https://amzn.eu/d/01P7cTtD" target="_blank" class="btn-buy">COMPRAR NA AMAZON +</a>
+            </div>
+
+            <div class="book-detail-card">
+                <div>
+                    <h4>O Sonho dos Mortos</h4>
+                    <p>Mistério, sombras e castelos antigos numa atmosfera gótica envolvente que desafia os limites entre o sonho e a realidade.</p>
+                </div>
+                <a href="https://amzn.eu/d/01xz8L48" target="_blank" class="btn-buy">COMPRAR NA AMAZON +</a>
+            </div>
+
+            <div class="book-detail-card">
+                <div>
+                    <h4>As Luzes da Chuva</h4>
+                    <p>Histórias que aquecem os dias cinzentos, repletas de ilustrações mágicas e aguarelas que transbordam emoção.</p>
+                </div>
+                <a href="https://amzn.eu/d/07cgT0dI" target="_blank" class="btn-buy">COMPRAR NA AMAZON +</a>
+            </div>
+        </div>
+
+        <!-- Link do Goodreads integrado na secção de livros -->
+        <div class="goodreads-box">
+            <p style="margin-bottom: 8px; font-size: 0.95rem; font-style: italic;">Acompanhe as leituras e avaliações:</p>
+            <a href="https://www.goodreads.com/user/show/200414913" target="_blank">VER PERFIL NO GOODREADS ✦</a>
+        </div>
     </section>
 
+    <!-- SECÇÃO SOBRE -->
     <section id="sobre" class="content-section" style="background: #e8d7c0;">
         <h3>SOBRE</h3>
         <p>Marylelin Lelinsky é autora e ilustradora apaixonada por mundos fantásticos e narrativas visuais.</p>
