@@ -328,3 +328,269 @@ body {
         font-size: 0.72rem;
     }
 }
+/* =====================================
+   PÁGINA ATELIER
+===================================== */
+
+.atelier-page {
+    background: #f3e9d8;
+    color: #38211b;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.atelier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 6%;
+    border-bottom: 1px solid rgba(88,34,40,0.25);
+    background: #f3e9d8;
+}
+
+.atelier-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #582228;
+    text-decoration: none;
+}
+
+.atelier-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.atelier-nav a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    color: #38211b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.atelier-nav a:hover {
+    color: #a36b36;
+}
+
+/* INTRODUÇÃO */
+
+.atelier-intro {
+    text-align: center;
+    padding: 85px 20px 65px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.atelier-small-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: #966d43;
+    margin-bottom: 18px;
+}
+
+.atelier-intro h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: #582228;
+}
+
+.atelier-decoration {
+    font-size: 1.8rem;
+    color: #b28a4b;
+    margin: 15px 0 22px;
+}
+
+.atelier-description {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+.atelier-signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #582228;
+    margin-top: 28px;
+}
+
+/* GALERIA */
+
+.atelier-gallery {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 35px 90px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 30px;
+}
+
+.artwork {
+    text-align: center;
+}
+
+.artwork img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+
+    border-radius: 3px;
+
+    box-shadow: 0 8px 25px rgba(56,33,27,0.13);
+
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.artwork img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(56,33,27,0.2);
+}
+
+.artwork h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: #582228;
+    margin-top: 18px;
+}
+
+.artwork p {
+    font-size: 1.1rem;
+    color: #80634c;
+    margin-top: 5px;
+}
+
+/* MENSAGEM FINAL */
+
+.atelier-end {
+    text-align: center;
+    padding: 65px 20px 85px;
+    background: #e9dcc8;
+}
+
+.atelier-end div {
+    font-size: 2rem;
+    color: #a98445;
+    margin-bottom: 18px;
+}
+
+.atelier-end h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #582228;
+}
+
+.atelier-end p {
+    font-size: 1.2rem;
+    margin: 18px 0 30px;
+}
+
+.atelier-back {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #582228;
+
+    border: 1px solid #582228;
+    border-radius: 30px;
+    padding: 14px 28px;
+
+    transition: 0.3s;
+}
+
+.atelier-back:hover {
+    background: #582228;
+    color: #fff1df;
+}
+
+/* RODAPÉ */
+
+.atelier-footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #2b1d16;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 900px) {
+
+    .atelier-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 22px;
+    }
+
+    .artwork img {
+        height: 320px;
+    }
+
+}
+
+/* TELEMÓVEIS */
+
+@media screen and (max-width: 600px) {
+
+    .atelier-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 22px 12px;
+    }
+
+    .atelier-brand {
+        font-size: 1.6rem;
+    }
+
+    .atelier-nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .atelier-nav a {
+        font-size: 0.65rem;
+    }
+
+    .atelier-intro {
+        padding: 60px 20px 45px;
+    }
+
+    .atelier-intro h1 {
+        font-size: 3.4rem;
+    }
+
+    .atelier-description {
+        font-size: 1.2rem;
+    }
+
+    .atelier-gallery {
+        grid-template-columns: 1fr;
+        padding: 15px 22px 60px;
+        gap: 38px;
+    }
+
+    .artwork img {
+        height: auto;
+        max-height: 480px;
+        object-fit: contain;
+    }
+
+    .atelier-end h2 {
+        font-size: 2rem;
+    }
+
+}
