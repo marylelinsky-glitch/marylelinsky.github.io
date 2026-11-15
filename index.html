@@ -25,12 +25,12 @@
             align-items: center;
         }
 
-        /* Contentor principal com a tua imagem de fundo */
         .canvas-site {
             width: 100%;
             max-width: 1440px;
             min-height: 100vh;
-            background-image: url('fundo.jpg');
+            /* 👇 MUDA AQUI 'fundo.jpg' PARA O NOME EXATO DA TUA IMAGEM NO GITHUB 👇 */
+            background-image: url images/hero.png;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -45,7 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding-left: 33%; /* Deixa espaço livre para a libélula desenhada no fundo */
+            padding-left: 33%;
         }
 
         .brand-title h1 {
@@ -70,7 +70,7 @@
             font-family: 'Cinzel', serif;
             font-size: 0.76rem;
             letter-spacing: 2px;
-            margin-top: 42px; /* Encaixa entre as duas linhas horizontais da imagem */
+            margin-top: 42px;
             padding-right: 20px;
         }
 
@@ -122,7 +122,7 @@
             padding: 10px 26px;
             border: 1px solid rgba(56, 33, 27, 0.55);
             border-radius: 30px;
-            background: rgba(243, 230, 211, 0.45);
+            background: rgba(243, 230, 211, 0.25);
             transition: all 0.3s ease;
         }
 
@@ -132,7 +132,7 @@
             color: #f3e6d3;
         }
 
-        /* --- BASE: LIVROS + TEXTO NOS CARTÕES DO FUNDO --- */
+        /* --- BASE: LIVROS + TEXTOS --- */
         .bottom-area {
             display: grid;
             grid-template-columns: 1.8fr 1fr;
@@ -161,7 +161,7 @@
         .book-cover {
             width: 100%;
             aspect-ratio: 2 / 3;
-            background: rgba(243, 230, 211, 0.75);
+            background: rgba(243, 230, 211, 0.5);
             border: 1px solid rgba(56, 33, 27, 0.35);
             box-shadow: -5px 6px 14px rgba(35, 18, 12, 0.35);
             position: relative;
@@ -174,7 +174,7 @@
         }
 
         .book-cover.dark {
-            background: rgba(43, 33, 30, 0.9);
+            background: rgba(43, 33, 30, 0.85);
             color: #e8dcc8;
         }
 
@@ -193,7 +193,6 @@
             line-height: 1.2;
         }
 
-        /* Textos alinhados sobre a faixa bege e sobre o medalhão vinho da imagem */
         .right-notes {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -222,14 +221,12 @@
             font-style: italic;
             font-size: 1.2rem;
             line-height: 1.3;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
         }
 
-        /* Adaptação para ecrãs menores / telemóvel */
         @media (max-width: 960px) {
             .canvas-site {
                 padding: 25px;
-                background-position: center top;
             }
             .header {
                 padding-left: 0;
@@ -241,18 +238,10 @@
                 margin-top: 20px;
                 flex-wrap: wrap;
                 justify-content: center;
-                background: rgba(243, 230, 211, 0.8);
-                padding: 10px;
-                border-radius: 6px;
             }
             .hero {
                 justify-content: center;
                 padding-right: 0;
-            }
-            .hero-box {
-                background: rgba(243, 230, 211, 0.82);
-                padding: 20px;
-                border-radius: 10px;
             }
             .bottom-area {
                 grid-template-columns: 1fr;
@@ -261,18 +250,12 @@
                 grid-template-columns: repeat(2, 1fr);
                 padding-left: 0;
             }
-            .note-medallion {
-                background: #582228;
-                border-radius: 20px;
-                padding: 25px;
-            }
         }
     </style>
 </head>
 <body>
 
     <div class="canvas-site">
-        <!-- CABEÇALHO -->
         <header class="header">
             <div class="brand-title">
                 <h1>Marylelin<br>Lelinsky</h1>
@@ -292,7 +275,6 @@
             </nav>
         </header>
 
-        <!-- FRASE DE DESTAQUE -->
         <main class="hero">
             <div class="hero-box">
                 <h2>Entre livros,<br>imagens e mundos<br>possíveis.</h2>
@@ -300,34 +282,34 @@
             </div>
         </main>
 
-        <!-- SECÇÃO INFERIOR -->
         <section id="livros" class="bottom-area">
             <div class="books-row">
+                <!-- Se quiseres colocar as capas dos livros, muda também os nomes de livro1.jpg para o nome exato dos teus ficheiros -->
                 <a href="#" class="book-item">
                     <div class="book-cover">
                         <span class="book-title-fallback">Saudade é<br>Nome de Flor</span>
-                        <img src="livro1.jpg" alt="Saudade é Nome de Flor" onerror="this.style.display='none'">
+                        <img src=saudade-flor.jpg alt="Saudade é Nome de Flor" onerror="this.style.display='none'">
                     </div>
                 </a>
 
                 <a href="#" class="book-item">
                     <div class="book-cover">
                         <span class="book-title-fallback">O Que Faz<br>uma Bota no Céu<br>das Melancias?</span>
-                        <img src="livro2.jpg" alt="O Que Faz uma Bota no Céu das Melancias?" onerror="this.style.display='none'">
+                        <img src=Bota-melancias.jpg alt="O Que Faz uma Bota no Céu das Melancias?" onerror="this.style.display='none'">
                     </div>
                 </a>
 
                 <a href="#" class="book-item">
                     <div class="book-cover dark">
                         <span class="book-title-fallback">O Sonho<br>dos Mortos</span>
-                        <img src="livro3.jpg" alt="O Sonho dos Mortos" onerror="this.style.display='none'">
+                        <img src="sonho-dos-mortos.jpg" alt="O Sonho dos Mortos" onerror="this.style.display='none'">
                     </div>
                 </a>
 
                 <a href="#" class="book-item">
                     <div class="book-cover">
                         <span class="book-title-fallback">As Luzes<br>da Chuva</span>
-                        <img src="livro4.jpg" alt="As Luzes da Chuva" onerror="this.style.display='none'">
+                        <img src="luzes-da-chuva.jpg" alt="As Luzes da Chuva" onerror="this.style.display='none'">
                     </div>
                 </a>
             </div>
