@@ -498,3 +498,29 @@
     .content-section {
         padding: 45px 18px;
     }
+/* =====================================
+   CORREÇÃO DO FUNDO PRINCIPAL
+   ===================================== */
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.canvas-site {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    padding: 35px 55px 40px;
+
+    background-image: url('images/hero.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
