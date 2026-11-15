@@ -776,3 +776,134 @@ img {
         object-fit: contain;
     }
 }
+/* =========================================
+   NOVA ORGANIZAÇÃO DA LANDING PAGE
+========================================= */
+
+.canvas-site .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    width: 100%;
+}
+
+.canvas-site .nav-menu {
+    order: 1;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+
+.canvas-site .brand-text {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 1;
+    margin: 0;
+}
+
+.canvas-site .brand-text h1 {
+    text-align: center;
+    font-size: 3.8rem;
+    line-height: 0.95;
+}
+
+.canvas-site .brand-signature-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    margin: 18px auto 0;
+}
+
+.canvas-site .brand-signature {
+    width: 210px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.canvas-site .brand-header-seal {
+    width: 230px;
+    height: 230px;
+    object-fit: contain;
+}
+
+/* TABLETS */
+
+@media screen and (max-width: 1100px) {
+
+    .canvas-site {
+        padding: 25px;
+    }
+
+    .canvas-site .header {
+        gap: 22px;
+    }
+
+    .canvas-site .brand-text h1 {
+        font-size: 3.2rem;
+    }
+
+    .canvas-site .brand-signature-row {
+        gap: 18px;
+    }
+
+    .canvas-site .brand-signature {
+        width: 180px;
+        height: 140px;
+    }
+
+    .canvas-site .brand-header-seal {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+/* TELEMÓVEIS */
+
+@media screen and (max-width: 600px) {
+
+    .canvas-site {
+        padding: 20px 15px;
+        background-position: 43% center;
+    }
+
+    .canvas-site .header {
+        gap: 20px;
+    }
+
+    .canvas-site .nav-menu {
+        gap: 7px;
+    }
+
+    .canvas-site .nav-menu a {
+        font-size: 0.65rem;
+        padding: 9px 10px;
+        letter-spacing: 0.7px;
+    }
+
+    .canvas-site .brand-text h1 {
+        font-size: 2.7rem;
+    }
+
+    .canvas-site .brand-signature-row {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .canvas-site .brand-signature {
+        width: 125px;
+        height: 110px;
+    }
+
+    .canvas-site .brand-header-seal {
+        width: 155px;
+        height: 155px;
+    }
+}
